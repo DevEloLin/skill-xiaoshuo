@@ -15,6 +15,9 @@
 - 为了制造戏剧性擅自新增设定
 - 网文章节能写，但缺少追更节奏
 - 不同题材共用同一套写法，最后变得同质化
+- 主线能跑，但支线发虚，暗线缺失
+- 伏笔只有单点，回收时不够成立
+- 世界看起来很大，但真正推动剧情的棋盘太小
 
 `skill-xiaoshuo` 的设计重点是：
 
@@ -39,6 +42,11 @@
 9. 长篇记忆维护
 10. 网文连载节奏控制
 11. 题材特化模板切换
+12. 多线叙事结构设计
+13. 伏笔矩阵与草蛇灰线设计
+14. 势力棋盘与宏大布局设计
+15. 宇宙设定与世界规律设计
+16. 世界地图与宇宙地图设计
 
 ## 适用场景
 
@@ -86,12 +94,16 @@ skill-xiaoshuo/
 │   ├── chapter-card-template.md
 │   ├── chapter-summary-template.md
 │   ├── character-template.md
+│   ├── cosmology-template.md
 │   ├── continuity-checklist.md
+│   ├── faction-board-template.md
+│   ├── foreshadow-matrix-template.md
 │   ├── genre-lightnovel-template.md
 │   ├── genre-xuanhuan-template.md
 │   ├── genre-xuanyi-template.md
 │   ├── genre-yanqing-template.md
 │   ├── outline-template.md
+│   ├── plot-architecture-template.md
 │   ├── plot-thread-template.md
 │   ├── project-brief-template.md
 │   ├── rewrite-prompt-template.md
@@ -99,11 +111,16 @@ skill-xiaoshuo/
 │   ├── series-state-template.md
 │   ├── task-prompt-template.md
 │   ├── timeline-template.md
+│   ├── universe-map-template.md
+│   ├── world-map-template.md
+│   ├── world-rules-template.md
 │   └── worldbuilding-template.md
 └── references/
+  ├── macro-plotting.md
     ├── hallucination-control.md
     ├── quality-rubric.md
     ├── webnovel-serialization.md
+  ├── world-logic.md
     └── workflow.md
 ```
 
@@ -151,6 +168,27 @@ skill-xiaoshuo/
 - [series-state-template.md](./assets/series-state-template.md)
   维护长篇连载当前的总状态，包括已确认事实、时间线、风险点和风格边界。
 
+- [cosmology-template.md](./assets/cosmology-template.md)
+  用于定义宇宙层级、底层规律、世界联系和最终命题。
+
+- [world-rules-template.md](./assets/world-rules-template.md)
+  用于把世界规则写成可推导、可约束剧情的系统。
+
+- [world-map-template.md](./assets/world-map-template.md)
+  用于让地理结构真实影响资源、战争、迁徙和剧情推进。
+
+- [universe-map-template.md](./assets/universe-map-template.md)
+  用于定义世界与世界之间、文明与文明之间的宏观版图关系。
+
+- [plot-architecture-template.md](./assets/plot-architecture-template.md)
+  用于搭建主线、支线、暗线之间的结构网，避免剧情只剩单线推进。
+
+- [foreshadow-matrix-template.md](./assets/foreshadow-matrix-template.md)
+  用于把伏笔拆成近回收、中回收、远回收三层，强化草蛇灰线式埋法。
+
+- [faction-board-template.md](./assets/faction-board-template.md)
+  用于搭建势力、棋手、筹码和误判，形成更大的叙事棋盘。
+
 ### Prompt 模板
 
 - [task-prompt-template.md](./assets/task-prompt-template.md)
@@ -191,6 +229,12 @@ skill-xiaoshuo/
 
 - [webnovel-serialization.md](./references/webnovel-serialization.md)
   规定网文连载时的开篇、单章、卷末和钩子策略。
+
+- [macro-plotting.md](./references/macro-plotting.md)
+  规定如何构建多线叙事、远近伏笔和更大的剧情棋盘。
+
+- [world-logic.md](./references/world-logic.md)
+  规定如何让宇宙、世界、地图和剧情逻辑真正对上。
 
 ## 工作流
 
@@ -234,7 +278,7 @@ Skill 当前支持 6 种主模式：
 
 ## 记忆体系
 
-这个 Skill 不把“记忆”交给模型临时发挥，而是显式维护 6 类状态：
+这个 Skill 不把“记忆”交给模型临时发挥，而是显式维护 10 类状态：
 
 1. Canon 事实
 2. 人物状态
@@ -242,6 +286,10 @@ Skill 当前支持 6 种主模式：
 4. 伏笔与线索
 5. 章节摘要
 6. 连载节奏
+7. 主线 / 支线 / 暗线结构网
+8. 势力棋盘
+9. 宇宙设定
+10. 地图体系
 
 这样做的目的有两个：
 
@@ -301,6 +349,41 @@ Skill 当前支持 6 种主模式：
 - 常见错误是什么
 
 这能显著减少“题材表面像，内核不对”的问题。
+
+## 大布局与草蛇灰线
+
+这次优化后，这个 Skill 不再只强调“稳”，也强调“大”。
+
+这里说的“大”，不是单纯把世界观写得很大，而是：
+
+- 至少有主线、支线、暗线三层结构
+- 伏笔不是一个点，而是多点、多层、多时距
+- 势力和人物的博弈能形成棋盘
+- 单章推进会反作用于更大的局势
+
+对应文件：
+
+- [assets/plot-architecture-template.md](./assets/plot-architecture-template.md)
+- [assets/foreshadow-matrix-template.md](./assets/foreshadow-matrix-template.md)
+- [assets/faction-board-template.md](./assets/faction-board-template.md)
+- [references/macro-plotting.md](./references/macro-plotting.md)
+
+## 宇宙、世界与地图系统
+
+这次优化后，这个 Skill 也不再把世界观当成单独设定页，而是把它拆成四个彼此约束的层级：
+
+- 宇宙层：宇宙如何运作、边界在哪里、什么规律不可违背
+- 世界层：文明、资源、力量、秩序如何运行
+- 地图层：地区和世界之间如何连通、阻隔、冲突和迁移
+- 剧情层：这些规律如何实际限制人物、势力和事件
+
+对应文件：
+
+- [assets/cosmology-template.md](./assets/cosmology-template.md)
+- [assets/world-rules-template.md](./assets/world-rules-template.md)
+- [assets/world-map-template.md](./assets/world-map-template.md)
+- [assets/universe-map-template.md](./assets/universe-map-template.md)
+- [references/world-logic.md](./references/world-logic.md)
 
 ## 如何使用
 
@@ -428,6 +511,7 @@ Skill 当前采用以下策略降低幻觉：
 ## 相关文件
 
 - [SKILL.md](./SKILL.md)
+- [USAGE.md](./USAGE.md)
 - [work.md](./work.md)
 - [examples](./examples)
 - [assets](./assets)

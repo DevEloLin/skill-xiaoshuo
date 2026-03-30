@@ -1,6 +1,6 @@
 ---
 name: skill-xiaoshuo
-description: 'Plan, write, continue, audit, and revise long-form Chinese fiction with stronger memory and lower hallucination risk. Use for小说创作, 网文连载, Obsidian 写作, 故事总纲, 世界观设定, 人物设定, 章节规划, 正文写作, 文风统一, 连续性审校, 时间线维护, 伏笔回收, 状态管理, 降低AI味, 减少AI幻觉. Trigger phrases include 小说, 故事, 世界观, 大纲, 人设, 章节, 续写, 润色, 连载, 审校, 时间线, 伏笔, 状态.'
+description: 'Plan, write, continue, audit, and revise long-form Chinese fiction with stronger memory and lower hallucination risk. Use for小说创作, 网文连载, Obsidian 写作, 故事总纲, 世界观设定, 人物设定, 章节规划, 正文写作, 文风统一, 连续性审校, 时间线维护, 伏笔回收, 状态管理, 草蛇灰线, 多线叙事, 主线支线, 势力棋盘, 宏大布局, 宇宙设定, 世界地图, 宇宙地图, 世界规律, 宇宙运作, 降低AI味, 减少AI幻觉. Trigger phrases include 小说, 故事, 世界观, 大纲, 人设, 章节, 续写, 润色, 连载, 审校, 时间线, 伏笔, 状态, 主线, 支线, 布局, 棋盘, 宇宙, 地图, 规律.'
 argument-hint: 'Describe genre, target readers, tone, length, current material, and the writing task you want completed.'
 user-invocable: true
 disable-model-invocation: false
@@ -16,6 +16,10 @@ disable-model-invocation: false
 - 先提取事实，再推进剧情
 - 先更新状态，再继续连载
 - 信息不足时保守输出，不擅自发明新设定
+- 不让剧情只剩单线推进，而要形成主线、支线、暗线彼此咬合
+- 不让伏笔只停留在单点回收，而要形成近中远多层回响
+- 不让世界观只停留在名词堆砌，而要形成可推演、可约束剧情的宇宙运作体系
+- 不让地图只是装饰，而要让世界地图、宇宙地图与势力、资源、战争、文明流动相互对应
 
 ## 适用场景
 
@@ -70,6 +74,25 @@ disable-model-invocation: false
 - 已埋伏笔与待回收线索
 - 不能更改的规则、关系和结论
 
+如果用户追求大布局，再额外收集：
+
+- 主线目标与终局方向
+- 至少 2 到 4 条支线
+- 至少 1 条暗线
+- 关键势力或棋盘参与方
+- 近回收 / 中回收 / 远回收伏笔层级
+- 哪些章节负责埋，哪些章节负责偏移，哪些章节负责兑现
+
+如果用户追求宏伟世界观，再额外收集：
+
+- 宇宙层级：单世界 / 多界 / 多重宇宙 / 星海文明 / 神话宇宙
+- 世界运作核心：能量、法则、科技、神性、命运、熵、轮回等
+- 世界边界与上限：地理边界、文明边界、力量边界、认知边界
+- 世界地图和关键区域
+- 宇宙地图和世界之间的关系
+- 资源流动、交通路径、战争路径、信仰路径、贸易路径
+- 哪些规律绝对不可破坏，哪些规律可以被发现或改写
+
 如果这些信息缺失，不直接硬写长段正文，先补一个最小状态包。
 
 ## 核心设计原则
@@ -79,6 +102,10 @@ disable-model-invocation: false
 3. 长篇任务必须维护外部记忆载体，而不是只依赖当前上下文
 4. 写作和审校分离，先产出，再检查
 5. 信息不足时显式标出未知项，不用猜测补全
+6. 剧情不能只靠单主线推进，至少要考虑主线、支线、暗线的层次关系
+7. 伏笔不能只埋一个点，至少要形成多点、多层、多时距的回收设计
+8. 世界观必须可推演，宇宙规则要能约束人物选择、势力行动和剧情结果
+9. 地图必须有叙事意义，地理结构和宇宙结构都要能解释资源、文明、冲突与迁移
 
 ## 记忆体系
 
@@ -89,6 +116,10 @@ disable-model-invocation: false
 3. 时间线：记录关键事件发生顺序和时间位置
 4. 伏笔与线索表：记录已埋、待回收、已回收内容
 5. 章节摘要：记录每章发生了什么，便于续写前快速回忆
+6. 势力棋盘：记录各方势力、立场、筹码、误判和真实目标
+7. 结构网图：记录主线、支线、暗线之间的交汇和反哺关系
+8. 宇宙设定：记录世界层级、法则、运行机制和边界
+9. 地图体系：记录世界地图、区域关系、宇宙地图和跨界路径
 
 推荐优先维护：
 
@@ -98,6 +129,13 @@ disable-model-invocation: false
 - [章节摘要模板](./assets/chapter-summary-template.md)
 - [连载状态模板](./assets/series-state-template.md)
 - [连载节奏板模板](./assets/serialization-board-template.md)
+- [结构网图模板](./assets/plot-architecture-template.md)
+- [伏笔矩阵模板](./assets/foreshadow-matrix-template.md)
+- [势力棋盘模板](./assets/faction-board-template.md)
+- [宇宙设定模板](./assets/cosmology-template.md)
+- [世界地图模板](./assets/world-map-template.md)
+- [宇宙地图模板](./assets/universe-map-template.md)
+- [世界规律模板](./assets/world-rules-template.md)
 
 ## 工作流
 
@@ -107,6 +145,8 @@ disable-model-invocation: false
 
 - 立项阶段：使用 [项目简报模板](./assets/project-brief-template.md)
 - 世界观阶段：使用 [世界观模板](./assets/worldbuilding-template.md)
+- 宇宙设定阶段：使用 [宇宙设定模板](./assets/cosmology-template.md)
+- 地图阶段：使用 [世界地图模板](./assets/world-map-template.md) 和 [宇宙地图模板](./assets/universe-map-template.md)
 - 人设阶段：使用 [角色模板](./assets/character-template.md)
 - 总纲阶段：使用 [总纲模板](./assets/outline-template.md)
 - 章节阶段：使用 [章节卡模板](./assets/chapter-card-template.md)
@@ -121,6 +161,8 @@ disable-model-invocation: false
 - 模式 D，连续性审校：只找问题，不负责大段重写
 - 模式 E，网文连载模式：读取连载状态 -> 评估追更价值 -> 生成章节卡 -> 写正文 -> 回写连载节奏
 - 模式 F，题材特化模式：先加载对应题材模板，再生成设定、总纲或正文
+- 模式 G，大布局模式：先建立结构网图、伏笔矩阵、势力棋盘，再设计卷级推进
+- 模式 H，宇宙设定模式：先定义宇宙运作、世界规律、地图体系，再反推文明和剧情
 
 如果用户目标跨多个阶段，按“先结构、再章节、后正文、最后审校”的顺序执行。
 
@@ -148,6 +190,30 @@ disable-model-invocation: false
 
 低优先级内容不能推翻高优先级内容。
 
+### 2.1 结构层级优先级
+
+当剧情设计出现冲突时，按以下层级判断：
+
+1. 终局方向
+2. 主线推进
+3. 支线价值
+4. 暗线隐蔽度与回收价值
+5. 单章戏剧性
+
+单章的爽点、反转和情绪价值，不能破坏更高层级的长期布局。
+
+### 2.2 世界逻辑优先级
+
+当世界观、力量体系、宇宙法则与剧情冲突时，按以下层级判断：
+
+1. 宇宙底层规律
+2. 世界规则与文明边界
+3. 地图结构与资源流动
+4. 势力和人物的可行动范围
+5. 单次剧情需要
+
+单次剧情不能为了方便推进而破坏更高层级的世界逻辑。
+
 ### 3. 先固化设定，再写正文
 
 除非用户明确只要试写片段，否则优先完成：
@@ -160,6 +226,14 @@ disable-model-invocation: false
 6. 审校与修订
 
 不要在设定空缺较多时直接输出大量正文，否则容易导致后续连载失稳。
+
+对于大长篇或多卷结构，再加一步：
+
+7. 先建立结构网图、伏笔矩阵和势力棋盘，再进入中后段章节写作
+
+对于宏大世界观作品，再加前置步骤：
+
+0. 先建立宇宙设定、世界规律、世界地图和宇宙地图，再进入世界观和总纲阶段
 
 ### 4. 写作前的事实提取
 
@@ -199,6 +273,14 @@ disable-model-invocation: false
 - 正文只允许新增“小事实”，不允许擅自新增“重大 canon”
 - 重大 canon 包括：新力量体系、新核心组织、新主线秘密、新关键角色真实身份、新世界底层规则
 - 如果必须新增，先显式说明这是“候选设定”或“建议补充项”，不要直接写死进正文
+- 每章至少和一条主线或支线产生有效联系，不能成为完全孤立的片段
+- 当一章主要服务支线时，也要让它对主线认知、人物关系或后续棋局产生反作用
+- 伏笔优先采用“多次擦边出现”而不是“一次硬塞，后面突然回收”
+- 优先使用草蛇灰线式埋法：细节先行、意义后显、回头才成立
+- 反转优先来自旧信息重组，而不是新信息空降
+- 地理位置、宇宙位置、资源距离和交通成本要真实影响事件推进
+- 不同世界层级的规则差异要有明确代价，不能随意跨界、穿梭、降维使用
+- 世界地图和宇宙地图上的节点，必须和剧情中的战争、探索、贸易、信仰或灾变产生对应
 
 如果是网文连载正文，再额外遵循：
 
@@ -226,6 +308,24 @@ disable-model-invocation: false
 - 审校意见而不是正文
 
 更具体的控制方法参考 [防幻觉参考](./references/hallucination-control.md)。
+
+### 7.1 多线叙事与大布局规则
+
+当用户要求大结构、宏大布局、草蛇灰线时，默认执行以下规则：
+
+1. 至少建立 1 条主线、2 条支线、1 条暗线
+2. 至少建立 3 层伏笔：近回收、中回收、远回收
+3. 至少让 2 个以上势力或棋手拥有互不相同的目标
+4. 让人物个人命运、势力对抗和世界变化至少有两层互相套叠
+5. 章节推进不能只做表面事件，要不断改变读者对更大棋局的理解
+
+如果作品追求宇宙级布局，再追加：
+
+6. 至少建立宇宙层、世界层、地区层三个叙事层级
+7. 至少让一个宇宙规律在前期作为背景、中期作为限制、后期作为解法或代价
+8. 让地图不是静态说明，而是动态影响路线、冲突、扩张和文明碰撞
+
+如果当前材料不足以支持宏大布局，先输出结构网图和伏笔矩阵，不直接硬写大段正文。
 
 ### 8. 润色与降 AI 味
 
@@ -261,6 +361,9 @@ disable-model-invocation: false
 4. 新埋下或新回收的伏笔
 5. 新确认的 canon 事实
 6. 本章钩子类型与读者期待点
+7. 本章触发了哪条支线或暗线变化
+8. 本章对更大棋盘的影响
+9. 本章触发了哪条世界规律或地图关系
 
 没有回写，后续续写的稳定性会快速下降。
 
@@ -289,6 +392,13 @@ disable-model-invocation: false
 - Canon 事实表
 - 时间线表
 - 伏笔与线索表
+- 伏笔矩阵
+- 势力棋盘
+- 结构网图
+- 宇宙设定书
+- 世界规律表
+- 世界地图
+- 宇宙地图
 - 章节摘要表
 - 连载状态板
 - 连载节奏板
@@ -309,6 +419,12 @@ disable-model-invocation: false
 - 当用户要求大幅改写时，先说明哪些 canon 会被影响
 - 网文优先可追读性，但不能牺牲基本逻辑
 - 题材特化优先“满足该题材读者期待”，而不是混搭所有流行元素
+- 宏大布局优先“多层关联”，不是单纯把世界写大
+- 多线叙事优先“彼此牵动”，不是平铺多个互不相干的小故事
+- 草蛇灰线优先“反复轻触”，不是一次性显眼提示
+- 宇宙设定优先“规则可推演”，不是只堆名词和神秘概念
+- 地图优先“可用”，不是只给出地名列表
+- 世界逻辑优先“从规律推导事件”，不是先写事件再补规则
 
 ## 质量门槛
 
@@ -328,14 +444,23 @@ disable-model-invocation: false
 - [质量标准](./references/quality-rubric.md)
 - [防幻觉参考](./references/hallucination-control.md)
 - [网文连载参考](./references/webnovel-serialization.md)
+- [大布局参考](./references/macro-plotting.md)
+- [宇宙与世界逻辑参考](./references/world-logic.md)
 - [项目简报模板](./assets/project-brief-template.md)
 - [世界观模板](./assets/worldbuilding-template.md)
+- [宇宙设定模板](./assets/cosmology-template.md)
+- [世界规律模板](./assets/world-rules-template.md)
+- [世界地图模板](./assets/world-map-template.md)
+- [宇宙地图模板](./assets/universe-map-template.md)
 - [角色模板](./assets/character-template.md)
 - [总纲模板](./assets/outline-template.md)
 - [章节卡模板](./assets/chapter-card-template.md)
 - [Canon 事实模板](./assets/canon-facts-template.md)
 - [时间线模板](./assets/timeline-template.md)
 - [伏笔与线索模板](./assets/plot-thread-template.md)
+- [伏笔矩阵模板](./assets/foreshadow-matrix-template.md)
+- [结构网图模板](./assets/plot-architecture-template.md)
+- [势力棋盘模板](./assets/faction-board-template.md)
 - [章节摘要模板](./assets/chapter-summary-template.md)
 - [连载状态模板](./assets/series-state-template.md)
 - [连载节奏板模板](./assets/serialization-board-template.md)
