@@ -47,6 +47,12 @@
 14. 势力棋盘与宏大布局设计
 15. 宇宙设定与世界规律设计
 16. 世界地图与宇宙地图设计
+17. 热门网文高层写法提炼
+18. 反拼贴验收与写法去拼装控制
+19. 小说项目文件夹组织与阶段归档
+20. 分卷大纲与细纲拆解
+21. 人物小传与关系图维护
+22. 记忆索引与连续性台账
 
 ## 适用场景
 
@@ -93,7 +99,9 @@ skill-xiaoshuo/
 │   ├── canon-facts-template.md
 │   ├── chapter-card-template.md
 │   ├── chapter-summary-template.md
+│   ├── character-biography-template.md
 │   ├── character-template.md
+│   ├── consistency-ledger-template.md
 │   ├── cosmology-template.md
 │   ├── continuity-checklist.md
 │   ├── faction-board-template.md
@@ -106,21 +114,29 @@ skill-xiaoshuo/
 │   ├── plot-architecture-template.md
 │   ├── plot-thread-template.md
 │   ├── project-brief-template.md
+│   ├── relationship-map-template.md
 │   ├── rewrite-prompt-template.md
 │   ├── serialization-board-template.md
 │   ├── series-state-template.md
+│   ├── storyline-board-template.md
 │   ├── task-prompt-template.md
 │   ├── timeline-template.md
+│   ├── detailed-outline-template.md
+│   ├── memory-index-template.md
 │   ├── universe-map-template.md
+│   ├── volume-outline-template.md
 │   ├── world-map-template.md
 │   ├── world-rules-template.md
 │   └── worldbuilding-template.md
 └── references/
-  ├── macro-plotting.md
+    ├── anti-pastiche.md
     ├── hallucination-control.md
+    ├── macro-plotting.md
+    ├── popular-webnovel-craft.md
+    ├── project-organization.md
     ├── quality-rubric.md
     ├── webnovel-serialization.md
-  ├── world-logic.md
+    ├── world-logic.md
     └── workflow.md
 ```
 
@@ -145,8 +161,20 @@ skill-xiaoshuo/
 - [character-template.md](./assets/character-template.md)
   用于角色动机、伤口、目标、关系网和弧光设计。
 
+- [character-biography-template.md](./assets/character-biography-template.md)
+  用于人物小传、前史、秘密、说话惯性和连续性锚点维护。
+
 - [outline-template.md](./assets/outline-template.md)
   用于整部作品的大结构设计。
+
+- [storyline-board-template.md](./assets/storyline-board-template.md)
+  用于集中维护主线、支线、暗线和它们的交汇节点。
+
+- [volume-outline-template.md](./assets/volume-outline-template.md)
+  用于把整部作品拆成卷级推进，防止大纲过粗。
+
+- [detailed-outline-template.md](./assets/detailed-outline-template.md)
+  用于把卷纲和章节卡进一步细化到场景级。
 
 - [chapter-card-template.md](./assets/chapter-card-template.md)
   用于单章情节拆解，控制本章目标、冲突、节拍和钩子。
@@ -167,6 +195,15 @@ skill-xiaoshuo/
 
 - [series-state-template.md](./assets/series-state-template.md)
   维护长篇连载当前的总状态，包括已确认事实、时间线、风险点和风格边界。
+
+- [memory-index-template.md](./assets/memory-index-template.md)
+  用于规定每次写作前的读取顺序和当前硬约束，是整个项目的记忆入口。
+
+- [consistency-ledger-template.md](./assets/consistency-ledger-template.md)
+  用于记录已锁定决定、禁止冲突项和修订记录，减少前后不对称。
+
+- [relationship-map-template.md](./assets/relationship-map-template.md)
+  用于维护人物关系温度、历史纠葛和未来变化方向。
 
 - [cosmology-template.md](./assets/cosmology-template.md)
   用于定义宇宙层级、底层规律、世界联系和最终命题。
@@ -236,6 +273,15 @@ skill-xiaoshuo/
 - [world-logic.md](./references/world-logic.md)
   规定如何让宇宙、世界、地图和剧情逻辑真正对上。
 
+- [popular-webnovel-craft.md](./references/popular-webnovel-craft.md)
+  提炼热门网络小说常见长板，抽象成可复用的结构、节奏、群像、升级、悬疑、史诗感等写法机制。
+
+- [anti-pastiche.md](./references/anti-pastiche.md)
+  把“吸收长板”约束成一套硬规则，防止设定、人物、节奏、气质变成热门作品拼装。
+
+- [project-organization.md](./references/project-organization.md)
+  给出小说项目的推荐目录树，明确故事线、总纲、细纲、人物、伏笔、记忆、审校应分别放在哪个文件夹。
+
 ## 工作流
 
 ### 标准流程
@@ -245,16 +291,20 @@ skill-xiaoshuo/
 1. 立项
 2. 设定
 3. 总纲
-4. 章节卡
-5. 正文
-6. 审校
-7. 状态回写
+4. 卷纲
+5. 细纲
+6. 章节卡
+7. 正文
+8. 审校
+9. 状态回写
 
 这套顺序的意义是避免正文先跑太远，后面再回头硬补设定。
 
+长篇项目建议先按 [project-organization.md](./references/project-organization.md) 建目录，再开始填内容。
+
 ### 支持的工作模式
 
-Skill 当前支持 6 种主模式：
+Skill 当前支持 10 种主模式：
 
 1. 模式 A，新建小说
 2. 模式 B，继续写某一章
@@ -262,6 +312,10 @@ Skill 当前支持 6 种主模式：
 4. 模式 D，连续性审校
 5. 模式 E，网文连载模式
 6. 模式 F，题材特化模式
+7. 模式 G，大布局模式
+8. 模式 H，宇宙设定模式
+9. 模式 I，写法吸收模式
+10. 模式 J，项目整理模式
 
 ### 源信息优先级
 
@@ -384,6 +438,25 @@ Skill 当前支持 6 种主模式：
 - [assets/world-map-template.md](./assets/world-map-template.md)
 - [assets/universe-map-template.md](./assets/universe-map-template.md)
 - [references/world-logic.md](./references/world-logic.md)
+
+## 热门网文写法吸收
+
+这次优化后，这个 Skill 也加入了“热门网文高层写法提炼”能力。
+
+它的目标不是模仿具体作品文本，而是抽取这些成功作品常见的长处，例如：
+
+- 世界厚度
+- 信息悬疑
+- 升级节奏
+- 群像辨识度
+- 情绪爆点
+- 史诗感与宿命感
+- 规则闭环
+- 克制成长
+
+对应参考文件：
+
+- [references/popular-webnovel-craft.md](./references/popular-webnovel-craft.md)
 
 ## 如何使用
 

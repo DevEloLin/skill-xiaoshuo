@@ -47,7 +47,7 @@ disable-model-invocation: false
 - 目标读者：男频、女频、青年向、轻小说向等
 - 风格目标：冷峻、热血、克制、诙谐、诗性、纪实等
 - 篇幅目标：短篇、中篇、长篇、连载
-- 当前阶段：立项、设定、总纲、章节、正文、润色、审校
+- 当前阶段：立项、设定、总纲、卷纲、细纲、章节、正文、润色、审校、项目整理
 - 已有素材：设定、片段、角色、章节草稿、历史正文
 - 约束条件：第一人称/第三人称、节奏、禁写内容、平台偏好
 
@@ -64,6 +64,7 @@ disable-model-invocation: false
 - 目标题材模板：玄幻 / 悬疑 / 言情 / 轻小说
 - 必须保留的题材核心体验
 - 必须避开的同质化套路
+- 参考写法侧重：群像 / 升级爽点 / 信息悬疑 / 史诗感 / 克制成长 / 少年感 / 宿命感 / 文明厚度 / 情绪爆发 / 仪式感
 
 对长篇、连载、续写任务，再额外收集：
 
@@ -106,10 +107,11 @@ disable-model-invocation: false
 7. 伏笔不能只埋一个点，至少要形成多点、多层、多时距的回收设计
 8. 世界观必须可推演，宇宙规则要能约束人物选择、势力行动和剧情结果
 9. 地图必须有叙事意义，地理结构和宇宙结构都要能解释资源、文明、冲突与迁移
+10. 参考优秀作品时，只抽取高层写法机制，不复制具体文本、桥段组合、标志性设定或角色关系
 
 ## 记忆体系
 
-这个 skill 处理长篇时，默认把“记忆”拆成 5 个层级，避免设定漂移：
+这个 skill 处理长篇时，默认把“记忆”拆成 11 个层级，避免设定漂移：
 
 1. Canon 事实表：只记录已经确认、不可随意改动的事实
 2. 人物状态表：记录每个主要角色当前处境、关系和心理变化
@@ -120,6 +122,8 @@ disable-model-invocation: false
 7. 结构网图：记录主线、支线、暗线之间的交汇和反哺关系
 8. 宇宙设定：记录世界层级、法则、运行机制和边界
 9. 地图体系：记录世界地图、区域关系、宇宙地图和跨界路径
+10. 记忆索引：规定每一轮写作前先读什么、先看什么、当前锁定什么
+11. 连续性台账：记录已锁定决定、禁止冲突项、可调整边界和修订记录
 
 推荐优先维护：
 
@@ -128,14 +132,24 @@ disable-model-invocation: false
 - [伏笔与线索模板](./assets/plot-thread-template.md)
 - [章节摘要模板](./assets/chapter-summary-template.md)
 - [连载状态模板](./assets/series-state-template.md)
+- [记忆索引模板](./assets/memory-index-template.md)
+- [连续性台账模板](./assets/consistency-ledger-template.md)
 - [连载节奏板模板](./assets/serialization-board-template.md)
+- [故事线总表模板](./assets/storyline-board-template.md)
 - [结构网图模板](./assets/plot-architecture-template.md)
 - [伏笔矩阵模板](./assets/foreshadow-matrix-template.md)
 - [势力棋盘模板](./assets/faction-board-template.md)
+- [分卷大纲模板](./assets/volume-outline-template.md)
+- [细纲模板](./assets/detailed-outline-template.md)
+- [人物小传模板](./assets/character-biography-template.md)
+- [人物关系图模板](./assets/relationship-map-template.md)
 - [宇宙设定模板](./assets/cosmology-template.md)
 - [世界地图模板](./assets/world-map-template.md)
 - [宇宙地图模板](./assets/universe-map-template.md)
 - [世界规律模板](./assets/world-rules-template.md)
+- [热门网文写法参考](./references/popular-webnovel-craft.md)
+- [反拼贴规则](references/anti-pastiche.md)
+- [项目文件夹组织参考](./references/project-organization.md)
 
 ## 工作流
 
@@ -149,7 +163,10 @@ disable-model-invocation: false
 - 地图阶段：使用 [世界地图模板](./assets/world-map-template.md) 和 [宇宙地图模板](./assets/universe-map-template.md)
 - 人设阶段：使用 [角色模板](./assets/character-template.md)
 - 总纲阶段：使用 [总纲模板](./assets/outline-template.md)
+- 卷纲阶段：使用 [分卷大纲模板](./assets/volume-outline-template.md)
+- 细纲阶段：使用 [细纲模板](./assets/detailed-outline-template.md)
 - 章节阶段：使用 [章节卡模板](./assets/chapter-card-template.md)
+- 项目整理阶段：使用 [项目文件夹组织参考](./references/project-organization.md)
 - 连载维护阶段：使用 [连载状态模板](./assets/series-state-template.md)
 - 审校阶段：使用 [连续性检查清单](./assets/continuity-checklist.md)
 
@@ -163,6 +180,8 @@ disable-model-invocation: false
 - 模式 F，题材特化模式：先加载对应题材模板，再生成设定、总纲或正文
 - 模式 G，大布局模式：先建立结构网图、伏笔矩阵、势力棋盘，再设计卷级推进
 - 模式 H，宇宙设定模式：先定义宇宙运作、世界规律、地图体系，再反推文明和剧情
+- 模式 I，写法吸收模式：先定义主体验，再选择长板组合，最后用反拼贴规则做验收
+- 模式 J，项目整理模式：先输出目录树，再按阶段创建文件夹和对应状态文件
 
 如果用户目标跨多个阶段，按“先结构、再章节、后正文、最后审校”的顺序执行。
 
@@ -235,14 +254,40 @@ disable-model-invocation: false
 
 0. 先建立宇宙设定、世界规律、世界地图和宇宙地图，再进入世界观和总纲阶段
 
+对于长篇项目，再加常驻步骤：
+
+0.5 先建立记忆索引和连续性台账，再进入卷纲、细纲和章节阶段
+
+### 3.1 先过反拼贴验收，再吸收热门写法
+
+如果用户要求“参考热门作品”“融合多部作品优点”“兼顾多种爆款长板”，默认先做三步：
+
+1. 用一句话定义本书主体验
+2. 只保留 1 到 2 个主长板与 2 到 4 个辅长板
+3. 使用 [反拼贴规则](references/anti-pastiche.md) 检查是否出现设定拼盘、角色拼盘、节奏拼盘或气质拼盘
+
+如果某项参考无法回落到本书主线、世界规律、人物代价三层之一，就不接入当前版本。
+
 ### 4. 写作前的事实提取
 
 在续写、改写、长篇写作前，先从已有材料中提取：
 
+- 已读取的记忆文件
 - 已知事实
 - 未知事实
 - 本章允许推进的范围
 - 不能改动的内容
+
+默认读取顺序：
+
+1. [记忆索引模板](./assets/memory-index-template.md) 对应文件
+2. [Canon 事实模板](./assets/canon-facts-template.md) 对应文件
+3. [连续性台账模板](./assets/consistency-ledger-template.md) 对应文件
+4. [时间线模板](./assets/timeline-template.md) 对应文件
+5. 当前卷纲 / 细纲 / 章节卡
+6. 最近章节摘要
+
+如果没有先读这套顺序，就不要直接大段写正文。
 
 如果无法确认某个关键事实：
 
@@ -425,6 +470,7 @@ disable-model-invocation: false
 - 宇宙设定优先“规则可推演”，不是只堆名词和神秘概念
 - 地图优先“可用”，不是只给出地名列表
 - 世界逻辑优先“从规律推导事件”，不是先写事件再补规则
+- 参考标杆作品时优先学习其长板机制，例如节奏组织、信息管理、人物弧光、棋盘推进，而不是表层模仿
 
 ## 质量门槛
 
@@ -446,6 +492,7 @@ disable-model-invocation: false
 - [网文连载参考](./references/webnovel-serialization.md)
 - [大布局参考](./references/macro-plotting.md)
 - [宇宙与世界逻辑参考](./references/world-logic.md)
+- [热门网文写法参考](./references/popular-webnovel-craft.md)
 - [项目简报模板](./assets/project-brief-template.md)
 - [世界观模板](./assets/worldbuilding-template.md)
 - [宇宙设定模板](./assets/cosmology-template.md)

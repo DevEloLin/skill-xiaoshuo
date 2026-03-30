@@ -42,6 +42,10 @@
 6. 先建立世界地图
 7. 先建立宇宙地图
 
+如果你还希望吸收热门网络小说的长板，再多做一步：
+
+8. 先选你要吸收的“高层写法长板”，而不是直接模仿某一本书
+
 ## 二、推荐使用顺序
 
 ### 1. 新建项目时
@@ -52,8 +56,10 @@
 2. 世界观
 3. 角色设定
 4. 总纲
-5. 前几章章节卡
-6. 正文
+5. 卷纲
+6. 细纲
+7. 前几章章节卡
+8. 正文
 
 对应文件：
 
@@ -61,6 +67,8 @@
 - [assets/worldbuilding-template.md](./assets/worldbuilding-template.md)
 - [assets/character-template.md](./assets/character-template.md)
 - [assets/outline-template.md](./assets/outline-template.md)
+- [assets/volume-outline-template.md](./assets/volume-outline-template.md)
+- [assets/detailed-outline-template.md](./assets/detailed-outline-template.md)
 - [assets/chapter-card-template.md](./assets/chapter-card-template.md)
 
 ### 2. 长篇 / 连载项目时
@@ -72,6 +80,10 @@
 - [assets/plot-thread-template.md](./assets/plot-thread-template.md)
 - [assets/chapter-summary-template.md](./assets/chapter-summary-template.md)
 - [assets/series-state-template.md](./assets/series-state-template.md)
+- [assets/memory-index-template.md](./assets/memory-index-template.md)
+- [assets/consistency-ledger-template.md](./assets/consistency-ledger-template.md)
+- [assets/character-biography-template.md](./assets/character-biography-template.md)
+- [assets/relationship-map-template.md](./assets/relationship-map-template.md)
 
 如果是网文连载，再加：
 
@@ -79,6 +91,7 @@
 
 如果你要追求大布局，再加：
 
+- [assets/storyline-board-template.md](./assets/storyline-board-template.md)
 - [assets/plot-architecture-template.md](./assets/plot-architecture-template.md)
 - [assets/foreshadow-matrix-template.md](./assets/foreshadow-matrix-template.md)
 - [assets/faction-board-template.md](./assets/faction-board-template.md)
@@ -90,18 +103,41 @@
 - [assets/world-map-template.md](./assets/world-map-template.md)
 - [assets/universe-map-template.md](./assets/universe-map-template.md)
 
+如果你还要吸收热门写法，再读：
+
+- [references/popular-webnovel-craft.md](./references/popular-webnovel-craft.md)
+- [references/anti-pastiche.md](./references/anti-pastiche.md)
+
+如果你想先把整个项目资料整理清楚，再加：
+
+- [references/project-organization.md](./references/project-organization.md)
+
 ### 3. 日常章节写作时
 
 建议固定流程：
 
-1. 读上一章摘要
-2. 读 canon 事实和时间线
-3. 先做章节卡
-4. 再写正文
-5. 写完后做审校
-6. 回写章节摘要、时间线、伏笔和状态
+1. 读记忆索引
+2. 读 canon 事实和连续性台账
+3. 读时间线和上一章摘要
+4. 读当前卷纲 / 细纲 / 章节卡
+5. 再写正文
+6. 写完后做审校
+7. 回写章节摘要、时间线、伏笔、状态和连续性台账
 
 这是这个 Skill 最关键的用法。
+
+### 3.1 先整理文件夹再开始长篇
+
+如果你准备写的是中长篇、连载、多卷或多线作品，建议先按 [project-organization.md](./references/project-organization.md) 建立目录，再填模板。
+
+最低建议先建：
+
+1. `00-brief`
+2. `03-outline`
+3. `05-chapters`
+4. `07-memory`
+
+这样做的意义是把结构文件、正文文件、状态文件彻底分开，减少后续写乱。
 
 ### 4. 大布局项目时
 
@@ -128,7 +164,41 @@
 - 跨界、穿梭、战争和资源逻辑对不上
 - 规则只在需要时出现，不需要时消失
 
-## 三、最推荐的 6 种使用模式
+### 6. 吸收热门写法时
+
+如果你想参考热门作品，不建议直接说“按某本书写”，更好的用法是拆成长板来选：
+
+可选长板包括：
+
+- 世界厚度
+- 信息悬疑
+- 升级爽点
+- 群像辨识度
+- 情绪爆点
+- 史诗感
+- 宿命感
+- 克制成长
+- 仪式感
+- 棋盘感
+
+推荐问法：
+
+```text
+不要模仿具体作品文本。
+请参考热门网文常见长板，帮我组合以下写法：
+- 主长板：世界厚度 + 克制成长 + 大棋盘
+- 辅长板：远回收伏笔 + 群像辨识度 + 宿命感
+
+目标：用于我的多卷玄幻长篇设定和总纲。
+```
+
+在这一步之后，建议再加一句：
+
+```text
+请继续用反拼贴规则检查这个组合，删掉不服务主体验的部分，并说明哪些长板应当舍弃。
+```
+
+## 三、最推荐的 10 种使用模式
 
 ### 模式 A：新建小说
 
@@ -384,6 +454,73 @@
 2. 设计世界规律
 3. 设计世界地图和宇宙地图
 4. 说明这些规则如何约束主线和势力棋盘
+```
+
+### 模式 I：写法吸收模式
+
+适合场景：
+
+- 想参考热门网文的长处
+- 想吸收优点，但不想变成拼贴模仿
+
+推荐目标：
+
+- 明确主长板和辅长板
+- 把这些长板映射到你的结构、世界观和人物系统里
+- 输出一套适合你项目的组合策略
+
+推荐提问：
+
+```text
+任务阶段：写法吸收
+题材模板：玄幻
+目标读者：男频
+篇幅目标：多卷长篇
+不要模仿具体作品文本。
+
+我想吸收的长板：
+- 主长板：信息悬疑、大棋盘、克制成长
+- 辅长板：群像辨识度、史诗感、远回收伏笔
+
+本次任务：
+1. 分析这套长板适合什么类型的作品
+2. 帮我把它映射到世界观、总纲、章节推进里
+3. 列出容易踩的拼贴式误区
+```
+
+### 模式 J：项目整理模式
+
+适合场景：
+
+- 手上资料很多，但散在不同文档和对话里
+- 准备开始长篇或连载，希望先把目录和状态体系搭好
+- 已经出现前后不一致，想先做一次文件归档和记忆重建
+
+推荐目标：
+
+- 输出项目目录树
+- 指定当前阶段必须创建的文件
+- 明确每轮写作前的读取顺序
+- 明确哪些内容进 memory，哪些内容进 outline，哪些内容进 drafts
+
+推荐提问：
+
+```text
+任务阶段：项目整理
+题材模板：玄幻
+篇幅目标：多卷长篇
+当前问题：资料散乱，人物设定、总纲、章节草稿、伏笔记录分散在多个文档里
+目标：建立一套稳定目录，后续用于长期连载
+必须保留：
+- 总纲、卷纲、细纲、章节卡分开存放
+- 人物小传和关系图单独维护
+- 记忆文件必须能防止设定漂移和前后矛盾
+
+本次任务：
+1. 给我输出推荐目录树
+2. 按我当前阶段列出必须先建的文件
+3. 给出每次写作前必须读取的文件顺序
+4. 说明哪些文件需要每章回写
 ```
 
 ## 四、每次输入时最好提供什么
