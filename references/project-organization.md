@@ -20,7 +20,9 @@ novel-project/
 ├── 02-characters/
 │   ├── character-cards.md
 │   ├── character-biographies.md
-│   └── relationship-map.md
+│   ├── relationship-map.md
+│   ├── ensemble-cast.md
+│   └── ensemble-arc-matrix.md
 ├── 03-outline/
 │   ├── master-outline.md
 │   ├── storyline-board.md
@@ -86,6 +88,8 @@ novel-project/
 - 人物小传
 - 关系图
 - 人物弧光
+- 群像总表
+- 群像弧光矩阵
 
 ### `03-outline`
 
@@ -151,6 +155,11 @@ novel-project/
 7. `07-memory/consistency-ledger.md`
 
 没有这 7 项，长篇中后期很容易开始乱。
+
+如果作品采用群像推进，再至少补两项：
+
+8. `02-characters/ensemble-cast.md`
+9. `02-characters/ensemble-arc-matrix.md`
 
 ## 四、每次写作前的读取顺序
 

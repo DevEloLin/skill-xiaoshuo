@@ -27,6 +27,8 @@
 - 把写作、润色、审校拆开处理
 - 尽量减少 AI 幻觉和设定漂移
 - 把单章正文稳定控制在可连载区间，默认不少于 3100 字，常规 3200 到 4200 字
+- 让核心角色阵列真正进入主线，而不是只剩单主角和工具人配角
+- 让读者在合适阶段持续遇到值得追问的未知钩子，而不是只靠空泛神秘感吊着走
 
 ## 核心能力
 
@@ -54,6 +56,8 @@
 20. 分卷大纲与细纲拆解
 21. 人物小传与关系图维护
 22. 记忆索引与连续性台账
+23. 群像角色阵列与群像弧光设计
+24. 未知钩子设计与阶段揭示控制
 
 ## 适用场景
 
@@ -105,6 +109,8 @@ skill-xiaoshuo/
 │   ├── consistency-ledger-template.md
 │   ├── cosmology-template.md
 │   ├── continuity-checklist.md
+│   ├── ensemble-arc-matrix-template.md
+│   ├── ensemble-cast-template.md
 │   ├── faction-board-template.md
 │   ├── foreshadow-matrix-template.md
 │   ├── genre-lightnovel-template.md
@@ -124,6 +130,7 @@ skill-xiaoshuo/
 │   ├── timeline-template.md
 │   ├── detailed-outline-template.md
 │   ├── memory-index-template.md
+│   ├── unknown-hook-matrix-template.md
 │   ├── universe-map-template.md
 │   ├── volume-outline-template.md
 │   ├── world-map-template.md
@@ -131,8 +138,10 @@ skill-xiaoshuo/
 │   └── worldbuilding-template.md
 └── references/
     ├── anti-pastiche.md
+    ├── ensemble-writing.md
     ├── hallucination-control.md
     ├── macro-plotting.md
+    ├── unknown-hook-design.md
     ├── popular-webnovel-craft.md
     ├── project-organization.md
     ├── quality-rubric.md
@@ -165,6 +174,12 @@ skill-xiaoshuo/
 - [character-biography-template.md](./assets/character-biography-template.md)
   用于人物小传、前史、秘密、说话惯性和连续性锚点维护。
 
+- [ensemble-cast-template.md](./assets/ensemble-cast-template.md)
+  用于维护核心群像成员、角色分层、角色分工和工具人风险。
+
+- [ensemble-arc-matrix-template.md](./assets/ensemble-arc-matrix-template.md)
+  用于维护核心群像在不同阶段的弧光变化和交叉影响。
+
 - [outline-template.md](./assets/outline-template.md)
   用于整部作品的大结构设计。
 
@@ -179,6 +194,9 @@ skill-xiaoshuo/
 
 - [chapter-card-template.md](./assets/chapter-card-template.md)
   用于单章情节拆解，控制本章目标、冲突、节拍和钩子。
+
+- [unknown-hook-matrix-template.md](./assets/unknown-hook-matrix-template.md)
+  用于维护主未知、副未知、阶段偏移和最终回收，避免悬念只靠故弄玄虚。
 
 ### 记忆与状态模板
 
@@ -280,6 +298,12 @@ skill-xiaoshuo/
 - [anti-pastiche.md](./references/anti-pastiche.md)
   把“吸收长板”约束成一套硬规则，防止设定、人物、节奏、气质变成热门作品拼装。
 
+- [ensemble-writing.md](./references/ensemble-writing.md)
+  规定什么才算真正的群像、如何避免多人围观单主角，以及如何在章节和卷级控制群像平衡。
+
+- [unknown-hook-design.md](./references/unknown-hook-design.md)
+  规定什么是有效未知、什么时候投放未知钩子、如何阶段揭示，以及如何避免空洞谜语。
+
 - [project-organization.md](./references/project-organization.md)
   给出小说项目的推荐目录树，明确故事线、总纲、细纲、人物、伏笔、记忆、审校应分别放在哪个文件夹。
 
@@ -305,7 +329,7 @@ skill-xiaoshuo/
 
 ### 支持的工作模式
 
-Skill 当前支持 10 种主模式：
+Skill 当前支持 12 种主模式：
 
 1. 模式 A，新建小说
 2. 模式 B，继续写某一章
@@ -317,6 +341,8 @@ Skill 当前支持 10 种主模式：
 8. 模式 H，宇宙设定模式
 9. 模式 I，写法吸收模式
 10. 模式 J，项目整理模式
+11. 模式 K，群像模式
+12. 模式 L，未知钩子模式
 
 ### 源信息优先级
 

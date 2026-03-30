@@ -1,6 +1,6 @@
 ---
 name: skill-xiaoshuo
-description: 'Plan, write, continue, audit, and revise long-form Chinese fiction with stronger memory and lower hallucination risk. Use for小说创作, 网文连载, Obsidian 写作, 故事总纲, 世界观设定, 人物设定, 章节规划, 正文写作, 文风统一, 连续性审校, 时间线维护, 伏笔回收, 状态管理, 草蛇灰线, 多线叙事, 主线支线, 势力棋盘, 宏大布局, 宇宙设定, 世界地图, 宇宙地图, 世界规律, 宇宙运作, 降低AI味, 减少AI幻觉. Trigger phrases include 小说, 故事, 世界观, 大纲, 人设, 章节, 续写, 润色, 连载, 审校, 时间线, 伏笔, 状态, 主线, 支线, 布局, 棋盘, 宇宙, 地图, 规律.'
+description: 'Plan, write, continue, audit, and revise long-form Chinese fiction with stronger memory and lower hallucination risk. Use for小说创作, 网文连载, Obsidian 写作, 故事总纲, 世界观设定, 人物设定, 章节规划, 正文写作, 文风统一, 连续性审校, 时间线维护, 伏笔回收, 未知钩子, 悬疑钩子, 信息差, 状态管理, 草蛇灰线, 多线叙事, 主线支线, 群像, 群像写作, 多主角, 团队叙事, 势力棋盘, 宏大布局, 宇宙设定, 世界地图, 宇宙地图, 世界规律, 宇宙运作, 降低AI味, 减少AI幻觉. Trigger phrases include 小说, 故事, 世界观, 大纲, 人设, 章节, 续写, 润色, 连载, 审校, 时间线, 伏笔, 未知, 钩子, 信息差, 状态, 主线, 支线, 群像, 多主角, 团队, 布局, 棋盘, 宇宙, 地图, 规律.'
 argument-hint: 'Describe genre, target readers, tone, length, current material, and the writing task you want completed.'
 user-invocable: true
 disable-model-invocation: false
@@ -17,7 +17,9 @@ disable-model-invocation: false
 - 先更新状态，再继续连载
 - 信息不足时保守输出，不擅自发明新设定
 - 不让剧情只剩单线推进，而要形成主线、支线、暗线彼此咬合
+- 不让人物只剩主角单核推进，而要形成彼此推动、彼此冲突、彼此照亮的群像阵列
 - 不让伏笔只停留在单点回收，而要形成近中远多层回响
+- 不让悬念只靠故弄玄虚，而要在合适阶段持续投放具体可感、值得追问的未知钩子
 - 不让世界观只停留在名词堆砌，而要形成可推演、可约束剧情的宇宙运作体系
 - 不让地图只是装饰，而要让世界地图、宇宙地图与势力、资源、战争、文明流动相互对应
 
@@ -85,6 +87,22 @@ disable-model-invocation: false
 - 近回收 / 中回收 / 远回收伏笔层级
 - 哪些章节负责埋，哪些章节负责偏移，哪些章节负责兑现
 
+如果用户追求群像，再额外收集：
+
+- 核心群像人数：建议前期 3 到 5 人
+- 哪些角色具备独立行动线
+- 哪些角色会和主角发生价值观分歧
+- 哪些角色需要完整弧光，哪些只承担阶段性作用
+- 当前最重要的群像组合与最容易工具人化的角色
+
+如果用户追求悬疑感、未知感、信息差推进，再额外收集：
+
+- 开篇未知钩子是什么
+- 第一卷核心未知是什么
+- 哪些未知只允许偏移，不允许立刻解释
+- 哪些未知必须在章尾或卷尾升级
+- 哪条未知与主角身份、记忆、动机或处境直接绑定
+
 如果用户追求宏伟世界观，再额外收集：
 
 - 宇宙层级：单世界 / 多界 / 多重宇宙 / 星海文明 / 神话宇宙
@@ -110,6 +128,8 @@ disable-model-invocation: false
 9. 地图必须有叙事意义，地理结构和宇宙结构都要能解释资源、文明、冲突与迁移
 10. 参考优秀作品时，只抽取高层写法机制，不复制具体文本、桥段组合、标志性设定或角色关系
 11. 单章正文默认不得少于 3100 字，常规目标控制在 3200 到 4200 字，除非用户明确要求更短或更长
+12. 群像作品中，至少 3 个核心角色要拥有独立目标、独立代价和独立推动局势的能力，不能只围着主角转
+13. 未知钩子必须先被读者具体感知，再被阶段性延迟解释，不能只靠作者硬藏信息制造神秘感
 
 ## 记忆体系
 
@@ -126,6 +146,9 @@ disable-model-invocation: false
 9. 地图体系：记录世界地图、区域关系、宇宙地图和跨界路径
 10. 记忆索引：规定每一轮写作前先读什么、先看什么、当前锁定什么
 11. 连续性台账：记录已锁定决定、禁止冲突项、可调整边界和修订记录
+12. 群像总表：记录核心群像角色的功能分层、不可替代性和当前失衡风险
+13. 群像弧光矩阵：记录核心角色各自的阶段变化与交叉影响
+14. 未知钩子矩阵：记录未知对象、未知问题、阶段揭示和最终回收方式
 
 推荐优先维护：
 
@@ -145,11 +168,16 @@ disable-model-invocation: false
 - [细纲模板](./assets/detailed-outline-template.md)
 - [人物小传模板](./assets/character-biography-template.md)
 - [人物关系图模板](./assets/relationship-map-template.md)
+- [群像角色总表模板](./assets/ensemble-cast-template.md)
+- [群像弧光矩阵模板](./assets/ensemble-arc-matrix-template.md)
+- [未知钩子矩阵模板](./assets/unknown-hook-matrix-template.md)
 - [宇宙设定模板](./assets/cosmology-template.md)
 - [世界地图模板](./assets/world-map-template.md)
 - [宇宙地图模板](./assets/universe-map-template.md)
 - [世界规律模板](./assets/world-rules-template.md)
 - [热门网文写法参考](./references/popular-webnovel-craft.md)
+- [群像写作参考](./references/ensemble-writing.md)
+- [未知钩子设计参考](./references/unknown-hook-design.md)
 - [反拼贴规则](references/anti-pastiche.md)
 - [项目文件夹组织参考](./references/project-organization.md)
 
@@ -165,6 +193,8 @@ disable-model-invocation: false
 - 地图阶段：使用 [世界地图模板](./assets/world-map-template.md) 和 [宇宙地图模板](./assets/universe-map-template.md)
 - 人设阶段：使用 [角色模板](./assets/character-template.md)
 - 总纲阶段：使用 [总纲模板](./assets/outline-template.md)
+- 未知设计阶段：使用 [未知钩子矩阵模板](./assets/unknown-hook-matrix-template.md)
+- 群像阶段：使用 [群像角色总表模板](./assets/ensemble-cast-template.md) 和 [群像弧光矩阵模板](./assets/ensemble-arc-matrix-template.md)
 - 卷纲阶段：使用 [分卷大纲模板](./assets/volume-outline-template.md)
 - 细纲阶段：使用 [细纲模板](./assets/detailed-outline-template.md)
 - 章节阶段：使用 [章节卡模板](./assets/chapter-card-template.md)
@@ -184,6 +214,8 @@ disable-model-invocation: false
 - 模式 H，宇宙设定模式：先定义宇宙运作、世界规律、地图体系，再反推文明和剧情
 - 模式 I，写法吸收模式：先定义主体验，再选择长板组合，最后用反拼贴规则做验收
 - 模式 J，项目整理模式：先输出目录树，再按阶段创建文件夹和对应状态文件
+- 模式 K，群像模式：先建立群像总表、群像弧光矩阵和关系图，再反推主线分工与章节戏份
+- 模式 L，未知钩子模式：先定义主未知、副未知和阶段揭示，再反推开篇、章尾和卷尾的吸引力设计
 
 如果用户目标跨多个阶段，按“先结构、再章节、后正文、最后审校”的顺序执行。
 
@@ -260,6 +292,10 @@ disable-model-invocation: false
 
 0.5 先建立记忆索引和连续性台账，再进入卷纲、细纲和章节阶段
 
+如果作品依赖悬疑感或未知推进，再加常驻步骤：
+
+0.6 先建立未知钩子矩阵，再进入总纲、卷纲和章节阶段
+
 ### 3.1 先过反拼贴验收，再吸收热门写法
 
 如果用户要求“参考热门作品”“融合多部作品优点”“兼顾多种爆款长板”，默认先做三步：
@@ -312,7 +348,9 @@ disable-model-invocation: false
 ### 6. 正文生成规则
 
 - 先明确本章功能：推进主线、塑造人物、揭示设定、制造反转、回收伏笔中的哪一种
+- 适合当前阶段时，尽早投放一个具体可感的未知钩子，让读者能明确追问“发生了什么”或“为什么会这样”
 - 每章至少明确一个外部冲突和一个内部变化
+- 群像作品里，每章除主角外，至少有 1 个核心角色真正改变局势、改变关系或改变信息结构
 - 场景切换要有明显触发，不要无因跳转
 - 对话要服务于人物关系和信息推进，不要只为解释设定
 - 避免反复使用同一类形容词、同一节奏句式和空泛情绪词
@@ -322,9 +360,11 @@ disable-model-invocation: false
 - 如果必须新增，先显式说明这是“候选设定”或“建议补充项”，不要直接写死进正文
 - 每章至少和一条主线或支线产生有效联系，不能成为完全孤立的片段
 - 当一章主要服务支线时，也要让它对主线认知、人物关系或后续棋局产生反作用
+- 不要让同一个角色长期垄断高光，卷级范围内要允许核心群像轮换承担波峰
 - 伏笔优先采用“多次擦边出现”而不是“一次硬塞，后面突然回收”
 - 优先使用草蛇灰线式埋法：细节先行、意义后显、回头才成立
 - 反转优先来自旧信息重组，而不是新信息空降
+- 未知钩子优先和主角处境、关系、身份、记忆或禁忌知识绑定，而不是只做空泛世界谜团
 - 地理位置、宇宙位置、资源距离和交通成本要真实影响事件推进
 - 不同世界层级的规则差异要有明确代价，不能随意跨界、穿梭、降维使用
 - 世界地图和宇宙地图上的节点，必须和剧情中的战争、探索、贸易、信仰或灾变产生对应
