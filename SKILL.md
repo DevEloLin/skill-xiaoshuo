@@ -18,10 +18,12 @@ disable-model-invocation: false
 - 信息不足时保守输出，不擅自发明新设定
 - 不让剧情只剩单线推进，而要形成主线、支线、暗线彼此咬合
 - 不让人物只剩主角单核推进，而要形成彼此推动、彼此冲突、彼此照亮的群像阵列
+- 不让群像只停留在主角团队，而要让反派、敌对阵营、中立方和普通人层面的反馈都参与推进
 - 不让伏笔只停留在单点回收，而要形成近中远多层回响
 - 不让悬念只靠故弄玄虚，而要在合适阶段持续投放具体可感、值得追问的未知钩子
 - 不让文本一眼 AI，而要在平台投稿场景下尽量减少平均腔、解释腔、套话感和过度工整感
 - 不让去 AI 化只停留在口号，而要先诊断主症状，再分轮修掉解释腔、现场感缺失、对白同声和平均节奏
+- 不让章节开头长期重复同一种起手方式，而要根据本章压力源、局势视角和信息顺序轮换章首设计
 - 不让世界观只停留在名词堆砌，而要形成可推演、可约束剧情的宇宙运作体系
 - 不让地图只是装饰，而要让世界地图、宇宙地图与势力、资源、战争、文明流动相互对应
 
@@ -141,6 +143,8 @@ disable-model-invocation: false
 13. 未知钩子必须先被读者具体感知，再被阶段性延迟解释，不能只靠作者硬藏信息制造神秘感
 14. 投稿文本优先减少解释腔、平均句、抽象情绪词堆叠和角色同声腔，先保证自然度，再追求完整度
 15. 去 AI 化优先按“先诊断、再定点修订、最后复检”的顺序处理，一轮只解决 1 到 3 个最重问题，避免越修越匀
+16. 连载章节的章首必须轮换，默认优先检查最近 2 到 3 章是否都从主角或主角团队起手；若重复，则强制改用异常、后果、反派动作、旁观者见闻或错位信息开头
+17. 每章至少应有一股非主角力量推进局势，优先从反派、敌对阵营、中立方、旁观者和路人反馈中选择，避免所有事件都等主角触发
 
 ## 记忆体系
 
@@ -162,6 +166,8 @@ disable-model-invocation: false
 14. 未知钩子矩阵：记录未知对象、未知问题、阶段揭示和最终回收方式
 15. 投稿润色单：记录平台偏好、AI 痕迹排查项和本轮精修重点
 16. 去 AI 味诊断单：记录当前最重的模型痕迹、证据段落和本轮只处理的问题层
+17. 章首轮换表：记录最近几章的章首类型，防止连续重复
+18. 多阵营动态表：记录主角团外各股力量的动作、误判和影响链
 
 推荐优先维护：
 
@@ -186,6 +192,8 @@ disable-model-invocation: false
 - [未知钩子矩阵模板](./assets/unknown-hook-matrix-template.md)
 - [平台投稿润色模板](./assets/submission-polish-template.md)
 - [去 AI 味诊断模板](./assets/de-ai-diagnostic-template.md)
+- [章首轮换模板](./assets/chapter-opening-rotation-template.md)
+- [多阵营动态模板](./assets/multi-faction-dynamics-template.md)
 - [宇宙设定模板](./assets/cosmology-template.md)
 - [世界地图模板](./assets/world-map-template.md)
 - [宇宙地图模板](./assets/universe-map-template.md)
@@ -212,9 +220,11 @@ disable-model-invocation: false
 - 总纲阶段：使用 [总纲模板](./assets/outline-template.md)
 - 未知设计阶段：使用 [未知钩子矩阵模板](./assets/unknown-hook-matrix-template.md)
 - 群像阶段：使用 [群像角色总表模板](./assets/ensemble-cast-template.md) 和 [群像弧光矩阵模板](./assets/ensemble-arc-matrix-template.md)
+- 章首设计阶段：使用 [章首轮换模板](./assets/chapter-opening-rotation-template.md)
 - 卷纲阶段：使用 [分卷大纲模板](./assets/volume-outline-template.md)
 - 细纲阶段：使用 [细纲模板](./assets/detailed-outline-template.md)
 - 章节阶段：使用 [章节卡模板](./assets/chapter-card-template.md)
+- 阵营动态阶段：使用 [多阵营动态模板](./assets/multi-faction-dynamics-template.md)
 - 项目整理阶段：使用 [项目文件夹组织参考](./references/project-organization.md)
 - 连载维护阶段：使用 [连载状态模板](./assets/series-state-template.md)
 - 审校阶段：使用 [连续性检查清单](./assets/continuity-checklist.md)

@@ -56,17 +56,21 @@
 
 9. 先建立群像总表和群像弧光矩阵，再去写总纲、卷纲和章节
 
+如果你发现故事总是只围着主角团转，再多做一步：
+
+10. 先建立多阵营动态表，让反派、敌对方、中立方和普通人层面都拥有动作线
+
 如果你还希望读者一直被“到底发生了什么”“为什么会这样”牵着走，再多做一步：
 
-10. 先建立未知钩子矩阵，再去写开篇、卷纲和章节结尾
+11. 先建立未知钩子矩阵，再去写开篇、卷纲和章节结尾
 
 如果你还希望稿子能拿去投起点、知乎而不显得一眼 AI，再多做一步：
 
-11. 先识别平台偏好和当前 AI 痕迹，再做定向投稿润色
+12. 先识别平台偏好和当前 AI 痕迹，再做定向投稿润色
 
 如果你还希望“去 AI 味”不只是口头要求，而是能稳定迭代，再多做一步：
 
-12. 先用诊断模板锁定最重的 1 到 3 个问题，再按层分轮精修
+13. 先用诊断模板锁定最重的 1 到 3 个问题，再按层分轮精修
 
 ## 二、推荐使用顺序
 
@@ -109,9 +113,11 @@
 - [assets/relationship-map-template.md](./assets/relationship-map-template.md)
 - [assets/ensemble-cast-template.md](./assets/ensemble-cast-template.md)
 - [assets/ensemble-arc-matrix-template.md](./assets/ensemble-arc-matrix-template.md)
+- [assets/multi-faction-dynamics-template.md](./assets/multi-faction-dynamics-template.md)
 - [assets/unknown-hook-matrix-template.md](./assets/unknown-hook-matrix-template.md)
 - [assets/submission-polish-template.md](./assets/submission-polish-template.md)
 - [assets/de-ai-diagnostic-template.md](./assets/de-ai-diagnostic-template.md)
+- [assets/chapter-opening-rotation-template.md](./assets/chapter-opening-rotation-template.md)
 
 如果是网文连载，再加：
 
@@ -144,6 +150,10 @@
 
 - [references/ensemble-writing.md](./references/ensemble-writing.md)
 
+如果你发现每章开头越来越像，或者老是主角团队先出场，再加：
+
+- [assets/chapter-opening-rotation-template.md](./assets/chapter-opening-rotation-template.md)
+
 如果你要把悬疑感和未知感做稳，再加：
 
 - [references/unknown-hook-design.md](./references/unknown-hook-design.md)
@@ -169,10 +179,15 @@
 
 8. 群像总表
 9. 群像弧光矩阵
+10. 多阵营动态表
 
 如果作品依赖悬疑或未知推进，再额外读：
 
-10. 未知钩子矩阵
+11. 未知钩子矩阵
+
+如果你发现章首容易重复，再额外读：
+
+12. 章首轮换表
 
 正文长度默认要求：
 
@@ -593,12 +608,13 @@
 
 - 你不想再写成“一个主角 + 一圈工具人”
 - 你希望多个角色都能独立推动局势
-- 你希望团队、同伴、对手、旁支角色都拥有自己的命运线
+- 你希望团队、同伴、对手、敌对阵营、中立方、旁支角色都拥有自己的命运线
 
 推荐目标：
 
 - 输出核心群像总表
 - 输出群像弧光矩阵
+- 输出多阵营动态表
 - 输出群像分工和关系推进方向
 - 明确谁在不同卷和不同章节承担波峰
 
@@ -610,7 +626,7 @@
 目标读者：男频
 篇幅目标：多卷长篇
 当前问题：主角之外的人物都太像功能件，主线推进几乎全靠主角
-希望效果：至少 4 个核心角色拥有独立目标、独立代价和独立行动线
+希望效果：至少 4 个核心角色拥有独立目标、独立代价和独立行动线，反派和敌对阵营也能在主角不在场时推动局势
 必须保留：
 - 每个核心角色都要和主线有关
 - 角色之间要彼此影响，不只是围着主角转
@@ -621,8 +637,9 @@
 本次任务：
 1. 建立核心群像 4 人的总表
 2. 给出这 4 人的弧光矩阵
-3. 指出他们分别如何推动主线、支线和关系变化
-4. 标出谁最容易工具人化，以及怎么修正
+3. 补一张多阵营动态表，写清主角团外谁在推进
+4. 指出他们分别如何推动主线、支线和关系变化
+5. 标出谁最容易工具人化，以及怎么修正
 ```
 
 ### 模式 L：未知钩子模式

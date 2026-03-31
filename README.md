@@ -28,9 +28,11 @@
 - 尽量减少 AI 幻觉和设定漂移
 - 把单章正文稳定控制在可连载区间，默认不少于 3100 字，常规 3200 到 4200 字
 - 让核心角色阵列真正进入主线，而不是只剩单主角和工具人配角
+- 让群像不只停留在主角团队，而把反派、敌对阵营、中立方和普通人反馈也写进局势推进
 - 让读者在合适阶段持续遇到值得追问的未知钩子，而不是只靠空泛神秘感吊着走
 - 让投稿给起点、知乎等平台的文本更自然，尽量降低一眼 AI 和模型打磨痕迹
 - 让去 AI 味变成可执行流程，先诊断再定点修订，而不是一把梭式全文打磨
+- 让每章开头具备轮换能力，不再长期重复同一种主角起手式
 
 ## 核心能力
 
@@ -59,8 +61,10 @@
 21. 人物小传与关系图维护
 22. 记忆索引与连续性台账
 23. 群像角色阵列与群像弧光设计
-24. 未知钩子设计与阶段揭示控制
-25. 平台投稿适配与去 AI 化精修
+24. 多阵营动态与主角团外推进设计
+25. 章节开头轮换与章首抓手控制
+26. 未知钩子设计与阶段揭示控制
+27. 平台投稿适配与去 AI 化精修
 
 ## 适用场景
 
@@ -113,6 +117,7 @@ skill-xiaoshuo/
 │   ├── consistency-ledger-template.md
 │   ├── cosmology-template.md
 │   ├── continuity-checklist.md
+│   ├── chapter-opening-rotation-template.md
 │   ├── de-ai-diagnostic-template.md
 │   ├── ensemble-arc-matrix-template.md
 │   ├── ensemble-cast-template.md
@@ -136,6 +141,7 @@ skill-xiaoshuo/
 │   ├── timeline-template.md
 │   ├── detailed-outline-template.md
 │   ├── memory-index-template.md
+│   ├── multi-faction-dynamics-template.md
 │   ├── unknown-hook-matrix-template.md
 │   ├── universe-map-template.md
 │   ├── volume-outline-template.md
@@ -144,7 +150,7 @@ skill-xiaoshuo/
 │   └── worldbuilding-template.md
 └── references/
     ├── anti-pastiche.md
-  ├── de-ai-rewriting-patterns.md
+    ├── de-ai-rewriting-patterns.md
     ├── ensemble-writing.md
     ├── hallucination-control.md
     ├── macro-plotting.md
@@ -183,10 +189,13 @@ skill-xiaoshuo/
   用于人物小传、前史、秘密、说话惯性和连续性锚点维护。
 
 - [ensemble-cast-template.md](./assets/ensemble-cast-template.md)
-  用于维护核心群像成员、角色分层、角色分工和工具人风险。
+  用于维护核心群像成员、反派角色、敌对阵营代表和工具人风险。
 
 - [ensemble-arc-matrix-template.md](./assets/ensemble-arc-matrix-template.md)
   用于维护核心群像在不同阶段的弧光变化和交叉影响。
+
+- [multi-faction-dynamics-template.md](./assets/multi-faction-dynamics-template.md)
+  用于维护主角团外各阵营的目标、动作、误判和对局势的独立推进。
 
 - [outline-template.md](./assets/outline-template.md)
   用于整部作品的大结构设计。
@@ -202,6 +211,9 @@ skill-xiaoshuo/
 
 - [chapter-card-template.md](./assets/chapter-card-template.md)
   用于单章情节拆解，控制本章目标、冲突、节拍和钩子。
+
+- [chapter-opening-rotation-template.md](./assets/chapter-opening-rotation-template.md)
+  用于避免每章都从同一种方式起手，强制轮换章首类型。
 
 - [unknown-hook-matrix-template.md](./assets/unknown-hook-matrix-template.md)
   用于维护主未知、副未知、阶段偏移和最终回收，避免悬念只靠故弄玄虚。
