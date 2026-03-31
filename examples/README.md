@@ -30,6 +30,9 @@
 7. [07-emotion-conflict-character.md](./07-emotion-conflict-character.md)
    演示如何同时提升情绪价值、冲突密度和角色魅力记忆点。
 
+8. [08-first-sentence-polish.md](./08-first-sentence-polish.md)
+   演示如何专门修正每章第一句的 AI 安全起手腔。
+
 ## 如何阅读这些示例
 
 每个示例都包含：
@@ -46,3 +49,4 @@
 如果你主要想降低 AI 味，看 5。
 如果你主要想拉开人物对白，看 6。
 如果你主要想提高情绪价值和节奏，看 7。
+如果你主要卡在章首第一句，看 8。

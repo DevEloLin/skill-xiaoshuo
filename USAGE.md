@@ -166,6 +166,13 @@
 
 - [assets/chapter-opening-rotation-template.md](./assets/chapter-opening-rotation-template.md)
 
+如果你发现问题已经缩小到“每章第一句都像 AI 在安全起手”，再加：
+
+- [assets/first-sentence-template.md](./assets/first-sentence-template.md)
+- [references/first-sentence-de-ai.md](./references/first-sentence-de-ai.md)
+
+如果你还想让每章第一句不要统一腔，而是在对话、冲突、写景、比喻、争吵、高潮余波之间自然轮换，也优先用这一组模板，不要只盯着“禁用哪些坏句子”。
+
 如果你要把悬疑感和未知感做稳，再加：
 
 - [references/unknown-hook-design.md](./references/unknown-hook-design.md)
