@@ -33,6 +33,9 @@
 8. [08-first-sentence-polish.md](./08-first-sentence-polish.md)
    演示如何专门修正每章第一句的 AI 安全起手腔。
 
+9. [09-length-control.md](./09-length-control.md)
+   演示如何修复单章严重缺字，并把最低字数变成硬约束。
+
 ## 如何阅读这些示例
 
 每个示例都包含：
@@ -50,3 +53,6 @@
 如果你主要想拉开人物对白，看 6。
 如果你主要想提高情绪价值和节奏，看 7。
 如果你主要卡在章首第一句，看 8。
+如果你主要卡在单章严重缺字，看 9。
+
+如果你需要更多首句手法方向，但不想用死模板，读 [../references/first-sentence-technique-library.md](../references/first-sentence-technique-library.md)。

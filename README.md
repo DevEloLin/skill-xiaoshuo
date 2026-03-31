@@ -27,6 +27,7 @@
 - 把写作、润色、审校拆开处理
 - 尽量减少 AI 幻觉和设定漂移
 - 把单章正文稳定控制在可连载区间，默认不少于 3100 字，常规 3200 到 4200 字
+- 让单章字数要求变成硬约束，缺字时先补结构和场景，不交半章稿
 - 让核心角色阵列真正进入主线，而不是只剩单主角和工具人配角
 - 让群像不只停留在主角团队，而把反派、敌对阵营、中立方和普通人反馈也写进局势推进
 - 让读者在合适阶段持续遇到值得追问的未知钩子，而不是只靠空泛神秘感吊着走
@@ -68,13 +69,15 @@
 24. 多阵营动态与主角团外推进设计
 25. 章节开头轮换与章首抓手控制
 26. 章首第一句去 AI 化控制
-27. 未知钩子设计与阶段揭示控制
-28. 平台投稿适配与去 AI 化精修
-29. 情绪爆点与脏感写法控制
-30. 对白分声线与角色口头毛边控制
-31. 高情绪价值设计与共感兑现
-32. 高频冲突与节奏掌控
-33. 标签化魅力角色设计
+27. 30 种章首第一句手法库
+28. 未知钩子设计与阶段揭示控制
+29. 平台投稿适配与去 AI 化精修
+30. 情绪爆点与脏感写法控制
+31. 对白分声线与角色口头毛边控制
+32. 高情绪价值设计与共感兑现
+33. 高频冲突与节奏掌控
+34. 标签化魅力角色设计
+35. 单章字数硬约束与补字控制
 
 ## 适用场景
 
@@ -92,8 +95,12 @@
 - 通用营销文案
 - SEO 内容生产
 - 非小说类写作
+│   ├── 05-de-ai-polish.md
+│   ├── 06-dialogue-voices.md
+│   ├── 07-emotion-conflict-character.md
+│   ├── 08-first-sentence-polish.md
+│   ├── 09-length-control.md
 - 与当前作品无关的随意灵感闲聊
-
 ## 设计原则
 
 这个 Skill 的核心原则有 5 条：
@@ -108,12 +115,17 @@
 
 ```text
 skill-xiaoshuo/
+│   ├── emotion-burst-template.md
+│   ├── emotional-value-board-template.md
 ├── README.md
+│   ├── first-sentence-template.md
 ├── SKILL.md
 ├── examples/
 │   ├── 01-project-init.md
 │   ├── 02-continue-chapter.md
 │   ├── 03-webnovel-serialization.md
+│   ├── magnetic-character-template.md
+│   ├── dialogue-voice-matrix-template.md
 │   ├── 04-genre-suspense.md
 │   ├── 05-de-ai-polish.md
 │   └── README.md
@@ -127,6 +139,7 @@ skill-xiaoshuo/
 │   ├── consistency-ledger-template.md
 │   ├── cosmology-template.md
 │   ├── continuity-checklist.md
+│   ├── chapter-length-control-template.md
 │   ├── chapter-opening-rotation-template.md
 │   ├── de-ai-diagnostic-template.md
 │   ├── ensemble-arc-matrix-template.md
@@ -134,13 +147,21 @@ skill-xiaoshuo/
 │   ├── faction-board-template.md
 │   ├── foreshadow-matrix-template.md
 │   ├── genre-lightnovel-template.md
+├── work.md
 │   ├── genre-xuanhuan-template.md
 │   ├── genre-xuanyi-template.md
-│   ├── genre-yanqing-template.md
+    ├── chapter-length-enforcement.md
 │   ├── outline-template.md
 │   ├── plot-architecture-template.md
+    ├── first-sentence-de-ai.md
+    ├── first-sentence-technique-library.md
 │   ├── plot-thread-template.md
 │   ├── project-brief-template.md
+    ├── raw-emotion-writing.md
+    ├── dialogue-voice-differentiation.md
+    ├── emotional-value-design.md
+    ├── conflict-rhythm-design.md
+    ├── magnetic-character-design.md
 │   ├── relationship-map-template.md
 │   ├── rewrite-prompt-template.md
 │   ├── serialization-board-template.md
@@ -160,6 +181,7 @@ skill-xiaoshuo/
 │   └── worldbuilding-template.md
 └── references/
     ├── anti-pastiche.md
+  ├── chapter-length-enforcement.md
     ├── de-ai-rewriting-patterns.md
     ├── ensemble-writing.md
     ├── hallucination-control.md
@@ -222,11 +244,17 @@ skill-xiaoshuo/
 - [chapter-card-template.md](./assets/chapter-card-template.md)
   用于单章情节拆解，控制本章目标、冲突、节拍和钩子。
 
+- [chapter-length-control-template.md](./assets/chapter-length-control-template.md)
+  用于判断章节厚度、分配字数并规定未达最低字数时先补哪里。
+
 - [chapter-opening-rotation-template.md](./assets/chapter-opening-rotation-template.md)
   用于避免每章都从同一种方式起手，强制轮换章首类型。
 
 - [first-sentence-template.md](./assets/first-sentence-template.md)
   用于单独控制每章第一句，避免第一句先暴露 AI 安全起手腔。
+
+- [first-sentence-technique-library.md](./references/first-sentence-technique-library.md)
+  用于提供 30 种章首第一句入口手法，只给原则和短例子，不提供死模板。
 
 - [unknown-hook-matrix-template.md](./assets/unknown-hook-matrix-template.md)
   用于维护主未知、副未知、阶段偏移和最终回收，避免悬念只靠故弄玄虚。

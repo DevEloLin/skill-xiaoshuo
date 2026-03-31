@@ -34,6 +34,7 @@
 1. 每章正文不得少于 3100 字
 2. 常规稳定区间控制在 3200 到 4200 字
 3. 不足字数时补场景和冲突，不补废话
+4. 如果章节卡过薄，先补中段升级、人物反应、余波和非主角推进，再写正文
 
 如果你希望剧情更大、更复杂、更有草蛇灰线感，那么还要多做三件事：
 
@@ -84,6 +85,10 @@
 
 16. 先做情绪价值板、冲突节奏板和魅力角色表，再回到卷纲和章节卡
 
+如果你发现调用 skill 时经常严重缺字，再多做一步：
+
+17. 先做单章字数控制单，判断章节厚度、分配各段字数，再生成正文
+
 ## 二、推荐使用顺序
 
 ### 1. 新建项目时
@@ -130,10 +135,12 @@
 - [assets/submission-polish-template.md](./assets/submission-polish-template.md)
 - [assets/de-ai-diagnostic-template.md](./assets/de-ai-diagnostic-template.md)
 - [assets/chapter-opening-rotation-template.md](./assets/chapter-opening-rotation-template.md)
+- [assets/chapter-length-control-template.md](./assets/chapter-length-control-template.md)
 
 如果是网文连载，再加：
 
 - [assets/serialization-board-template.md](./assets/serialization-board-template.md)
+- [assets/chapter-length-control-template.md](./assets/chapter-length-control-template.md)
 
 如果你要追求大布局，再加：
 
@@ -172,6 +179,10 @@
 - [references/first-sentence-de-ai.md](./references/first-sentence-de-ai.md)
 
 如果你还想让每章第一句不要统一腔，而是在对话、冲突、写景、比喻、争吵、高潮余波之间自然轮换，也优先用这一组模板，不要只盯着“禁用哪些坏句子”。
+
+如果你需要更多首句入口，但又不想把首句写成轮盘模板，再加：
+
+- [references/first-sentence-technique-library.md](./references/first-sentence-technique-library.md)
 
 如果你要把悬疑感和未知感做稳，再加：
 
@@ -213,6 +224,8 @@
 1. 单章不得少于 3100 字
 2. 推荐控制在 3200 到 4200 字
 3. 如果写不到这个区间，先检查是不是章节卡过薄，而不是直接硬凑字数
+4. 如果用户没有明确允许短章，不要交付低于最低字数的残缺版
+5. 补字优先补过程、阻力、反应、余波和非主角反馈，禁止重复解释灌水
 
 这是这个 Skill 最关键的用法。
 
