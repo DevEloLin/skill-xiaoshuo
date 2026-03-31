@@ -60,6 +60,14 @@
 
 10. 先建立未知钩子矩阵，再去写开篇、卷纲和章节结尾
 
+如果你还希望稿子能拿去投起点、知乎而不显得一眼 AI，再多做一步：
+
+11. 先识别平台偏好和当前 AI 痕迹，再做定向投稿润色
+
+如果你还希望“去 AI 味”不只是口头要求，而是能稳定迭代，再多做一步：
+
+12. 先用诊断模板锁定最重的 1 到 3 个问题，再按层分轮精修
+
 ## 二、推荐使用顺序
 
 ### 1. 新建项目时
@@ -102,6 +110,8 @@
 - [assets/ensemble-cast-template.md](./assets/ensemble-cast-template.md)
 - [assets/ensemble-arc-matrix-template.md](./assets/ensemble-arc-matrix-template.md)
 - [assets/unknown-hook-matrix-template.md](./assets/unknown-hook-matrix-template.md)
+- [assets/submission-polish-template.md](./assets/submission-polish-template.md)
+- [assets/de-ai-diagnostic-template.md](./assets/de-ai-diagnostic-template.md)
 
 如果是网文连载，再加：
 
@@ -137,6 +147,11 @@
 如果你要把悬疑感和未知感做稳，再加：
 
 - [references/unknown-hook-design.md](./references/unknown-hook-design.md)
+
+如果你要面向平台投稿并降低 AI 痕迹，再加：
+
+- [references/platform-submission.md](./references/platform-submission.md)
+- [references/de-ai-rewriting-patterns.md](./references/de-ai-rewriting-patterns.md)
 
 ### 3. 日常章节写作时
 
@@ -239,7 +254,14 @@
 请继续用反拼贴规则检查这个组合，删掉不服务主体验的部分，并说明哪些长板应当舍弃。
 ```
 
-## 三、最推荐的 12 种使用模式
+## 三、最推荐的 14 种使用模式
+
+去 AI 味相关的推荐顺序：
+
+1. 先用 [assets/de-ai-diagnostic-template.md](./assets/de-ai-diagnostic-template.md) 诊断
+2. 再用 [references/de-ai-rewriting-patterns.md](./references/de-ai-rewriting-patterns.md) 选修法
+3. 如果要投稿，再接 [assets/submission-polish-template.md](./assets/submission-polish-template.md)
+4. 一轮只改 1 到 3 个问题，不要同时大修节奏、对白、结构和修辞
 
 ### 模式 A：新建小说
 
@@ -641,6 +663,78 @@
 4. 指出哪条未知最适合作为章尾和卷尾升级
 ```
 
+### 模式 M：平台投稿模式
+
+适合场景：
+
+- 你准备投稿给起点、知乎或类似平台
+- 你担心文本一眼 AI，解释腔和模板味太重
+- 你希望在不改坏剧情的前提下，把稿子修得更像真人写作
+
+推荐目标：
+
+- 识别当前文本最重的 AI 痕迹
+- 按平台偏好给出定向修法
+- 输出一版更自然、更像投稿稿的文本
+- 指出剩余问题，便于下一轮精修
+
+推荐提问：
+
+```text
+任务阶段：平台投稿模式
+投稿平台：起点
+题材模板：玄幻
+目标读者：男频
+当前稿件阶段：首章
+当前问题：开头能读，但解释腔重，段落太平均，像 AI 打磨过的稿子
+希望效果：更像平台可投稿的自然文本，有抓手，但不能太像模板套路
+必须保留：
+- 剧情结果不变
+- 核心设定不变
+- 第一章开篇未知钩子保留
+必须避免：
+- 套话感
+- 空泛情绪词堆叠
+- 所有人说话一个味
+
+本次任务：
+1. 先指出最重的 AI 痕迹
+2. 按起点偏好给出修改方向
+3. 输出润色后的版本
+4. 标出还需要下一轮精修的地方
+```
+
+### 模式 N：去 AI 味精修模式
+
+适合场景：
+
+- 原文能看，但解释腔重
+- 句子太平均，读起来像统一模板
+- 对白互换后仍成立
+- 情绪老是靠抽象词直给
+
+推荐提问：
+
+```text
+任务阶段：去 AI 味精修
+题材：都市悬疑
+投稿平台：起点
+本次处理重点：解释腔 + 对白去同声
+不可改变项：剧情结果、角色立场、关键线索
+
+请先使用去 AI 味诊断模板，找出当前最重的两个问题。
+然后只处理这两个问题，给出：
+1. 问题判断
+2. 润色版本
+3. 残留问题
+```
+
+操作要点：
+
+1. 不要一轮把所有问题都修完
+2. 先修解释腔和现场感，再修对白，再修节奏
+3. 如果越修越整齐，说明这一轮改过头了
+
 ## 四、每次输入时最好提供什么
 
 ### 最小输入包
@@ -698,6 +792,17 @@
 - 哪条未知绑定主角身份、记忆、动机或处境
 - 哪条未知暂时只能偏移，不能立刻解释
 - 哪条未知必须在章尾或卷尾升级
+
+### 平台投稿输入包
+
+如果你要面向平台投稿，最好再补：
+
+- 投稿平台
+- 当前稿件阶段
+- 当前最重的 AI 痕迹
+- 希望保留的长处
+- 不能改动的剧情和设定
+- 平台更看重的方向：抓手 / 节奏 / 自然度 / 叙述密度 / 视角稳定
 
 ### 宏伟世界观输入包
 

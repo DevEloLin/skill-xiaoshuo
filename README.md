@@ -29,6 +29,8 @@
 - 把单章正文稳定控制在可连载区间，默认不少于 3100 字，常规 3200 到 4200 字
 - 让核心角色阵列真正进入主线，而不是只剩单主角和工具人配角
 - 让读者在合适阶段持续遇到值得追问的未知钩子，而不是只靠空泛神秘感吊着走
+- 让投稿给起点、知乎等平台的文本更自然，尽量降低一眼 AI 和模型打磨痕迹
+- 让去 AI 味变成可执行流程，先诊断再定点修订，而不是一把梭式全文打磨
 
 ## 核心能力
 
@@ -58,6 +60,7 @@
 22. 记忆索引与连续性台账
 23. 群像角色阵列与群像弧光设计
 24. 未知钩子设计与阶段揭示控制
+25. 平台投稿适配与去 AI 化精修
 
 ## 适用场景
 
@@ -98,6 +101,7 @@ skill-xiaoshuo/
 │   ├── 02-continue-chapter.md
 │   ├── 03-webnovel-serialization.md
 │   ├── 04-genre-suspense.md
+│   ├── 05-de-ai-polish.md
 │   └── README.md
 ├── work.md
 ├── assets/
@@ -109,6 +113,7 @@ skill-xiaoshuo/
 │   ├── consistency-ledger-template.md
 │   ├── cosmology-template.md
 │   ├── continuity-checklist.md
+│   ├── de-ai-diagnostic-template.md
 │   ├── ensemble-arc-matrix-template.md
 │   ├── ensemble-cast-template.md
 │   ├── faction-board-template.md
@@ -126,6 +131,7 @@ skill-xiaoshuo/
 │   ├── serialization-board-template.md
 │   ├── series-state-template.md
 │   ├── storyline-board-template.md
+│   ├── submission-polish-template.md
 │   ├── task-prompt-template.md
 │   ├── timeline-template.md
 │   ├── detailed-outline-template.md
@@ -138,10 +144,12 @@ skill-xiaoshuo/
 │   └── worldbuilding-template.md
 └── references/
     ├── anti-pastiche.md
+  ├── de-ai-rewriting-patterns.md
     ├── ensemble-writing.md
     ├── hallucination-control.md
     ├── macro-plotting.md
     ├── unknown-hook-design.md
+    ├── platform-submission.md
     ├── popular-webnovel-craft.md
     ├── project-organization.md
     ├── quality-rubric.md
@@ -253,6 +261,12 @@ skill-xiaoshuo/
 - [rewrite-prompt-template.md](./assets/rewrite-prompt-template.md)
   用于正文续写、局部改写、润色和风格统一。
 
+- [submission-polish-template.md](./assets/submission-polish-template.md)
+  用于按起点、知乎等平台偏好做定向投稿润色，重点降低 AI 痕迹和模板腔。
+
+- [de-ai-diagnostic-template.md](./assets/de-ai-diagnostic-template.md)
+  用于先诊断当前文本最重的 AI 痕迹，再决定本轮只修哪些问题，避免一轮改到失真。
+
 ### 网文连载模板
 
 - [serialization-board-template.md](./assets/serialization-board-template.md)
@@ -280,6 +294,9 @@ skill-xiaoshuo/
 - [quality-rubric.md](./references/quality-rubric.md)
   定义结构、人设、语言、连载质量标准。
 
+- [de-ai-rewriting-patterns.md](./references/de-ai-rewriting-patterns.md)
+  总结平均句、解释腔、对白同声、现场感不足等常见 AI 痕迹的具体修法。
+
 - [hallucination-control.md](./references/hallucination-control.md)
   规定如何减少 AI 幻觉，尤其是设定幻觉和剧情幻觉。
 
@@ -303,6 +320,9 @@ skill-xiaoshuo/
 
 - [unknown-hook-design.md](./references/unknown-hook-design.md)
   规定什么是有效未知、什么时候投放未知钩子、如何阶段揭示，以及如何避免空洞谜语。
+
+- [platform-submission.md](./references/platform-submission.md)
+  规定投稿到起点、知乎等平台时，如何排查和降低 AI 痕迹、解释腔、平均腔和角色同声腔。
 
 - [project-organization.md](./references/project-organization.md)
   给出小说项目的推荐目录树，明确故事线、总纲、细纲、人物、伏笔、记忆、审校应分别放在哪个文件夹。
@@ -329,7 +349,7 @@ skill-xiaoshuo/
 
 ### 支持的工作模式
 
-Skill 当前支持 12 种主模式：
+Skill 当前支持 13 种主模式：
 
 1. 模式 A，新建小说
 2. 模式 B，继续写某一章
@@ -343,6 +363,8 @@ Skill 当前支持 12 种主模式：
 10. 模式 J，项目整理模式
 11. 模式 K，群像模式
 12. 模式 L，未知钩子模式
+13. 模式 M，平台投稿模式
+14. 模式 N，去 AI 味精修模式
 
 ### 源信息优先级
 

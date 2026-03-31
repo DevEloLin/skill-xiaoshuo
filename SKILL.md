@@ -1,6 +1,6 @@
 ---
 name: skill-xiaoshuo
-description: 'Plan, write, continue, audit, and revise long-form Chinese fiction with stronger memory and lower hallucination risk. Use for小说创作, 网文连载, Obsidian 写作, 故事总纲, 世界观设定, 人物设定, 章节规划, 正文写作, 文风统一, 连续性审校, 时间线维护, 伏笔回收, 未知钩子, 悬疑钩子, 信息差, 状态管理, 草蛇灰线, 多线叙事, 主线支线, 群像, 群像写作, 多主角, 团队叙事, 势力棋盘, 宏大布局, 宇宙设定, 世界地图, 宇宙地图, 世界规律, 宇宙运作, 降低AI味, 减少AI幻觉. Trigger phrases include 小说, 故事, 世界观, 大纲, 人设, 章节, 续写, 润色, 连载, 审校, 时间线, 伏笔, 未知, 钩子, 信息差, 状态, 主线, 支线, 群像, 多主角, 团队, 布局, 棋盘, 宇宙, 地图, 规律.'
+description: 'Plan, write, continue, audit, and revise long-form Chinese fiction with stronger memory and lower hallucination risk. Use for小说创作, 网文连载, Obsidian 写作, 故事总纲, 世界观设定, 人物设定, 章节规划, 正文写作, 文风统一, 连续性审校, 时间线维护, 伏笔回收, 未知钩子, 悬疑钩子, 信息差, 平台投稿, 起点投稿, 知乎投稿, 降低AI味, 去AI化, 状态管理, 草蛇灰线, 多线叙事, 主线支线, 群像, 群像写作, 多主角, 团队叙事, 势力棋盘, 宏大布局, 宇宙设定, 世界地图, 宇宙地图, 世界规律, 宇宙运作, 减少AI幻觉. Trigger phrases include 小说, 故事, 世界观, 大纲, 人设, 章节, 续写, 润色, 连载, 审校, 时间线, 伏笔, 未知, 钩子, 信息差, 起点, 知乎, 投稿, 去AI化, 降低AI味, 状态, 主线, 支线, 群像, 多主角, 团队, 布局, 棋盘, 宇宙, 地图, 规律.'
 argument-hint: 'Describe genre, target readers, tone, length, current material, and the writing task you want completed.'
 user-invocable: true
 disable-model-invocation: false
@@ -20,6 +20,8 @@ disable-model-invocation: false
 - 不让人物只剩主角单核推进，而要形成彼此推动、彼此冲突、彼此照亮的群像阵列
 - 不让伏笔只停留在单点回收，而要形成近中远多层回响
 - 不让悬念只靠故弄玄虚，而要在合适阶段持续投放具体可感、值得追问的未知钩子
+- 不让文本一眼 AI，而要在平台投稿场景下尽量减少平均腔、解释腔、套话感和过度工整感
+- 不让去 AI 化只停留在口号，而要先诊断主症状，再分轮修掉解释腔、现场感缺失、对白同声和平均节奏
 - 不让世界观只停留在名词堆砌，而要形成可推演、可约束剧情的宇宙运作体系
 - 不让地图只是装饰，而要让世界地图、宇宙地图与势力、资源、战争、文明流动相互对应
 
@@ -67,6 +69,13 @@ disable-model-invocation: false
 - 必须保留的题材核心体验
 - 必须避开的同质化套路
 - 参考写法侧重：群像 / 升级爽点 / 信息悬疑 / 史诗感 / 克制成长 / 少年感 / 宿命感 / 文明厚度 / 情绪爆发 / 仪式感
+
+如果用户目标是平台投稿或去 AI 化，再额外收集：
+
+- 投稿平台：起点 / 知乎 / 其他
+- 当前稿件阶段：首章 / 前三章 / 单章 / 多章连读 / 投稿样章
+- 当前最重的 AI 痕迹：解释腔 / 套话感 / 角色同声腔 / 情绪直给 / 过度工整
+- 平台更看重什么：抓手 / 连载感 / 语言自然度 / 信息密度 / 视角稳定
 
 对长篇、连载、续写任务，再额外收集：
 
@@ -130,6 +139,8 @@ disable-model-invocation: false
 11. 单章正文默认不得少于 3100 字，常规目标控制在 3200 到 4200 字，除非用户明确要求更短或更长
 12. 群像作品中，至少 3 个核心角色要拥有独立目标、独立代价和独立推动局势的能力，不能只围着主角转
 13. 未知钩子必须先被读者具体感知，再被阶段性延迟解释，不能只靠作者硬藏信息制造神秘感
+14. 投稿文本优先减少解释腔、平均句、抽象情绪词堆叠和角色同声腔，先保证自然度，再追求完整度
+15. 去 AI 化优先按“先诊断、再定点修订、最后复检”的顺序处理，一轮只解决 1 到 3 个最重问题，避免越修越匀
 
 ## 记忆体系
 
@@ -149,6 +160,8 @@ disable-model-invocation: false
 12. 群像总表：记录核心群像角色的功能分层、不可替代性和当前失衡风险
 13. 群像弧光矩阵：记录核心角色各自的阶段变化与交叉影响
 14. 未知钩子矩阵：记录未知对象、未知问题、阶段揭示和最终回收方式
+15. 投稿润色单：记录平台偏好、AI 痕迹排查项和本轮精修重点
+16. 去 AI 味诊断单：记录当前最重的模型痕迹、证据段落和本轮只处理的问题层
 
 推荐优先维护：
 
@@ -171,6 +184,8 @@ disable-model-invocation: false
 - [群像角色总表模板](./assets/ensemble-cast-template.md)
 - [群像弧光矩阵模板](./assets/ensemble-arc-matrix-template.md)
 - [未知钩子矩阵模板](./assets/unknown-hook-matrix-template.md)
+- [平台投稿润色模板](./assets/submission-polish-template.md)
+- [去 AI 味诊断模板](./assets/de-ai-diagnostic-template.md)
 - [宇宙设定模板](./assets/cosmology-template.md)
 - [世界地图模板](./assets/world-map-template.md)
 - [宇宙地图模板](./assets/universe-map-template.md)
@@ -178,6 +193,8 @@ disable-model-invocation: false
 - [热门网文写法参考](./references/popular-webnovel-craft.md)
 - [群像写作参考](./references/ensemble-writing.md)
 - [未知钩子设计参考](./references/unknown-hook-design.md)
+- [平台投稿与去 AI 化参考](./references/platform-submission.md)
+- [去 AI 味改写参考](./references/de-ai-rewriting-patterns.md)
 - [反拼贴规则](references/anti-pastiche.md)
 - [项目文件夹组织参考](./references/project-organization.md)
 
@@ -201,6 +218,8 @@ disable-model-invocation: false
 - 项目整理阶段：使用 [项目文件夹组织参考](./references/project-organization.md)
 - 连载维护阶段：使用 [连载状态模板](./assets/series-state-template.md)
 - 审校阶段：使用 [连续性检查清单](./assets/continuity-checklist.md)
+- 去 AI 味诊断阶段：先使用 [去 AI 味诊断模板](./assets/de-ai-diagnostic-template.md)
+- 投稿润色阶段：使用 [平台投稿润色模板](./assets/submission-polish-template.md)
 
 默认任务模式：
 
@@ -216,6 +235,8 @@ disable-model-invocation: false
 - 模式 J，项目整理模式：先输出目录树，再按阶段创建文件夹和对应状态文件
 - 模式 K，群像模式：先建立群像总表、群像弧光矩阵和关系图，再反推主线分工与章节戏份
 - 模式 L，未知钩子模式：先定义主未知、副未知和阶段揭示，再反推开篇、章尾和卷尾的吸引力设计
+- 模式 M，平台投稿模式：先识别平台偏好和 AI 痕迹，再做定向去 AI 化和投稿润色
+- 模式 N，去 AI 味精修模式：先诊断最重的 1 到 3 个问题，再按节奏、解释、对白、现场感分轮修订
 
 如果用户目标跨多个阶段，按“先结构、再章节、后正文、最后审校”的顺序执行。
 
@@ -354,6 +375,7 @@ disable-model-invocation: false
 - 场景切换要有明显触发，不要无因跳转
 - 对话要服务于人物关系和信息推进，不要只为解释设定
 - 避免反复使用同一类形容词、同一节奏句式和空泛情绪词
+- 平台投稿稿件优先删除“总结性解释句”、空修辞和通用情绪判断，更多让场景、动作、停顿自己说话
 - 对长篇续写，先读取已有状态资料再写
 - 正文只允许新增“小事实”，不允许擅自新增“重大 canon”
 - 重大 canon 包括：新力量体系、新核心组织、新主线秘密、新关键角色真实身份、新世界底层规则
