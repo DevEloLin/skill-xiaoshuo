@@ -23,6 +23,7 @@ disable-model-invocation: false
 - 不让单章字数要求停留在口头，而要先做章节厚度判断、字数分配、生成中补足和输出前验收，避免交出明显缺字的半章稿
 - 不让冲突稀薄到只剩说明，而要维持可感知的高频压力和节奏变化
 - 不让角色只有设定，而要有能钉在读者脑子里的标签、魅力和代价
+- 不让文本只剩功能推进，而要保留适量能留下来的金句，以及能把主角团和反派队伍写活的有趣角色层
 - 不让伏笔只停留在单点回收，而要形成近中远多层回响
 - 不让悬念只靠故弄玄虚，而要在合适阶段持续投放具体可感、值得追问的未知钩子
 - 不让文本一眼 AI，而要在平台投稿场景下尽量减少平均腔、解释腔、套话感和过度工整感
@@ -85,6 +86,7 @@ disable-model-invocation: false
 - 哪类情绪最值钱：爽 / 刀 / 委屈 / 拉扯 / 爆开 / 暧昧 / 其他
 - 章节可接受的冲突频率目标
 - 核心角色的一句话钉子标签和最强魅力场面
+- 是否需要适量金句与功能性搞笑角色
 
 如果用户目标是平台投稿或去 AI 化，再额外收集：
 
@@ -170,10 +172,12 @@ disable-model-invocation: false
 23. 章节必须兼顾推进和情绪回报，默认每章至少设置一个能让读者明显感到爽、疼、拉扯或反弹的兑现点
 24. 连载节奏默认尽早给压力、中段升级、后段推进下一轮问题，避免长时间说明或空转
 25. 角色设计默认要求“标签 + 魅力 + 代价”三件套，缺一项都容易只剩设定说明
+26. 金句默认适量配置，只在人物站住、关系刺穿、情绪爆开或主题落点处使用，禁止堆成作者发言墙
+27. 群像队伍默认需要活气层：主角团最好有一名特别犯贱、特别有趣、能拆台又能推进的角色；反派队伍也允许有搞笑担当与翻车出丑担当，但都必须服务局势
 
 ## 记忆体系
 
-这个 skill 处理长篇时，默认把“记忆”拆成 11 个层级，避免设定漂移：
+这个 skill 处理长篇时，默认把“记忆”拆成 26 个层级，避免设定漂移：
 
 1. Canon 事实表：只记录已经确认、不可随意改动的事实
 2. 人物状态表：记录每个主要角色当前处境、关系和心理变化
@@ -200,6 +204,7 @@ disable-model-invocation: false
 23. 情绪价值板：记录本书、本卷、本章最值钱的情绪兑现点和共感来源
 24. 冲突节奏板：记录章节和卷的冲突频率、升级节点和后果变化
 25. 魅力角色表：记录角色标签、魅力来源、反差和代价
+26. 金句与有趣角色单：记录哪些句子该留、谁负责活气、谁负责翻车，以及这些功能如何反哺剧情
 
 推荐优先维护：
 
@@ -233,6 +238,7 @@ disable-model-invocation: false
 - [情绪价值板模板](./assets/emotional-value-board-template.md)
 - [高频冲突节奏板模板](./assets/conflict-rhythm-template.md)
 - [标签化魅力角色模板](./assets/magnetic-character-template.md)
+- [金句与功能性有趣角色模板](./assets/funny-role-template.md)
 - [宇宙设定模板](./assets/cosmology-template.md)
 - [世界地图模板](./assets/world-map-template.md)
 - [宇宙地图模板](./assets/universe-map-template.md)
@@ -250,6 +256,7 @@ disable-model-invocation: false
 - [情绪价值设计参考](./references/emotional-value-design.md)
 - [高频冲突与节奏掌控参考](./references/conflict-rhythm-design.md)
 - [标签化魅力角色参考](./references/magnetic-character-design.md)
+- [金句与功能性有趣角色参考](./references/funny-role-design.md)
 - [反拼贴规则](references/anti-pastiche.md)
 - [项目文件夹组织参考](./references/project-organization.md)
 
@@ -264,6 +271,7 @@ disable-model-invocation: false
 - 宇宙设定阶段：使用 [宇宙设定模板](./assets/cosmology-template.md)
 - 地图阶段：使用 [世界地图模板](./assets/world-map-template.md) 和 [宇宙地图模板](./assets/universe-map-template.md)
 - 人设阶段：使用 [角色模板](./assets/character-template.md)
+- 人物小传阶段：使用 [人物小传模板](./assets/character-biography-template.md)
 - 总纲阶段：使用 [总纲模板](./assets/outline-template.md)
 - 未知设计阶段：使用 [未知钩子矩阵模板](./assets/unknown-hook-matrix-template.md)
 - 群像阶段：使用 [群像角色总表模板](./assets/ensemble-cast-template.md) 和 [群像弧光矩阵模板](./assets/ensemble-arc-matrix-template.md)
@@ -291,7 +299,7 @@ disable-model-invocation: false
 - 模式 G，大布局模式：先建立结构网图、伏笔矩阵、势力棋盘，再设计卷级推进
 - 模式 H，宇宙设定模式：先定义宇宙运作、世界规律、地图体系，再反推文明和剧情
 - 模式 I，写法吸收模式：先定义主体验，再选择长板组合，最后用反拼贴规则做验收
-- 模式 J，项目整理模式：先输出目录树，再按阶段创建文件夹和对应状态文件
+- 模式 J，项目整理模式：先输出目录树，再按阶段创建文件夹和对应状态文件；如果是中长篇、连载、多卷或群像项目，默认先建 `00-brief`、`01-world`、`02-characters`、`03-outline`、`05-chapters`、`07-memory`
 - 模式 K，群像模式：先建立群像总表、群像弧光矩阵和关系图，再反推主线分工与章节戏份
 - 模式 L，未知钩子模式：先定义主未知、副未知和阶段揭示，再反推开篇、章尾和卷尾的吸引力设计
 - 模式 M，平台投稿模式：先识别平台偏好和 AI 痕迹，再做定向去 AI 化和投稿润色

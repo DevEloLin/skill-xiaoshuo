@@ -36,6 +36,9 @@
 9. [09-length-control.md](./09-length-control.md)
    演示如何修复单章严重缺字，并把最低字数变成硬约束。
 
+10. [10-quotable-and-funny-roles.md](./10-quotable-and-funny-roles.md)
+   演示如何补适量金句，以及主角团和反派队伍中的功能性有趣角色。
+
 ## 如何阅读这些示例
 
 每个示例都包含：
@@ -54,5 +57,6 @@
 如果你主要想提高情绪价值和节奏，看 7。
 如果你主要卡在章首第一句，看 8。
 如果你主要卡在单章严重缺字，看 9。
+如果你主要卡在人物太正、没有活气或缺少金句，看 10。
 
 如果你需要更多首句手法方向，但不想用死模板，读 [../references/first-sentence-technique-library.md](../references/first-sentence-technique-library.md)。

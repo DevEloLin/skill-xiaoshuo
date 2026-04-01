@@ -37,6 +37,7 @@
 - 让每章第一句允许用对话、冲突、写景、比喻、争吵、高潮余波等多种手法随机轮换，而不是一开口就是模型常见的感觉句、气氛句和总结句
 - 让情绪在该炸的时候真的炸开，允许不完整句、卡顿、失手和不够体面的毛边
 - 让不同角色说出不同缺点，不再所有人都理性、克制、像同一个作者
+- 让文本里有适量金句，也让主角团和反派队伍都拥有真正有用、会搞笑、会翻车、会把气氛写活的人
 - 让章节持续提供高情绪价值、高频冲突和标签化且有魅力的角色记忆点
 
 ## 核心能力
@@ -78,6 +79,7 @@
 33. 高频冲突与节奏掌控
 34. 标签化魅力角色设计
 35. 单章字数硬约束与补字控制
+36. 适量金句与功能性有趣角色设计
 
 ## 适用场景
 
@@ -95,11 +97,6 @@
 - 通用营销文案
 - SEO 内容生产
 - 非小说类写作
-│   ├── 05-de-ai-polish.md
-│   ├── 06-dialogue-voices.md
-│   ├── 07-emotion-conflict-character.md
-│   ├── 08-first-sentence-polish.md
-│   ├── 09-length-control.md
 - 与当前作品无关的随意灵感闲聊
 ## 设计原则
 
@@ -115,53 +112,55 @@
 
 ```text
 skill-xiaoshuo/
-│   ├── emotion-burst-template.md
-│   ├── emotional-value-board-template.md
 ├── README.md
-│   ├── first-sentence-template.md
 ├── SKILL.md
+├── USAGE.md
+├── work.md
 ├── examples/
 │   ├── 01-project-init.md
 │   ├── 02-continue-chapter.md
 │   ├── 03-webnovel-serialization.md
-│   ├── magnetic-character-template.md
-│   ├── dialogue-voice-matrix-template.md
 │   ├── 04-genre-suspense.md
 │   ├── 05-de-ai-polish.md
+│   ├── 06-dialogue-voices.md
+│   ├── 07-emotion-conflict-character.md
+│   ├── 08-first-sentence-polish.md
+│   ├── 09-length-control.md
+│   ├── 10-quotable-and-funny-roles.md
 │   └── README.md
-├── work.md
 ├── assets/
 │   ├── canon-facts-template.md
 │   ├── chapter-card-template.md
+│   ├── chapter-length-control-template.md
+│   ├── chapter-opening-rotation-template.md
 │   ├── chapter-summary-template.md
 │   ├── character-biography-template.md
 │   ├── character-template.md
 │   ├── consistency-ledger-template.md
-│   ├── cosmology-template.md
 │   ├── continuity-checklist.md
-│   ├── chapter-length-control-template.md
-│   ├── chapter-opening-rotation-template.md
+│   ├── cosmology-template.md
 │   ├── de-ai-diagnostic-template.md
+│   ├── detailed-outline-template.md
+│   ├── dialogue-voice-matrix-template.md
+│   ├── emotion-burst-template.md
+│   ├── emotional-value-board-template.md
 │   ├── ensemble-arc-matrix-template.md
 │   ├── ensemble-cast-template.md
 │   ├── faction-board-template.md
+│   ├── first-sentence-template.md
 │   ├── foreshadow-matrix-template.md
 │   ├── genre-lightnovel-template.md
-├── work.md
 │   ├── genre-xuanhuan-template.md
 │   ├── genre-xuanyi-template.md
-    ├── chapter-length-enforcement.md
+│   ├── genre-yanqing-template.md
+│   ├── magnetic-character-template.md
+│   ├── memory-index-template.md
+│   ├── multi-faction-dynamics-template.md
 │   ├── outline-template.md
 │   ├── plot-architecture-template.md
-    ├── first-sentence-de-ai.md
-    ├── first-sentence-technique-library.md
 │   ├── plot-thread-template.md
 │   ├── project-brief-template.md
-    ├── raw-emotion-writing.md
-    ├── dialogue-voice-differentiation.md
-    ├── emotional-value-design.md
-    ├── conflict-rhythm-design.md
-    ├── magnetic-character-design.md
+│   ├── funny-role-template.md
 │   ├── relationship-map-template.md
 │   ├── rewrite-prompt-template.md
 │   ├── serialization-board-template.md
@@ -170,30 +169,35 @@ skill-xiaoshuo/
 │   ├── submission-polish-template.md
 │   ├── task-prompt-template.md
 │   ├── timeline-template.md
-│   ├── detailed-outline-template.md
-│   ├── memory-index-template.md
-│   ├── multi-faction-dynamics-template.md
-│   ├── unknown-hook-matrix-template.md
 │   ├── universe-map-template.md
+│   ├── unknown-hook-matrix-template.md
 │   ├── volume-outline-template.md
 │   ├── world-map-template.md
 │   ├── world-rules-template.md
 │   └── worldbuilding-template.md
 └── references/
-    ├── anti-pastiche.md
+  ├── anti-pastiche.md
   ├── chapter-length-enforcement.md
-    ├── de-ai-rewriting-patterns.md
-    ├── ensemble-writing.md
-    ├── hallucination-control.md
-    ├── macro-plotting.md
-    ├── unknown-hook-design.md
-    ├── platform-submission.md
-    ├── popular-webnovel-craft.md
-    ├── project-organization.md
-    ├── quality-rubric.md
-    ├── webnovel-serialization.md
-    ├── world-logic.md
-    └── workflow.md
+  ├── conflict-rhythm-design.md
+  ├── de-ai-rewriting-patterns.md
+  ├── dialogue-voice-differentiation.md
+  ├── emotional-value-design.md
+  ├── ensemble-writing.md
+  ├── first-sentence-de-ai.md
+  ├── first-sentence-technique-library.md
+  ├── hallucination-control.md
+  ├── magnetic-character-design.md
+  ├── macro-plotting.md
+  ├── popular-webnovel-craft.md
+  ├── platform-submission.md
+  ├── project-organization.md
+  ├── quality-rubric.md
+  ├── funny-role-design.md
+  ├── raw-emotion-writing.md
+  ├── unknown-hook-design.md
+  ├── webnovel-serialization.md
+  ├── world-logic.md
+  └── workflow.md
 ```
 
 ## 文件说明
@@ -255,6 +259,9 @@ skill-xiaoshuo/
 
 - [first-sentence-technique-library.md](./references/first-sentence-technique-library.md)
   用于提供 30 种章首第一句入口手法，只给原则和短例子，不提供死模板。
+
+- [funny-role-template.md](./assets/funny-role-template.md)
+  用于控制适量金句，以及主角团和反派队伍里的功能性有趣角色配置。
 
 - [unknown-hook-matrix-template.md](./assets/unknown-hook-matrix-template.md)
   用于维护主未知、副未知、阶段偏移和最终回收，避免悬念只靠故弄玄虚。
@@ -402,7 +409,7 @@ skill-xiaoshuo/
 
 ### 支持的工作模式
 
-Skill 当前支持 13 种主模式：
+Skill 当前支持 14 种主模式：
 
 1. 模式 A，新建小说
 2. 模式 B，继续写某一章
@@ -434,7 +441,7 @@ Skill 当前支持 13 种主模式：
 
 ## 记忆体系
 
-这个 Skill 不把“记忆”交给模型临时发挥，而是显式维护 10 类状态：
+这个 Skill 不把“记忆”交给模型临时发挥，而是显式维护多类状态；核心基础层至少包括：
 
 1. Canon 事实
 2. 人物状态
@@ -446,6 +453,8 @@ Skill 当前支持 13 种主模式：
 8. 势力棋盘
 9. 宇宙设定
 10. 地图体系
+
+在此基础上，还会按任务阶段补充群像、未知钩子、章首轮换、字数控制、对白声线、情绪价值、冲突节奏、魅力角色、金句与有趣角色等扩展台账。
 
 这样做的目的有两个：
 

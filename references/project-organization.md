@@ -142,26 +142,51 @@ novel-project/
 
 用来放废案、弃用设定、已退役 retcon，不让它们混入当前 canon。
 
-## 三、最小必备包
+## 三、长篇默认骨架
+
+如果用户要求“初步生成项目结构”“先帮我建一套小说目录”“先整理长篇工作台”，默认应先给出下面 6 个骨架目录：
+
+1. `00-brief/`
+2. `01-world/`
+3. `02-characters/`
+4. `03-outline/`
+5. `05-chapters/`
+6. `07-memory/`
+
+原因很简单：
+
+- `01-world` 不先落地，世界规则、地图和文明层容易被挤进总纲或正文里
+- `02-characters` 不先落地，人物卡、人设、小传和群像资料就会散落在章节说明里
+
+只有在以下情况，才允许初次整理时暂缓 `01-world` 或 `02-characters`：
+
+- 用户明确只写短篇试稿
+- 用户当前只要一个极简脑暴框架
+- 用户明确说暂时不做世界观或人物档案
+
+## 四、最小必备文件包
 
 如果用户不想一开始建太多文件，至少先建这些：
 
 1. `00-brief/project-brief.md`
-2. `03-outline/master-outline.md`
-3. `05-chapters/chapter-cards/`
-4. `07-memory/memory-index.md`
-5. `07-memory/canon-facts.md`
-6. `07-memory/timeline.md`
-7. `07-memory/consistency-ledger.md`
+2. `01-world/worldbuilding.md`
+3. `02-characters/character-cards.md`
+4. `02-characters/character-biographies.md`
+5. `03-outline/master-outline.md`
+6. `05-chapters/chapter-cards/`
+7. `07-memory/memory-index.md`
+8. `07-memory/canon-facts.md`
+9. `07-memory/timeline.md`
+10. `07-memory/consistency-ledger.md`
 
-没有这 7 项，长篇中后期很容易开始乱。
+没有这 10 项，长篇中后期很容易开始乱。
 
 如果作品采用群像推进，再至少补两项：
 
-8. `02-characters/ensemble-cast.md`
-9. `02-characters/ensemble-arc-matrix.md`
+11. `02-characters/ensemble-cast.md`
+12. `02-characters/ensemble-arc-matrix.md`
 
-## 三点五、章节文件命名规则
+## 四点五、章节文件命名规则
 
 章节相关文件默认统一使用：
 
@@ -193,7 +218,7 @@ novel-project/
 - `99-第九十九章.md`
 - `100-第一百章.md`
 
-## 四、每次写作前的读取顺序
+## 五、每次写作前的读取顺序
 
 建议固定为：
 
@@ -212,7 +237,7 @@ novel-project/
 - 伏笔方向被写断
 - 世界规则前后不一致
 
-## 五、输出规则
+## 六、输出规则
 
 当用户要求“帮我整理小说项目”时，优先输出：
 

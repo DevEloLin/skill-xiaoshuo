@@ -85,9 +85,13 @@
 
 16. 先做情绪价值板、冲突节奏板和魅力角色表，再回到卷纲和章节卡
 
+如果你发现人物太正、太齐、太没活气，再多做一步：
+
+17. 先做金句与功能性有趣角色单，明确谁负责留句子、谁负责把主角团写活、谁负责在反派队伍里翻车出丑
+
 如果你发现调用 skill 时经常严重缺字，再多做一步：
 
-17. 先做单章字数控制单，判断章节厚度、分配各段字数，再生成正文
+18. 先做单章字数控制单，判断章节厚度、分配各段字数，再生成正文
 
 ## 二、推荐使用顺序
 
@@ -169,6 +173,11 @@
 
 - [references/ensemble-writing.md](./references/ensemble-writing.md)
 
+如果你想让文本里有适量金句，同时让主角团和反派队伍都更有活气，再加：
+
+- [assets/funny-role-template.md](./assets/funny-role-template.md)
+- [references/funny-role-design.md](./references/funny-role-design.md)
+
 如果你发现每章开头越来越像，或者老是主角团队先出场，再加：
 
 - [assets/chapter-opening-rotation-template.md](./assets/chapter-opening-rotation-template.md)
@@ -236,11 +245,15 @@
 最低建议先建：
 
 1. `00-brief`
-2. `03-outline`
-3. `05-chapters`
-4. `07-memory`
+2. `01-world`
+3. `02-characters`
+4. `03-outline`
+5. `05-chapters`
+6. `07-memory`
 
-这样做的意义是把结构文件、正文文件、状态文件彻底分开，减少后续写乱。
+这样做的意义是把世界资料、人物资料、结构文件、正文文件、状态文件彻底分开，减少后续写乱。
+
+如果只是短篇试写、单章试写，或者用户明确要求极简骨架，才可以暂缓 `01-world` 和 `02-characters`。
 
 ### 4. 大布局项目时
 
