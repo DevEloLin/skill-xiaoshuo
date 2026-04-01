@@ -29,6 +29,14 @@
 - 伏笔遗忘
 - AI 擅自新增重大设定
 
+如果你是按网文或长篇连载来写，还要额外记住一组前期硬规则：
+
+1. 前三章必须埋线
+2. 前三章必须给爽点
+3. 前三章必须给至少一次有效反转或理解偏移
+4. 第 10 到 15 章必须打出第一阶段高潮爽点，不能一直拖着不爆
+5. 代入感要尽量强，先把读者扔进角色眼前的局势和压力里，再解释背景
+
 如果你要把它用于网文或长篇单章输出，默认还要多记住一条：
 
 1. 每章正文不得少于 4300 字
@@ -164,6 +172,10 @@
 
 - [references/popular-webnovel-craft.md](./references/popular-webnovel-craft.md)
 - [references/anti-pastiche.md](./references/anti-pastiche.md)
+
+如果你明确要写权谋、克苏鲁、脑洞、军事、战争、谍战、悬疑、搞笑、古装这些方向，再加：
+
+- [references/expanded-genre-strengths.md](./references/expanded-genre-strengths.md)
 
 如果你想先把整个项目资料整理清楚，再加：
 

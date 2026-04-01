@@ -59,4 +59,6 @@
 如果你主要卡在单章严重缺字，看 9。
 如果你主要卡在人物太正、没有活气或缺少金句，看 10。
 
+如果你主要要补权谋、克苏鲁、军事、战争、谍战、搞笑、古装等题材专长，读 [../references/expanded-genre-strengths.md](../references/expanded-genre-strengths.md)。
+
 如果你需要更多首句手法方向，但不想用死模板，读 [../references/first-sentence-technique-library.md](../references/first-sentence-technique-library.md)。

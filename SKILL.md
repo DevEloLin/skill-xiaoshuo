@@ -1,6 +1,6 @@
 ---
 name: skill-xiaoshuo
-description: 'Plan, write, continue, audit, and revise long-form Chinese fiction with stronger memory and lower hallucination risk. Use for小说创作, 网文连载, Obsidian 写作, 故事总纲, 世界观设定, 人物设定, 章节规划, 正文写作, 文风统一, 连续性审校, 时间线维护, 伏笔回收, 未知钩子, 悬疑钩子, 信息差, 平台投稿, 起点投稿, 知乎投稿, 降低AI味, 去AI化, 状态管理, 草蛇灰线, 多线叙事, 主线支线, 群像, 群像写作, 多主角, 团队叙事, 势力棋盘, 宏大布局, 宇宙设定, 世界地图, 宇宙地图, 世界规律, 宇宙运作, 减少AI幻觉. Trigger phrases include 小说, 故事, 世界观, 大纲, 人设, 章节, 续写, 润色, 连载, 审校, 时间线, 伏笔, 未知, 钩子, 信息差, 起点, 知乎, 投稿, 去AI化, 降低AI味, 状态, 主线, 支线, 群像, 多主角, 团队, 布局, 棋盘, 宇宙, 地图, 规律.'
+description: 'Plan, write, continue, audit, and revise long-form Chinese fiction with stronger memory and lower hallucination risk. Use for小说创作, 网文连载, Obsidian 写作, 故事总纲, 世界观设定, 人物设定, 章节规划, 正文写作, 文风统一, 连续性审校, 时间线维护, 伏笔回收, 未知钩子, 悬疑钩子, 信息差, 平台投稿, 起点投稿, 知乎投稿, 降低AI味, 去AI化, 状态管理, 草蛇灰线, 多线叙事, 主线支线, 群像, 群像写作, 多主角, 团队叙事, 势力棋盘, 宏大布局, 宇宙设定, 世界地图, 宇宙地图, 世界规律, 宇宙运作, 减少AI幻觉, 权谋, 玄幻, 克苏鲁, 脑洞, 军事, 战争, 谍战, 悬疑, 搞笑, 古装. Trigger phrases include 小说, 故事, 世界观, 大纲, 人设, 章节, 续写, 润色, 连载, 审校, 时间线, 伏笔, 未知, 钩子, 信息差, 起点, 知乎, 投稿, 去AI化, 降低AI味, 状态, 主线, 支线, 群像, 多主角, 团队, 布局, 棋盘, 宇宙, 地图, 规律, 权谋, 玄幻, 克苏鲁, 脑洞, 军事, 战争, 谍战, 悬疑, 搞笑, 古装.'
 argument-hint: 'Describe genre, target readers, tone, length, current material, and the writing task you want completed.'
 user-invocable: true
 disable-model-invocation: false
@@ -72,10 +72,14 @@ disable-model-invocation: false
 - 平台风格：男频、女频、轻小说、站内偏好
 - 爽点类型：升级、打脸、反转、情感兑现、解谜推进
 - 追更策略：章尾钩子、阶段悬念、卷末爆点
+- 前三章必须埋下哪些线
+- 前三章必须给出哪些爽点和反转
+- 第 10 到 15 章的第一阶段高潮准备兑现什么
+- 代入感最强应落在哪个角色、哪种处境和哪类现场压力上
 
 如果是题材特化写作，再补充：
 
-- 目标题材模板：玄幻 / 悬疑 / 言情 / 轻小说
+- 目标题材模板：玄幻 / 悬疑 / 言情 / 轻小说 / 权谋 / 克苏鲁 / 脑洞 / 军事 / 战争 / 谍战 / 搞笑 / 古装
 - 必须保留的题材核心体验
 - 必须避开的同质化套路
 - 参考写法侧重：群像 / 升级爽点 / 信息悬疑 / 史诗感 / 克制成长 / 少年感 / 宿命感 / 文明厚度 / 情绪爆发 / 仪式感
@@ -174,6 +178,9 @@ disable-model-invocation: false
 25. 角色设计默认要求“标签 + 魅力 + 代价”三件套，缺一项都容易只剩设定说明
 26. 金句默认适量配置，只在人物站住、关系刺穿、情绪爆开或主题落点处使用，禁止堆成作者发言墙
 27. 群像队伍默认需要活气层：主角团最好有一名特别犯贱、特别有趣、能拆台又能推进的角色；反派队伍也允许有搞笑担当与翻车出丑担当，但都必须服务局势
+28. 连载开篇前三章默认必须同时承担三件事：埋线、给爽点、给反转；不能只有世界观介绍或人物亮相，没有明确回报
+29. 连载第 10 到 15 章默认应形成第一阶段高潮爽点，至少兑现“阶段目标突破 / 压制后的强反弹 / 关系或棋盘大偏转”中的一项，不能一直拖到更后面才第一次爆开
+30. 代入感默认优先级极高：先给角色眼前压力、处境、身体反应、即时选择和可感知损失，再给解释；避免高空讲解盖过现场
 
 ## 记忆体系
 
@@ -257,6 +264,7 @@ disable-model-invocation: false
 - [高频冲突与节奏掌控参考](./references/conflict-rhythm-design.md)
 - [标签化魅力角色参考](./references/magnetic-character-design.md)
 - [金句与功能性有趣角色参考](./references/funny-role-design.md)
+- [扩展题材专长参考](./references/expanded-genre-strengths.md)
 - [反拼贴规则](references/anti-pastiche.md)
 - [项目文件夹组织参考](./references/project-organization.md)
 
@@ -315,6 +323,8 @@ disable-model-invocation: false
 - 悬疑 / 推理 / 都市迷局：使用 [悬疑模板](./assets/genre-xuanyi-template.md)
 - 言情 / 情感成长 / 双强关系：使用 [言情模板](./assets/genre-yanqing-template.md)
 - 轻小说 / 校园 / 冒险群像：使用 [轻小说模板](./assets/genre-lightnovel-template.md)
+
+当用户要求权谋、克苏鲁、脑洞、军事、战争、谍战、搞笑、古装时，先按通用模板立结构，再追加读取 [扩展题材专长参考](./references/expanded-genre-strengths.md) 作为专项约束。
 
 如果用户没有明确题材，就先按通用模板工作，不自行代入题材套路。
 
