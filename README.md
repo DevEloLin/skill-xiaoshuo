@@ -41,6 +41,7 @@
 - 让章节持续提供高情绪价值、高频冲突和标签化且有魅力的角色记忆点
 - 让连载前三章就完成埋线、爽点和反转的基础承诺，并在第 10 到 15 章打出第一阶段高潮爽点
 - 让文本默认追求强代入感，优先让读者先进入角色处境、压力和现场，再进入解释
+- 让每一章都必须和上一章、下一章对得上，避免章节之间像不同提纲拼接，降低 AI 混乱
 
 ## 核心能力
 
@@ -84,6 +85,7 @@
 36. 适量金句与功能性有趣角色设计
 37. 连载前期埋线、爽点、反转与阶段高潮控制
 38. 权谋 / 玄幻 / 克苏鲁 / 脑洞 / 军事 / 战争 / 谍战 / 悬疑 / 搞笑 / 古装等扩展题材专长
+39. 章节对齐控制，防止前后章节不对等和承接失真
 
 ## 适用场景
 
@@ -135,6 +137,7 @@ skill-xiaoshuo/
 ├── assets/
 │   ├── canon-facts-template.md
 │   ├── chapter-card-template.md
+│   ├── chapter-alignment-template.md
 │   ├── chapter-length-control-template.md
 │   ├── chapter-opening-rotation-template.md
 │   ├── chapter-summary-template.md
@@ -285,6 +288,9 @@ skill-xiaoshuo/
 - [chapter-summary-template.md](./assets/chapter-summary-template.md)
   记录每章发生了什么，方便下一章续写前快速回忆。
 
+- [chapter-alignment-template.md](./assets/chapter-alignment-template.md)
+  用于强制核对上一章结尾状态、本章承接点、本章兑现内容和下章不能丢的状态变化，减少前后章节不对等。
+
 - [series-state-template.md](./assets/series-state-template.md)
   维护长篇连载当前的总状态，包括已确认事实、时间线、风险点和风格边界。
 
@@ -416,6 +422,8 @@ skill-xiaoshuo/
 长篇项目建议先按 [project-organization.md](./references/project-organization.md) 建目录，再开始填内容。
 
 如果是网文连载，前期还要额外检查两道硬门槛：前三章必须埋线、给爽点、给反转；第 10 到 15 章必须打出第一阶段高潮爽点。
+
+如果你已经发现“前一章和后一章几乎对不上”，优先补章节对齐模板，再继续写正文，不要直接让模型硬接。
 
 ### 支持的工作模式
 

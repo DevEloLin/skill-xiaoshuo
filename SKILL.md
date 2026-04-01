@@ -184,7 +184,7 @@ disable-model-invocation: false
 
 ## 记忆体系
 
-这个 skill 处理长篇时，默认把“记忆”拆成 26 个层级，避免设定漂移：
+这个 skill 处理长篇时，默认把“记忆”拆成 27 个层级，避免设定漂移：
 
 1. Canon 事实表：只记录已经确认、不可随意改动的事实
 2. 人物状态表：记录每个主要角色当前处境、关系和心理变化
@@ -212,6 +212,7 @@ disable-model-invocation: false
 24. 冲突节奏板：记录章节和卷的冲突频率、升级节点和后果变化
 25. 魅力角色表：记录角色标签、魅力来源、反差和代价
 26. 金句与有趣角色单：记录哪些句子该留、谁负责活气、谁负责翻车，以及这些功能如何反哺剧情
+27. 章节对齐单：记录上一章结尾状态、本章必须承接的线、本章兑现与拖延的承诺，以及下章不能丢的状态变化
 
 推荐优先维护：
 
@@ -222,6 +223,7 @@ disable-model-invocation: false
 - [连载状态模板](./assets/series-state-template.md)
 - [记忆索引模板](./assets/memory-index-template.md)
 - [连续性台账模板](./assets/consistency-ledger-template.md)
+- [章节对齐模板](./assets/chapter-alignment-template.md)
 - [连载节奏板模板](./assets/serialization-board-template.md)
 - [故事线总表模板](./assets/storyline-board-template.md)
 - [结构网图模板](./assets/plot-architecture-template.md)
@@ -335,7 +337,7 @@ disable-model-invocation: false
 1. 用户刚刚明确说明的硬约束
 2. Canon 事实表
 3. 已有世界观和人物设定
-4. 最近章节摘要和时间线
+4. 最近章节摘要、章节对齐单和时间线
 5. 总纲和章节卡
 6. 推测性补全
 
@@ -388,7 +390,7 @@ disable-model-invocation: false
 
 对于长篇项目，再加常驻步骤：
 
-0.5 先建立记忆索引和连续性台账，再进入卷纲、细纲和章节阶段
+0.5 先建立记忆索引、连续性台账和章节对齐单，再进入卷纲、细纲和章节阶段
 
 如果作品依赖悬疑感或未知推进，再加常驻步骤：
 
@@ -420,8 +422,9 @@ disable-model-invocation: false
 2. [Canon 事实模板](./assets/canon-facts-template.md) 对应文件
 3. [连续性台账模板](./assets/consistency-ledger-template.md) 对应文件
 4. [时间线模板](./assets/timeline-template.md) 对应文件
-5. 当前卷纲 / 细纲 / 章节卡
-6. 最近章节摘要
+5. 最近章节摘要
+6. [章节对齐模板](./assets/chapter-alignment-template.md) 对应文件
+7. 当前卷纲 / 细纲 / 章节卡
 
 如果没有先读这套顺序，就不要直接大段写正文。
 
@@ -558,8 +561,9 @@ disable-model-invocation: false
 7. 本章触发了哪条支线或暗线变化
 8. 本章对更大棋盘的影响
 9. 本章触发了哪条世界规律或地图关系
+10. 本章和上一章是否已经完成状态对齐，以及下章必须先接住什么
 
-没有回写，后续续写的稳定性会快速下降。
+没有回写，后续续写的稳定性会快速下降，前后章节也会越来越不对齐。
 
 如果任务会产出章节文件、章节目录或项目文件树，章节相关文件名默认使用：
 

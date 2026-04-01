@@ -101,6 +101,10 @@
 
 18. 先做单章字数控制单，判断章节厚度、分配各段字数，再生成正文
 
+如果你发现前一章和后一章经常像不同提纲拼起来，再多做一步：
+
+19. 先做章节对齐单，明确上一章结尾状态、本章必须承接的问题、本章兑现什么、下章不能丢什么
+
 ## 二、推荐使用顺序
 
 ### 1. 新建项目时
@@ -135,6 +139,7 @@
 - [assets/timeline-template.md](./assets/timeline-template.md)
 - [assets/plot-thread-template.md](./assets/plot-thread-template.md)
 - [assets/chapter-summary-template.md](./assets/chapter-summary-template.md)
+- [assets/chapter-alignment-template.md](./assets/chapter-alignment-template.md)
 - [assets/series-state-template.md](./assets/series-state-template.md)
 - [assets/memory-index-template.md](./assets/memory-index-template.md)
 - [assets/consistency-ledger-template.md](./assets/consistency-ledger-template.md)
@@ -221,10 +226,11 @@
 1. 读记忆索引
 2. 读 canon 事实和连续性台账
 3. 读时间线和上一章摘要
-4. 读当前卷纲 / 细纲 / 章节卡
-5. 再写正文
-6. 写完后做审校
-7. 回写章节摘要、时间线、伏笔、状态和连续性台账
+4. 读章节对齐单
+5. 读当前卷纲 / 细纲 / 章节卡
+6. 再写正文
+7. 写完后做审校
+8. 回写章节摘要、时间线、伏笔、状态、章节对齐单和连续性台账
 
 如果是群像作品，再额外读：
 
