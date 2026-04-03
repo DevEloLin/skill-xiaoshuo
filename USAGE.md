@@ -85,25 +85,37 @@
 
 14. 先标出本章或本段的情绪爆点，再决定哪里允许不完整句、卡顿和狼狈感
 
+如果你发现正文只有“看见了什么”，现场感还是薄，再多做一步：
+
+15. 先指定本章优先调用哪些非视觉感官，比如听觉、嗅觉、味觉、痛觉、触感、温度感，不要只靠观感
+
 如果你发现所有人都说得太像，再多做一步：
 
-15. 先做一张对白声线矩阵，明确谁爆、谁碎嘴、谁冷笑、谁会用废话遮掩
+16. 先做一张对白声线矩阵，明确谁爆、谁碎嘴、谁冷笑、谁会用废话遮掩
+
+如果你发现段落总在解释，而不是自己长出画面，再多做一步：
+
+17. 先要求它加入隐形分镜式推进，用焦点切换、动作接力、物件特写、声响推进和后果先行带出场面，不要直接解释自己在分镜
 
 如果你想把读者情绪价值、冲突密度和角色记忆点一起拉高，再多做一步：
 
-16. 先做情绪价值板、冲突节奏板和魅力角色表，再回到卷纲和章节卡
+18. 先做情绪价值板、冲突节奏板和魅力角色表，再回到卷纲和章节卡
 
 如果你发现人物太正、太齐、太没活气，再多做一步：
 
-17. 先做金句与功能性有趣角色单，明确谁负责留句子、谁负责把主角团写活、谁负责在反派队伍里翻车出丑
+19. 先做金句与功能性有趣角色单，明确谁负责留句子、谁负责把主角团写活、谁负责在反派队伍里翻车出丑
 
 如果你发现调用 skill 时经常严重缺字，再多做一步：
 
-18. 先做单章字数控制单，判断章节厚度、分配各段字数，再生成正文
+20. 先做单章字数控制单，判断章节厚度、分配各段字数，再生成正文
 
 如果你发现前一章和后一章经常像不同提纲拼起来，再多做一步：
 
-19. 先做章节对齐单，明确上一章结尾状态、本章必须承接的问题、本章兑现什么、下章不能丢什么
+21. 先做章节对齐单，明确上一章结尾状态、本章必须承接的问题、本章兑现什么、下章不能丢什么
+
+如果你发现问题已经不是前后两章，而是最近 5 到 10 章互相发虚、互相失联，再多做一步：
+
+22. 先做十章呼应板，明确最近十章里哪些线、关系、压力和代价仍在持续生效，本章必须呼应什么，什么不能被新剧情硬盖过去
 
 ## 二、推荐使用顺序
 
@@ -140,15 +152,18 @@
 - [assets/plot-thread-template.md](./assets/plot-thread-template.md)
 - [assets/chapter-summary-template.md](./assets/chapter-summary-template.md)
 - [assets/chapter-alignment-template.md](./assets/chapter-alignment-template.md)
+- [assets/ten-chapter-echo-template.md](./assets/ten-chapter-echo-template.md)
 - [assets/series-state-template.md](./assets/series-state-template.md)
 - [assets/memory-index-template.md](./assets/memory-index-template.md)
 - [assets/consistency-ledger-template.md](./assets/consistency-ledger-template.md)
 - [assets/character-biography-template.md](./assets/character-biography-template.md)
 - [assets/relationship-map-template.md](./assets/relationship-map-template.md)
+- [assets/protagonist-agency-template.md](./assets/protagonist-agency-template.md)
 - [assets/ensemble-cast-template.md](./assets/ensemble-cast-template.md)
 - [assets/ensemble-arc-matrix-template.md](./assets/ensemble-arc-matrix-template.md)
 - [assets/multi-faction-dynamics-template.md](./assets/multi-faction-dynamics-template.md)
 - [assets/unknown-hook-matrix-template.md](./assets/unknown-hook-matrix-template.md)
+- [assets/subplot-fragility-template.md](./assets/subplot-fragility-template.md)
 - [assets/submission-polish-template.md](./assets/submission-polish-template.md)
 - [assets/de-ai-diagnostic-template.md](./assets/de-ai-diagnostic-template.md)
 - [assets/chapter-opening-rotation-template.md](./assets/chapter-opening-rotation-template.md)
@@ -227,10 +242,11 @@
 2. 读 canon 事实和连续性台账
 3. 读时间线和上一章摘要
 4. 读章节对齐单
-5. 读当前卷纲 / 细纲 / 章节卡
-6. 再写正文
-7. 写完后做审校
-8. 回写章节摘要、时间线、伏笔、状态、章节对齐单和连续性台账
+5. 读十章呼应板
+6. 读当前卷纲 / 细纲 / 章节卡
+7. 再写正文
+8. 写完后做审校
+9. 回写章节摘要、时间线、伏笔、状态、章节对齐单、十章呼应板和连续性台账
 
 如果是群像作品，再额外读：
 
@@ -403,10 +419,22 @@
 - 宗门开始搜查他住处
 当前时间线位置：外门大比第3天夜里
 当前人物状态：主角重伤未愈，但必须应战
+最近十章仍在持续生效的线：
+- 七长老怀疑主角
+- 试炼谷旧阵眼对应的旧秘密
+最近十章仍在持续生效的关系 / 代价 / 压力：
+- 主角伤势未愈
+- 宗门搜查带来的高压
 本章目标：确认七长老今晚动手，并推进临时联盟
 单章字数要求：不少于 4300 字，目标 4300 到 5000 字
 必须避免：新增力量体系、突改角色身份
 ```
+
+如果是长篇续写，正文前最好再要求它先用 3 行做自检：
+
+1. 这章承接了上一章什么
+2. 这章呼应了最近十章中的哪条旧线 / 旧关系 / 旧代价
+3. 如果这章引入新问题，旧问题为什么还没失效
 
 ### 模式 C：润色现有章节
 

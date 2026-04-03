@@ -45,6 +45,8 @@ disable-model-invocation: false
 - 不让文本只剩专业和稳定，而要在该失控的地方保留情绪爆点、不完整句、狼狈感和人写出来的毛边
 - 不让所有角色都说成同一种理性克制的作者腔，而要把爆、碎嘴、冷笑、废话掩饰这些缺点分配给不同角色
 - 不让章节开头长期重复同一种起手方式，而要根据本章压力源、局势视角和信息顺序轮换章首设计
+- 不让场面长期只有视觉描写，而要按需要补入听觉、嗅觉、味觉、痛觉、触感和温度感
+- 不让段落总靠解释推进，而要适度使用隐形分镜式写法，让焦点、动作、物件、声响和后果自然接力
 - 不让世界观只停留在名词堆砌，而要形成可推演、可约束剧情的宇宙运作体系
 - 不让地图只是装饰，而要让世界地图、宇宙地图与势力、资源、战争、文明流动相互对应
 
@@ -79,95 +81,19 @@ disable-model-invocation: false
 - 已有素材：设定、片段、角色、章节草稿、历史正文
 - 约束条件：第一人称/第三人称、节奏、禁写内容、平台偏好
 
-如果是网文连载，再补充：
+根据项目类型，按需补充收集以下维度的信息（详见 [输入收集指南](./references/input-collection-guide.md)）：
 
-- 更新频率：日更 / 周更 / 不定期
-- 单章字数范围
-- 平台风格：男频、女频、轻小说、站内偏好
-- 爽点类型：升级、打脸、反转、情感兑现、解谜推进
-- 追更策略：章尾钩子、阶段悬念、卷末爆点
-- 前三章必须埋下哪些线
-- 前三章必须给出哪些爽点和反转
-- 第 10 到 15 章的第一阶段高潮准备兑现什么
-- 代入感最强应落在哪个角色、哪种处境和哪类现场压力上
-
-如果是题材特化写作，再补充：
-
-- 目标题材模板：玄幻 / 悬疑 / 言情 / 轻小说 / 权谋 / 克苏鲁 / 脑洞 / 军事 / 战争 / 谍战 / 搞笑 / 古装
-- 必须保留的题材核心体验
-- 必须避开的同质化套路
-- 参考写法侧重：群像 / 升级爽点 / 信息悬疑 / 史诗感 / 克制成长 / 少年感 / 宿命感 / 文明厚度 / 情绪爆发 / 仪式感
-
-如果用户追求高情绪价值、高频冲突、强角色魅力，再额外收集：
-
-- 本书最想给读者的主情绪回报是什么
-- 哪类情绪最值钱：爽 / 刀 / 委屈 / 拉扯 / 爆开 / 暧昧 / 其他
-- 章节可接受的冲突频率目标
-- 核心角色的一句话钉子标签和最强魅力场面
-- 是否需要适量金句与功能性搞笑角色
-
-如果用户目标是平台投稿或去 AI 化，再额外收集：
-
-- 投稿平台：起点 / 知乎 / 其他
-- 当前稿件阶段：首章 / 前三章 / 单章 / 多章连读 / 投稿样章
-- 当前最重的 AI 痕迹：解释腔 / 套话感 / 角色同声腔 / 情绪直给 / 过度工整
-- AI 痕迹是否集中在每章第一句：是 / 否
-- 最近几章首句是否已经形成统一腔：是 / 否
-- 平台更看重什么：抓手 / 连载感 / 语言自然度 / 信息密度 / 视角稳定
-
-对长篇、连载、续写任务，再额外收集：
-
-- 单章字数要求：默认不少于 4300 字，常规控制在 4300 到 5000 字
-- 最低字数是否是硬约束
-- 已确认 canon 事实
-- 最近章节摘要
-- 当前时间线位置
-- 当前人物状态
-- 已埋伏笔与待回收线索
-- 不能更改的规则、关系和结论
-
-如果用户追求大布局，再额外收集：
-
-- 主线目标与终局方向
-- 至少 2 到 4 条支线
-- 至少 1 条暗线
-- 关键势力或棋盘参与方
-- 近回收 / 中回收 / 远回收伏笔层级
-- 哪些章节负责埋，哪些章节负责偏移，哪些章节负责兑现
-
-如果用户追求群像，再额外收集：
-
-- 核心群像人数：建议前期 3 到 5 人
-- 哪些角色具备独立行动线
-- 哪些角色会和主角发生价值观分歧
-- 哪些角色需要完整弧光，哪些只承担阶段性作用
-- 当前最重要的群像组合与最容易工具人化的角色
-
-如果用户追求悬疑感、未知感、信息差推进，再额外收集：
-
-- 开篇未知钩子是什么
-- 第一卷核心未知是什么
-- 哪些未知只允许偏移，不允许立刻解释
-- 哪些未知必须在章尾或卷尾升级
-- 哪条未知与主角身份、记忆、动机或处境直接绑定
-
-如果用户追求宏伟世界观，再额外收集：
-
-- 宇宙层级：单世界 / 多界 / 多重宇宙 / 星海文明 / 神话宇宙
-- 世界运作核心：能量、法则、科技、神性、命运、熵、轮回等
-- 世界边界与上限：地理边界、文明边界、力量边界、认知边界
-- 世界地图和关键区域
-- 宇宙地图和世界之间的关系
-- 资源流动、交通路径、战争路径、信仰路径、贸易路径
-- 哪些规律绝对不可破坏，哪些规律可以被发现或改写
+- 网文连载：更新频率、爽点类型、追更策略、前三章承诺、阶段高潮
+- 题材特化：题材模板、核心体验、避开套路、写法侧重
+- 高情绪价值：主情绪回报、冲突频率、角色标签与魅力场面
+- 平台投稿 / 去 AI 化：平台偏好、AI 痕迹诊断、自然度要求
+- 长篇续写：字数约束、canon 事实、时间线、人物状态、伏笔
+- 大布局：主线终局、支线暗线、势力棋盘、伏笔层级
+- 群像：核心人数、独立行动线、价值观分歧、弧光分配
+- 悬疑 / 未知推进：未知钩子、阶段揭示、偏移与升级
+- 宏伟世界观：宇宙层级、世界运作、边界与地图、规律约束
 
 如果这些信息缺失，不直接硬写长段正文，先补一个最小状态包。
-
-如果用户已经明确平台，再追加执行：
-
-- 起点方向：优先检查抓手、连载感、爽点兑现和章节追更理由
-- 知乎方向：优先检查语言自然度、信息密度、表达克制度和 AI 痕迹
-- 其他平台：先要求用户说明偏好，再决定是否走投稿润色或去 AI 化分支
 
 ## 核心设计原则
 
@@ -201,10 +127,12 @@ disable-model-invocation: false
 28. 连载开篇前三章默认必须同时承担三件事：埋线、给爽点、给反转；不能只有世界观介绍或人物亮相，没有明确回报
 29. 连载第 10 到 15 章默认应形成第一阶段高潮爽点，至少兑现“阶段目标突破 / 压制后的强反弹 / 关系或棋盘大偏转”中的一项，不能一直拖到更后面才第一次爆开
 30. 代入感默认优先级极高：先给角色眼前压力、处境、身体反应、即时选择和可感知损失，再给解释；避免高空讲解盖过现场
+31. 场面描写默认不能长期只靠视觉；应按题材和情境适度补入听觉、嗅觉、味觉、痛觉、触觉、温度和呼吸感，让现场进入身体层
+32. 分镜感默认应通过焦点切换、动作接力、物件特写、声响推进和后果先行自然呈现；不要显式解释“镜头如何移动”
 
 ## 记忆体系
 
-这个 skill 处理长篇时，默认把“记忆”拆成 27 个层级，避免设定漂移：
+这个 skill 处理长篇时，默认把“记忆”拆成 30 个层级，避免设定漂移：
 
 1. Canon 事实表：只记录已经确认、不可随意改动的事实
 2. 人物状态表：记录每个主要角色当前处境、关系和心理变化
@@ -220,75 +148,26 @@ disable-model-invocation: false
 12. 群像总表：记录核心群像角色的功能分层、不可替代性和当前失衡风险
 13. 群像弧光矩阵：记录核心角色各自的阶段变化与交叉影响
 14. 未知钩子矩阵：记录未知对象、未知问题、阶段揭示和最终回收方式
-15. 投稿润色单：记录平台偏好、AI 痕迹排查项和本轮精修重点
-16. 去 AI 味诊断单：记录当前最重的模型痕迹、证据段落和本轮只处理的问题层
-17. 章首轮换表：记录最近几章的章首类型，防止连续重复
-18. 章首第一句表：记录最近几章第一句的句法习惯、手法分布、禁用病句型和可替换方案
-19. 单章字数控制单：记录章节厚度判断、字数分配、未达标缺口和补足顺序
-20. 多阵营动态表：记录主角团外各股力量的动作、误判和影响链
-21. 情绪爆点表：记录哪一章、哪一段需要爆开，谁失控，余波如何进入后文
-22. 对白声线矩阵：记录每个核心角色的口头毛边、说话缺陷和最不可能说出的句型
-23. 情绪价值板：记录本书、本卷、本章最值钱的情绪兑现点和共感来源
-24. 冲突节奏板：记录章节和卷的冲突频率、升级节点和后果变化
-25. 魅力角色表：记录角色标签、魅力来源、反差和代价
-26. 金句与有趣角色单：记录哪些句子该留、谁负责活气、谁负责翻车，以及这些功能如何反哺剧情
-27. 章节对齐单：记录上一章结尾状态、本章必须承接的线、本章兑现与拖延的承诺，以及下章不能丢的状态变化
+15. 主角主动性追踪表：记录每章主角是主动推进、被动应对还是被迫失手，防止主角螺旋式失去主动权
+16. 投稿润色单：记录平台偏好、AI 痕迹排查项和本轮精修重点
+17. 去 AI 味诊断单：记录当前最重的模型痕迹、证据段落和本轮只处理的问题层
+18. 章首轮换表：记录最近几章的章首类型，防止连续重复
+19. 章首第一句表：记录最近几章第一句的句法习惯、手法分布、禁用病句型和可替换方案
+20. 单章字数控制单：记录章节厚度判断、字数分配、未达标缺口和补足顺序
+21. 多阵营动态表：记录主角团外各股力量的动作、误判和影响链
+22. 情绪爆点表：记录哪一章、哪一段需要爆开，谁失控，余波如何进入后文
+23. 对白声线矩阵：记录每个核心角色的口头毛边、说话缺陷和最不可能说出的句型
+24. 情绪价值板：记录本书、本卷、本章最值钱的情绪兑现点和共感来源
+25. 冲突节奏板：记录章节和卷的冲突频率、升级节点和后果变化
+26. 魅力角色表：记录角色标签、魅力来源、反差和代价
+27. 金句与有趣角色单：记录哪些句子该留、谁负责活气、谁负责翻车，以及这些功能如何反哺剧情
+28. 章节对齐单：记录上一章结尾状态、本章必须承接的线、本章兑现与拖延的承诺，以及下章不能丢的状态变化
+29. 十章呼应板：记录最近十章仍在持续生效的线、关系、压力、代价和语气，避免每章都像新的开始
+30. 支线脆弱度表：记录哪些支线最容易失联、最晚何时必须续一口气、哪条线最不能断
 
-推荐优先维护：
+推荐优先维护的前 10 层：Canon 事实、人物状态、时间线、伏笔与线索、章节摘要、连载状态、记忆索引、连续性台账、章节对齐单、十章呼应板。其余层级按需在对应工作模式中加载。
 
-- [Canon 事实模板](./assets/canon-facts-template.md)
-- [时间线模板](./assets/timeline-template.md)
-- [伏笔与线索模板](./assets/plot-thread-template.md)
-- [章节摘要模板](./assets/chapter-summary-template.md)
-- [连载状态模板](./assets/series-state-template.md)
-- [记忆索引模板](./assets/memory-index-template.md)
-- [连续性台账模板](./assets/consistency-ledger-template.md)
-- [章节对齐模板](./assets/chapter-alignment-template.md)
-- [连载节奏板模板](./assets/serialization-board-template.md)
-- [故事线总表模板](./assets/storyline-board-template.md)
-- [结构网图模板](./assets/plot-architecture-template.md)
-- [伏笔矩阵模板](./assets/foreshadow-matrix-template.md)
-- [势力棋盘模板](./assets/faction-board-template.md)
-- [分卷大纲模板](./assets/volume-outline-template.md)
-- [细纲模板](./assets/detailed-outline-template.md)
-- [人物小传模板](./assets/character-biography-template.md)
-- [人物关系图模板](./assets/relationship-map-template.md)
-- [群像角色总表模板](./assets/ensemble-cast-template.md)
-- [群像弧光矩阵模板](./assets/ensemble-arc-matrix-template.md)
-- [未知钩子矩阵模板](./assets/unknown-hook-matrix-template.md)
-- [平台投稿润色模板](./assets/submission-polish-template.md)
-- [去 AI 味诊断模板](./assets/de-ai-diagnostic-template.md)
-- [章首轮换模板](./assets/chapter-opening-rotation-template.md)
-- [章首第一句模板](./assets/first-sentence-template.md)
-- [单章字数控制模板](./assets/chapter-length-control-template.md)
-- [多阵营动态模板](./assets/multi-faction-dynamics-template.md)
-- [情绪爆点模板](./assets/emotion-burst-template.md)
-- [对白声线矩阵模板](./assets/dialogue-voice-matrix-template.md)
-- [情绪价值板模板](./assets/emotional-value-board-template.md)
-- [高频冲突节奏板模板](./assets/conflict-rhythm-template.md)
-- [标签化魅力角色模板](./assets/magnetic-character-template.md)
-- [金句与功能性有趣角色模板](./assets/funny-role-template.md)
-- [宇宙设定模板](./assets/cosmology-template.md)
-- [世界地图模板](./assets/world-map-template.md)
-- [宇宙地图模板](./assets/universe-map-template.md)
-- [世界规律模板](./assets/world-rules-template.md)
-- [热门网文写法参考](./references/popular-webnovel-craft.md)
-- [群像写作参考](./references/ensemble-writing.md)
-- [未知钩子设计参考](./references/unknown-hook-design.md)
-- [平台投稿与去 AI 化参考](./references/platform-submission.md)
-- [去 AI 味改写参考](./references/de-ai-rewriting-patterns.md)
-- [章首第一句去 AI 化参考](./references/first-sentence-de-ai.md)
-- [30 种章首第一句手法库](./references/first-sentence-technique-library.md)
-- [单章字数执行参考](./references/chapter-length-enforcement.md)
-- [情绪爆点与脏感写法参考](./references/raw-emotion-writing.md)
-- [对白分声线参考](./references/dialogue-voice-differentiation.md)
-- [情绪价值设计参考](./references/emotional-value-design.md)
-- [高频冲突与节奏掌控参考](./references/conflict-rhythm-design.md)
-- [标签化魅力角色参考](./references/magnetic-character-design.md)
-- [金句与功能性有趣角色参考](./references/funny-role-design.md)
-- [扩展题材专长参考](./references/expanded-genre-strengths.md)
-- [反拼贴规则](references/anti-pastiche.md)
-- [项目文件夹组织参考](./references/project-organization.md)
+全部模板和参考文档见本文件末尾“参考资料”章节，也可直接浏览 `assets/` 和 `references/` 目录。
 
 ## 工作流
 
@@ -305,6 +184,7 @@ disable-model-invocation: false
 - 总纲阶段：使用 [总纲模板](./assets/outline-template.md)
 - 未知设计阶段：使用 [未知钩子矩阵模板](./assets/unknown-hook-matrix-template.md)
 - 群像阶段：使用 [群像角色总表模板](./assets/ensemble-cast-template.md) 和 [群像弧光矩阵模板](./assets/ensemble-arc-matrix-template.md)
+- 主角校准阶段：使用 [主角主动性追踪表](./assets/protagonist-agency-template.md)
 - 章首设计阶段：使用 [章首轮换模板](./assets/chapter-opening-rotation-template.md)
 - 章首第一句阶段：使用 [章首第一句模板](./assets/first-sentence-template.md)
 - 字数控制阶段：使用 [单章字数控制模板](./assets/chapter-length-control-template.md)
@@ -345,8 +225,9 @@ disable-model-invocation: false
 
 - 如果要写群像：追加群像总表、群像弧光矩阵、关系图
 - 如果要做大布局：追加结构网图、伏笔矩阵、势力棋盘
+- 如果支线很多：追加支线脆弱度表
 - 如果要做宏伟世界观：追加宇宙设定、世界规律、世界地图、宇宙地图
-- 如果是网文连载：追加连载状态模板、连载节奏板、章节对齐单
+- 如果是网文连载：追加连载状态模板、连载节奏板、章节对齐单、十章呼应板
 - 如果依赖未知推进：追加未知钩子矩阵
 - 如果要投稿平台：追加投稿润色模板和平台参考
 - 如果要去 AI 化：先跑诊断模板，再进入定向改写
@@ -372,7 +253,7 @@ disable-model-invocation: false
 
 如果用户目标跨多个阶段，按“先结构、再章节、后正文、最后审校”的顺序执行。
 
-### 1.1 题材模板选择
+### 1.2 题材模板选择
 
 当用户明确题材时，优先加载对应模板：
 
@@ -392,7 +273,7 @@ disable-model-invocation: false
 1. 用户刚刚明确说明的硬约束
 2. Canon 事实表
 3. 已有世界观和人物设定
-4. 最近章节摘要、章节对齐单和时间线
+4. 最近章节摘要、章节对齐单、十章呼应板和时间线
 5. 总纲和章节卡
 6. 推测性补全
 
@@ -445,7 +326,7 @@ disable-model-invocation: false
 
 对于长篇项目，再加常驻步骤：
 
-0.5 先建立记忆索引、连续性台账和章节对齐单，再进入卷纲、细纲和章节阶段
+0.5 先建立记忆索引、连续性台账、章节对齐单和十章呼应板，再进入卷纲、细纲和章节阶段
 
 如果作品依赖悬疑感或未知推进，再加常驻步骤：
 
@@ -479,7 +360,8 @@ disable-model-invocation: false
 4. [时间线模板](./assets/timeline-template.md) 对应文件
 5. 最近章节摘要
 6. [章节对齐模板](./assets/chapter-alignment-template.md) 对应文件
-7. 当前卷纲 / 细纲 / 章节卡
+7. [十章呼应板模板](./assets/ten-chapter-echo-template.md) 对应文件
+8. 当前卷纲 / 细纲 / 章节卡
 
 如果没有先读这套顺序，就不要直接大段写正文。
 
@@ -497,10 +379,12 @@ disable-model-invocation: false
 2. 读 Canon 事实和连续性台账，锁定不可改项
 3. 读时间线和最近章节摘要，恢复当前局势
 4. 读章节对齐单，确认本章必须承接的问题
-5. 读当前卷纲、细纲、章节卡，确认本章功能和边界
-6. 再写正文
-7. 写完后按连续性清单审校
-8. 回写章节摘要、时间线、伏笔、状态和章节对齐单
+5. 读十章呼应板，确认最近十章里哪些线和关系还在持续生效
+6. 读当前卷纲、细纲、章节卡，确认本章功能和边界
+7. 再做三项写前预警检查：主角主动性、关系升级速度、未知钩子超时
+8. 通过后再写正文
+9. 写完后按连续性清单审校
+10. 回写章节摘要、时间线、伏笔、状态、章节对齐单和十章呼应板
 
 字数门槛也作为这一流程的验收门：
 
@@ -508,6 +392,12 @@ disable-model-invocation: false
 - 常规稳定区间为 4300 到 5000 字
 - 如果未达最低字数，先补过程、阻力、反应、余波和非主角反馈
 - 如果用户没有明确允许短章，不交付低于最低字数的残缺版
+
+三项写前预警器默认这样拦截：
+
+- 主角主动性预警：如果最近连续 3 章都不是“主动推进”，下一章必须补一次主动决策、主动试探、主动对抗或主动夺回节奏
+- 关系升级速度预警：如果关系要从试探跳到信任、从拉扯跳到依赖、从敌对跳到结盟，必须先满足关系图里登记过的可见动作或代价，否则不允许直接升级
+- 未知钩子超时预警：如果某条未知已经接近或超过“最晚下次提醒章节”，这一章必须给一次提醒、偏移、升级或明确登记延期原因，不能让未知无声蒸发
 
 ### 5. 输出时遵循固定层级
 
@@ -521,6 +411,12 @@ disable-model-invocation: false
 
 如果用户只要正文，正文前仍需用 2 到 5 行简要说明本章目标、冲突和情绪走向。
 
+如果是长篇、续写、连载正文，正文前再额外补一段极短自检，至少说清三件事：
+
+1. 本章承接了上一章的什么
+2. 本章呼应了最近十章中的哪条旧线、旧关系或旧代价
+3. 如果本章切入新问题，旧问题为什么没有失效
+
 ### 6. 正文生成规则
 
 - 先明确本章功能：推进主线、塑造人物、揭示设定、制造反转、回收伏笔中的哪一种
@@ -529,6 +425,8 @@ disable-model-invocation: false
 - 群像作品里，每章除主角外，至少有 1 个核心角色真正改变局势、改变关系或改变信息结构
 - 场景切换要有明显触发，不要无因跳转
 - 对话要服务于人物关系和信息推进，不要只为解释设定
+- 不要长期只写“看见了什么”；关键场面按需要补听觉、嗅觉、味觉、痛觉、触感、温度或呼吸反应
+- 场面推进可适度加入隐形分镜感，通过焦点切换、动作接力、物件特写、声响推进和后果先行带出节拍，不要解释这是分镜
 - 避免反复使用同一类形容词、同一节奏句式和空泛情绪词
 - 平台投稿稿件优先删除“总结性解释句”、空修辞和通用情绪判断，更多让场景、动作、停顿自己说话
 - 对长篇续写，先读取已有状态资料再写
@@ -537,6 +435,9 @@ disable-model-invocation: false
 - 如果必须新增，先显式说明这是“候选设定”或“建议补充项”，不要直接写死进正文
 - 每章至少和一条主线或支线产生有效联系，不能成为完全孤立的片段
 - 当一章主要服务支线时，也要让它对主线认知、人物关系或后续棋局产生反作用
+- 最近十章里仍在发热的线、关系、代价和压力，每章至少明确呼应其中主要一项；不能把每章写成旧问题自然蒸发后的新开局
+- 如果连这章呼应了最近十章中的什么都说不清，就先回退补章节卡、章节对齐单或十章呼应板，不直接硬写正文
+- 如果主角主动性预警、关系升级速度预警、未知钩子超时预警里任意一项没过，就先修正卡片和状态文件，不直接硬写正文
 - 不要让同一个角色长期垄断高光，卷级范围内要允许核心群像轮换承担波峰
 - 伏笔优先采用“多次擦边出现”而不是“一次硬塞，后面突然回收”
 - 优先使用草蛇灰线式埋法：细节先行、意义后显、回头才成立
@@ -637,8 +538,11 @@ disable-model-invocation: false
 8. 本章对更大棋盘的影响
 9. 本章触发了哪条世界规律或地图关系
 10. 本章和上一章是否已经完成状态对齐，以及下章必须先接住什么
+11. 本章是否继续呼应了最近十章中的旧线、旧关系、旧代价，以及哪条线被压暗或加重
 
 没有回写，后续续写的稳定性会快速下降，前后章节也会越来越不对齐。
+
+如果没有维护十章呼应板，模型很容易只记住上一章，却忘掉最近 5 到 10 章还在持续生效的压力、关系和旧问题，最后把每章都写成新的开始。
 
 如果任务会产出章节文件、章节目录或项目文件树，章节相关文件名默认使用：
 
@@ -722,6 +626,8 @@ disable-model-invocation: false
 
 ## 参考资料
 
+### 参考文档（references/）
+
 - [小说工作流](./references/workflow.md)
 - [质量标准](./references/quality-rubric.md)
 - [防幻觉参考](./references/hallucination-control.md)
@@ -729,28 +635,40 @@ disable-model-invocation: false
 - [大布局参考](./references/macro-plotting.md)
 - [宇宙与世界逻辑参考](./references/world-logic.md)
 - [热门网文写法参考](./references/popular-webnovel-craft.md)
-- [项目简报模板](./assets/project-brief-template.md)
-- [世界观模板](./assets/worldbuilding-template.md)
-- [宇宙设定模板](./assets/cosmology-template.md)
-- [世界规律模板](./assets/world-rules-template.md)
-- [世界地图模板](./assets/world-map-template.md)
-- [宇宙地图模板](./assets/universe-map-template.md)
-- [角色模板](./assets/character-template.md)
-- [总纲模板](./assets/outline-template.md)
-- [章节卡模板](./assets/chapter-card-template.md)
-- [Canon 事实模板](./assets/canon-facts-template.md)
-- [时间线模板](./assets/timeline-template.md)
-- [伏笔与线索模板](./assets/plot-thread-template.md)
-- [伏笔矩阵模板](./assets/foreshadow-matrix-template.md)
-- [结构网图模板](./assets/plot-architecture-template.md)
-- [势力棋盘模板](./assets/faction-board-template.md)
-- [章节摘要模板](./assets/chapter-summary-template.md)
-- [连载状态模板](./assets/series-state-template.md)
-- [连载节奏板模板](./assets/serialization-board-template.md)
-- [连续性检查清单](./assets/continuity-checklist.md)
-- [任务 Prompt 模板](./assets/task-prompt-template.md)
-- [续写与润色 Prompt 模板](./assets/rewrite-prompt-template.md)
-- [玄幻模板](./assets/genre-xuanhuan-template.md)
-- [悬疑模板](./assets/genre-xuanyi-template.md)
-- [言情模板](./assets/genre-yanqing-template.md)
-- [轻小说模板](./assets/genre-lightnovel-template.md)
+- [群像写作参考](./references/ensemble-writing.md)
+- [未知钩子设计参考](./references/unknown-hook-design.md)
+- [平台投稿与去 AI 化参考](./references/platform-submission.md)
+- [去 AI 味改写参考](./references/de-ai-rewriting-patterns.md)
+- [章首第一句去 AI 化参考](./references/first-sentence-de-ai.md)
+- [30 种章首第一句手法库](./references/first-sentence-technique-library.md)
+- [单章字数执行参考](./references/chapter-length-enforcement.md)
+- [情绪爆点与脏感写法参考](./references/raw-emotion-writing.md)
+- [对白分声线参考](./references/dialogue-voice-differentiation.md)
+- [情绪价值设计参考](./references/emotional-value-design.md)
+- [高频冲突与节奏掌控参考](./references/conflict-rhythm-design.md)
+- [标签化魅力角色参考](./references/magnetic-character-design.md)
+- [金句与功能性有趣角色参考](./references/funny-role-design.md)
+- [多感官与隐形分镜写法参考](./references/multisensory-scene-writing.md)
+- [扩展题材专长参考](./references/expanded-genre-strengths.md)
+- [反拼贴规则](./references/anti-pastiche.md)
+- [项目文件夹组织参考](./references/project-organization.md)
+- [输入收集指南](./references/input-collection-guide.md)
+
+### 模板（assets/）
+
+- [项目简报](./assets/project-brief-template.md) · [世界观](./assets/worldbuilding-template.md) · [角色](./assets/character-template.md) · [人物小传](./assets/character-biography-template.md)
+- [总纲](./assets/outline-template.md) · [分卷大纲](./assets/volume-outline-template.md) · [细纲](./assets/detailed-outline-template.md) · [章节卡](./assets/chapter-card-template.md)
+- [Canon 事实](./assets/canon-facts-template.md) · [时间线](./assets/timeline-template.md) · [伏笔与线索](./assets/plot-thread-template.md) · [章节摘要](./assets/chapter-summary-template.md)
+- [记忆索引](./assets/memory-index-template.md) · [连续性台账](./assets/consistency-ledger-template.md) · [章节对齐](./assets/chapter-alignment-template.md) · [十章呼应板](./assets/ten-chapter-echo-template.md)
+- [连载状态](./assets/series-state-template.md) · [连载节奏板](./assets/serialization-board-template.md) · [故事线总表](./assets/storyline-board-template.md)
+- [结构网图](./assets/plot-architecture-template.md) · [伏笔矩阵](./assets/foreshadow-matrix-template.md) · [势力棋盘](./assets/faction-board-template.md)
+- [宇宙设定](./assets/cosmology-template.md) · [世界规律](./assets/world-rules-template.md) · [世界地图](./assets/world-map-template.md) · [宇宙地图](./assets/universe-map-template.md)
+- [群像角色总表](./assets/ensemble-cast-template.md) · [群像弧光矩阵](./assets/ensemble-arc-matrix-template.md) · [人物关系图](./assets/relationship-map-template.md)
+- [主角主动性追踪表](./assets/protagonist-agency-template.md) · [支线脆弱度表](./assets/subplot-fragility-template.md)
+- [未知钩子矩阵](./assets/unknown-hook-matrix-template.md) · [多阵营动态](./assets/multi-faction-dynamics-template.md)
+- [章首轮换](./assets/chapter-opening-rotation-template.md) · [章首第一句](./assets/first-sentence-template.md) · [单章字数控制](./assets/chapter-length-control-template.md)
+- [情绪爆点](./assets/emotion-burst-template.md) · [对白声线矩阵](./assets/dialogue-voice-matrix-template.md) · [情绪价值板](./assets/emotional-value-board-template.md)
+- [高频冲突节奏板](./assets/conflict-rhythm-template.md) · [标签化魅力角色](./assets/magnetic-character-template.md) · [金句与有趣角色](./assets/funny-role-template.md)
+- [连续性检查清单](./assets/continuity-checklist.md) · [任务 Prompt](./assets/task-prompt-template.md) · [续写与润色 Prompt](./assets/rewrite-prompt-template.md)
+- [投稿润色](./assets/submission-polish-template.md) · [去 AI 味诊断](./assets/de-ai-diagnostic-template.md)
+- [玄幻](./assets/genre-xuanhuan-template.md) · [悬疑](./assets/genre-xuanyi-template.md) · [言情](./assets/genre-yanqing-template.md) · [轻小说](./assets/genre-lightnovel-template.md)
