@@ -61,6 +61,7 @@ disable-model-invocation: false
 - 检查前后设定、时间线、角色行为是否冲突
 - 长篇或网文连载，需要维护统一文风和状态
 - 需要做男频 / 女频 / 悬疑 / 轻小说等题材特化写作
+- 需要从小说场景骨架输出剧本格式，或同时输出小说正文和剧本
 
 ## 不适用场景
 
@@ -132,7 +133,7 @@ disable-model-invocation: false
 
 ## 记忆体系
 
-这个 skill 处理长篇时，默认把“记忆”拆成 30 个层级，避免设定漂移：
+这个 skill 处理长篇时，默认把”记忆”拆成 35 个层级，避免设定漂移：
 
 1. Canon 事实表：只记录已经确认、不可随意改动的事实
 2. 人物状态表：记录每个主要角色当前处境、关系和心理变化
@@ -164,6 +165,11 @@ disable-model-invocation: false
 28. 章节对齐单：记录上一章结尾状态、本章必须承接的线、本章兑现与拖延的承诺，以及下章不能丢的状态变化
 29. 十章呼应板：记录最近十章仍在持续生效的线、关系、压力、代价和语气，避免每章都像新的开始
 30. 支线脆弱度表：记录哪些支线最容易失联、最晚何时必须续一口气、哪条线最不能断
+31. 场景骨架表：记录每章的场景拆分，每个场景有唯一 scene_id（CH{章号}-S{序号}），标注类型/进入状态/冲突/退出状态/驱动角色；双轨模式下包含剧本兼容字段
+32. 信息流控制单：记录每章的信息预算、释放方式、信息差分布和解释段上限
+33. 节奏控制单：记录每章的张力曲线、场景节奏类型序列和段落级变速标记
+34. 角色驱动单：记录每章的角色驱动分配、非主角推进项和角色工具人化预警
+35. 质量闭环单：记录每章写后必检 24 项、通过/未通过状态和回修记录
 
 推荐优先维护的前 10 层：Canon 事实、人物状态、时间线、伏笔与线索、章节摘要、连载状态、记忆索引、连续性台账、章节对齐单、十章呼应板。其余层级按需在对应工作模式中加载。
 
@@ -191,10 +197,16 @@ disable-model-invocation: false
 - 卷纲阶段：使用 [分卷大纲模板](./assets/volume-outline-template.md)
 - 细纲阶段：使用 [细纲模板](./assets/detailed-outline-template.md)
 - 章节阶段：使用 [章节卡模板](./assets/chapter-card-template.md)
+- 场景拆分阶段：使用 [场景骨架模板](./assets/scene-engine-template.md)，把章节卡拆成可控的场景单元
+- 信息流设计阶段：使用 [信息流控制模板](./assets/information-flow-template.md)
+- 节奏设计阶段：使用 [节奏控制模板](./assets/pacing-engine-template.md)
+- 角色驱动分配阶段：使用 [角色驱动模板](./assets/character-engine-template.md)
 - 阵营动态阶段：使用 [多阵营动态模板](./assets/multi-faction-dynamics-template.md)
 - 项目整理阶段：使用 [项目文件夹组织参考](./references/project-organization.md)
 - 连载维护阶段：使用 [连载状态模板](./assets/series-state-template.md)
 - 审校阶段：使用 [连续性检查清单](./assets/continuity-checklist.md)
+- 质量闭环阶段：使用 [质量闭环模板](./assets/quality-gate-template.md)，正文写完后强制过检
+- 剧本输出阶段：使用 [剧本输出模板](./assets/screenplay-output-template.md)，从场景骨架压缩为剧本格式；需要先完成场景骨架
 - 去 AI 味诊断阶段：先使用 [去 AI 味诊断模板](./assets/de-ai-diagnostic-template.md)
 - 投稿润色阶段：使用 [平台投稿润色模板](./assets/submission-polish-template.md)
 
@@ -219,7 +231,7 @@ disable-model-invocation: false
 
 ### 1.1 条件扩展树
 
-基础长篇路径默认是：项目简报 -> 世界观 -> 角色 -> 总纲 -> 卷纲 / 细纲 -> 章节卡 -> 正文 -> 审校 -> 回写。
+基础长篇路径默认是：项目简报 -> 世界观 -> 角色 -> 总纲 -> 卷纲 / 细纲 -> 章节卡 -> 场景骨架（强制，含 scene_id）-> 正文 -> 质量闭环 -> 审校 -> 回写。双轨模式在场景骨架后分叉：小说路径（扩写 -> 质量门）和剧本路径（压缩 -> 剧本检查）-> 一致性检查。
 
 在基础路径上，按目标追加加载：
 
@@ -231,6 +243,7 @@ disable-model-invocation: false
 - 如果依赖未知推进：追加未知钩子矩阵
 - 如果要投稿平台：追加投稿润色模板和平台参考
 - 如果要去 AI 化：先跑诊断模板，再进入定向改写
+- 如果要双轨输出（小说 + 剧本）：场景骨架中剧本兼容字段改为必填，写完后分两路生成，最后过一致性检查
 
 不要一上来把全部模板都加载进来，只按当前任务需要递增读取。
 
@@ -250,6 +263,7 @@ disable-model-invocation: false
 - 模式 L，未知钩子模式：先定义主未知、副未知和阶段揭示，再反推开篇、章尾和卷尾的吸引力设计
 - 模式 M，平台投稿模式：先识别平台偏好和 AI 痕迹，再做定向去 AI 化和投稿润色
 - 模式 N，去 AI 味精修模式：先诊断最重的 1 到 3 个问题，再按节奏、解释、对白、现场感分轮修订
+- 模式 O，剧本输出模式：从已有场景骨架（含 scene_id 和剧本兼容字段）逐场景压缩为标准剧本格式（INT/EXT 场景标头 + 动作描写≤4行/段 + 推进性对白），严格禁止内心描写、镜头语言、文学修辞和背景堆砌；输出后过 13 项剧本检查清单；支持单独输出或与小说双轨输出（双轨需过 9 项一致性检查）
 
 如果用户目标跨多个阶段，按“先结构、再章节、后正文、最后审校”的顺序执行。
 
@@ -382,9 +396,14 @@ disable-model-invocation: false
 5. 读十章呼应板，确认最近十章里哪些线和关系还在持续生效
 6. 读当前卷纲、细纲、章节卡，确认本章功能和边界
 7. 再做三项写前预警检查：主角主动性、关系升级速度、未知钩子超时
-8. 通过后再写正文
-9. 写完后按连续性清单审校
-10. 回写章节摘要、时间线、伏笔、状态、章节对齐单和十章呼应板
+8. 填写场景骨架（强制）：把章节卡拆成 2-5 个场景，每个场景必须有 scene_id（格式 CH{章号}-S{序号}），标注类型、驱动角色、信息预算和节奏曲线。没有场景骨架不允许进入正文阶段
+9. 如果用户要求双轨输出，在场景骨架中填写剧本兼容字段（场景标头、视觉动作、对白核心、潜台词）
+10. 按场景骨架写正文（小说路径），逐 scene_id 扩写
+11. 写完后过质量闭环（24 项检查），不通过则回修
+12. 如果用户要求剧本输出，从同一份场景骨架压缩为剧本格式（剧本路径），过剧本检查清单（13 项）
+13. 如果是双轨输出，执行一致性检查（9 项），确保小说和剧本的 scene_id 对应关系和核心内容一致
+14. 通过后按连续性清单审校
+15. 回写章节摘要、时间线、伏笔、状态、章节对齐单和十章呼应板
 
 字数门槛也作为这一流程的验收门：
 
@@ -653,6 +672,12 @@ disable-model-invocation: false
 - [反拼贴规则](./references/anti-pastiche.md)
 - [项目文件夹组织参考](./references/project-organization.md)
 - [输入收集指南](./references/input-collection-guide.md)
+- [Scene Engine 设计参考](./references/scene-engine-design.md)
+- [信息流控制参考](./references/information-flow-control.md)
+- [节奏控制参考](./references/pacing-engine-design.md)
+- [角色驱动系统参考](./references/character-engine-design.md)
+- [质量闭环参考](./references/quality-gate-design.md)
+- [剧本转换参考](./references/screenplay-conversion-design.md)
 
 ### 模板（assets/）
 
@@ -666,6 +691,7 @@ disable-model-invocation: false
 - [群像角色总表](./assets/ensemble-cast-template.md) · [群像弧光矩阵](./assets/ensemble-arc-matrix-template.md) · [人物关系图](./assets/relationship-map-template.md)
 - [主角主动性追踪表](./assets/protagonist-agency-template.md) · [支线脆弱度表](./assets/subplot-fragility-template.md)
 - [未知钩子矩阵](./assets/unknown-hook-matrix-template.md) · [多阵营动态](./assets/multi-faction-dynamics-template.md)
+- [场景骨架](./assets/scene-engine-template.md) · [信息流控制](./assets/information-flow-template.md) · [节奏控制](./assets/pacing-engine-template.md) · [角色驱动](./assets/character-engine-template.md) · [质量闭环](./assets/quality-gate-template.md) · [剧本输出](./assets/screenplay-output-template.md)
 - [章首轮换](./assets/chapter-opening-rotation-template.md) · [章首第一句](./assets/first-sentence-template.md) · [单章字数控制](./assets/chapter-length-control-template.md)
 - [情绪爆点](./assets/emotion-burst-template.md) · [对白声线矩阵](./assets/dialogue-voice-matrix-template.md) · [情绪价值板](./assets/emotional-value-board-template.md)
 - [高频冲突节奏板](./assets/conflict-rhythm-template.md) · [标签化魅力角色](./assets/magnetic-character-template.md) · [金句与有趣角色](./assets/funny-role-template.md)

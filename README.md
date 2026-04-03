@@ -24,11 +24,18 @@
 
 ## 核心能力
 
-当前版本覆盖 40 项能力，按类别分组：
+当前版本按类别分组：
 
 **基础写作**：立项、世界观、人物、总纲、分卷与章节规划、正文写作、润色与风格统一、连续性审校
 
-**长篇与连载**：记忆维护（30 层状态体系）、网文连载节奏、单章字数硬约束、章节对齐、十章回响控制、前三章埋线与阶段高潮
+**5 大控制引擎**（本次核心升级）：
+- **Scene Engine（场景骨架）**：把章节拆成 2-5 个可控场景，每个场景有进入状态/冲突/退出状态；同时作为小说与剧本的唯一真实源，支持双轨输出
+- **Information Flow Control（信息流控制）**：控制每章信息释放量、节奏和信息差分布
+- **Pacing Engine（节奏控制）**：场景级和段落级节奏标记，防止全程一个速度
+- **Character Engine（角色驱动）**：确保每章有非主角角色主动推进，防止配角工具人化
+- **Quality Gate（质量闭环）**：正文写完后 24 项强制检查，不通过不交稿
+
+**长篇与连载**：记忆维护（35 层状态体系）、网文连载节奏、单章字数硬约束、章节对齐、十章回响控制、前三章埋线与阶段高潮
 
 **结构与布局**：多线叙事、伏笔矩阵与草蛇灰线、势力棋盘、宇宙设定与世界规律、世界地图与宇宙地图
 
@@ -138,7 +145,13 @@ skill-xiaoshuo/
 │   ├── volume-outline-template.md
 │   ├── world-map-template.md
 │   ├── world-rules-template.md
-│   └── worldbuilding-template.md
+│   ├── worldbuilding-template.md
+│   ├── scene-engine-template.md
+│   ├── information-flow-template.md
+│   ├── pacing-engine-template.md
+│   ├── character-engine-template.md
+│   ├── quality-gate-template.md
+│   └── screenplay-output-template.md
 └── references/
   ├── anti-pastiche.md
   ├── chapter-length-enforcement.md
@@ -164,7 +177,13 @@ skill-xiaoshuo/
   ├── unknown-hook-design.md
   ├── webnovel-serialization.md
   ├── world-logic.md
-  └── workflow.md
+  ├── workflow.md
+  ├── scene-engine-design.md
+  ├── information-flow-control.md
+  ├── pacing-engine-design.md
+  ├── character-engine-design.md
+  ├── quality-gate-design.md
+  └── screenplay-conversion-design.md
 ```
 
 ## 文件说明
@@ -220,6 +239,24 @@ skill-xiaoshuo/
 
 - [chapter-card-template.md](./assets/chapter-card-template.md)
   用于单章情节拆解，控制本章目标、冲突、节拍和钩子。
+
+- [scene-engine-template.md](./assets/scene-engine-template.md)
+  用于把章节卡拆成 2-5 个可控场景，每个场景标注类型、进入/退出状态、冲突、驱动角色和信息变化。
+
+- [information-flow-template.md](./assets/information-flow-template.md)
+  用于控制每章信息释放量、释放方式和信息差分布，防止信息过密或解释集中。
+
+- [pacing-engine-template.md](./assets/pacing-engine-template.md)
+  用于标记场景级和段落级节奏，设计张力曲线，防止全章匀速推进。
+
+- [character-engine-template.md](./assets/character-engine-template.md)
+  用于分配每章角色驱动，确保非主角角色主动推进，防止配角工具人化。
+
+- [quality-gate-template.md](./assets/quality-gate-template.md)
+  用于正文写完后的 24 项强制检查，不通过则回修，不交稿。
+
+- [screenplay-output-template.md](./assets/screenplay-output-template.md)
+  用于从场景骨架压缩为剧本格式（INT/EXT 场景标头 + 动作描写 + 对白），支持小说与剧本双轨输出。
 
 - [chapter-length-control-template.md](./assets/chapter-length-control-template.md)
   用于判断章节厚度、分配字数并规定未达最低字数时先补哪里。
@@ -372,9 +409,27 @@ skill-xiaoshuo/
 - [project-organization.md](./references/project-organization.md)
   给出小说项目的推荐目录树，明确故事线、总纲、细纲、人物、伏笔、记忆、审校应分别放在哪个文件夹。
 
+- [scene-engine-design.md](./references/scene-engine-design.md)
+  定义 6 种场景类型、场景组合规则、Scene 与章节/字数的关系，以及 Scene 作为统一中间层的设计。
+
+- [information-flow-control.md](./references/information-flow-control.md)
+  定义信息释放 4 条核心规则、4 种信息差类型和信息节奏模式，防止解释集中和信息过密。
+
+- [pacing-engine-design.md](./references/pacing-engine-design.md)
+  定义场景级/段落级/章级三层节奏控制、节奏与情绪的对应关系和节奏诊断方法。
+
+- [character-engine-design.md](./references/character-engine-design.md)
+  定义 4 种驱动力层级、角色工具人化 5 个信号和补救方式，解决"只有主角在动"的核心问题。
+
+- [quality-gate-design.md](./references/quality-gate-design.md)
+  定义 6 维度 24 项质量检查、评分标准、回修流程和质量门与工作流的集成方式。
+
+- [screenplay-conversion-design.md](./references/screenplay-conversion-design.md)
+  定义 Scene 作为唯一真实源的双轨输出架构、小说 vs 剧本的表达差异、剧本 8 核心要素与 4 禁区、转换流程和检查清单。
+
 ## 工作流
 
-默认流程：立项 → 设定 → 总纲 → 卷纲 → 细纲 → 章节卡 → 正文 → 审校 → 状态回写。支持 14 种工作模式（A-N），覆盖新建、续写、润色、审校、连载、题材特化、大布局、宇宙设定、群像、去 AI 化等场景。
+默认流程：立项 → 设定 → 总纲 → 卷纲 → 细纲 → 章节卡 → 正文 → 审校 → 状态回写。支持 15 种工作模式（A-O），覆盖新建、续写、润色、审校、连载、题材特化、大布局、宇宙设定、群像、去 AI 化、剧本输出等场景。
 
 完整工作流规则、源信息优先级、条件扩展树见 [SKILL.md 工作流](./SKILL.md#工作流)。
 
