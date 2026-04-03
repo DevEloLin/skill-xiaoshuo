@@ -32,7 +32,7 @@
 - 伏笔多层回收，势力棋盘，未知钩子阶段揭示
 - 连载前三章埋线给爽点，第 10-15 章打出首个高潮
 
-完整设计原则见 [SKILL.md 核心设计原则](./SKILL.md#核心设计原则)。
+完整设计原则见 [SKILL-reference.md 核心设计原则](./SKILL-reference.md#核心设计原则32-条)。
 
 ## 系统架构
 
@@ -100,7 +100,7 @@ Scene Schema (Level 1) → Mapping Layer (Level 2) → Mapping Validator (Level 
 | **B 级** | 17 层条件加载 | 按当前任务加载 | 伏笔表、势力棋盘、结构网图、连续性台账、未知钩子、场景骨架、信息流、节奏、角色驱动、质量闭环、群像、冲突节奏等 |
 | **C 级** | 11 层专项 | 特定模式/题材才读 | 宇宙设定、地图体系、投稿润色、去 AI 诊断、章首轮换、字数控制、情绪爆点、对白声线、情绪价值、魅力角色等 |
 
-完整层级列表见 [SKILL.md 记忆体系](./SKILL.md#记忆体系)。
+完整层级列表见 [SKILL-reference.md 记忆体系](./SKILL-reference.md#记忆体系完整-35-层)。
 
 ### 系统增强机制
 
@@ -173,7 +173,8 @@ Scene Schema (Level 1) → Mapping Layer (Level 2) → Mapping Validator (Level 
 ```text
 skill-xiaoshuo/
 ├── README.md
-├── SKILL.md
+├── SKILL.md                  # 精简运行时版（~300行），每次调用加载
+├── SKILL-reference.md        # 完整参考手册（~770行），按需加载
 ├── USAGE.md
 ├── work.md
 ├── examples/
@@ -287,7 +288,10 @@ skill-xiaoshuo/
 ### 入口文件
 
 - [SKILL.md](./SKILL.md)
-  Skill 的主定义文件，负责描述何时触发、能做什么、采用什么工作流。包含六道硬门、六项协议和三级执行模式的完整定义。
+  Skill 的精简运行时版本（~300 行），每次调用加载到 AI 上下文。包含六道硬门、七项协议、三级执行模式和任务模式映射表的核心定义。
+
+- [SKILL-reference.md](./SKILL-reference.md)
+  Skill 的完整参考手册（~770 行），按需加载。包含 32 条设计原则全文、35 层记忆完整列表、版本控制与回滚协议、约束层与冲突裁决、正文生成规则、幻觉控制、多线叙事、润色/去AI、连续性审校、状态回写、网文特化、推荐产物、使用原则、全部参考文档和模板索引。
 
 - [work.md](./work.md)
   Skill 的设计草稿和迭代来源。
@@ -558,7 +562,7 @@ skill-xiaoshuo/
 | P | Idea 模式 | 用户给出一句话想法，系统自动生成项目简报、主角、冲突、世界约束、三幕结构、第 1 章章节卡和场景骨架 |
 | Q | 日更一句话续写 | 一句方向指令 → 自动读取状态 → 解析 → 章节卡 → 骨架 → 正文 |
 
-完整工作流规则、源信息优先级、条件扩展树见 [SKILL.md 工作流](./SKILL.md#工作流)。
+完整工作流规则、源信息优先级、条件扩展树见 [SKILL-reference.md 工作流](./SKILL-reference.md#工作流详细规则)。
 
 ## 记忆体系
 
@@ -566,12 +570,12 @@ skill-xiaoshuo/
 
 目的：续写时快速恢复上下文，减少 AI 擅自发明新设定。每次写作前由记忆索引（A 级第 10 层）决定本轮读取哪些层。
 
-完整层级列表见 [SKILL.md 记忆体系](./SKILL.md#记忆体系)。
+完整层级列表见 [SKILL-reference.md 记忆体系](./SKILL-reference.md#记忆体系完整-35-层)。
 
 ## 专项能力
 
-- **网文连载**：管理追更节奏、开篇钩子、三章承诺、十章高潮、卷末兑现。见 [SKILL.md S11](./SKILL.md#11-网文连载特化要求)
-- **题材特化**：玄幻、悬疑、言情、轻小说 4 套模板 + 权谋/克苏鲁/军事等扩展题材。见 [SKILL.md S1.2](./SKILL.md#12-题材模板选择)
+- **网文连载**：管理追更节奏、开篇钩子、三章承诺、十章高潮、卷末兑现。见 [SKILL-reference.md 网文连载](./SKILL-reference.md#网文连载特化要求)
+- **题材特化**：玄幻、悬疑、言情、轻小说 4 套模板 + 权谋/克苏鲁/军事等扩展题材。见 [SKILL-reference.md 题材模板](./SKILL-reference.md#题材模板选择)
 - **大布局**：主线/支线/暗线结构网 + 伏笔矩阵 + 势力棋盘。见 [references/macro-plotting.md](./references/macro-plotting.md)
 - **宇宙与地图**：宇宙层 -> 世界层 -> 地图层 -> 剧情层四级约束。见 [references/world-logic.md](./references/world-logic.md)
 - **热门写法吸收**：抽取高层写法机制，反拼贴验收。见 [references/popular-webnovel-craft.md](./references/popular-webnovel-craft.md)
@@ -633,7 +637,8 @@ AI 会按 立项 -> 设定 -> 总纲 -> 章节卡 -> 场景骨架 -> 正文 的�
 
 ## 相关文件
 
-- [SKILL.md](./SKILL.md)
+- [SKILL.md](./SKILL.md) — 精简运行时版（~300行），每次调用加载
+- [SKILL-reference.md](./SKILL-reference.md) — 完整参考手册（~770行），按需加载
 - [USAGE.md](./USAGE.md)
 - [work.md](./work.md)
 - [examples](./examples)

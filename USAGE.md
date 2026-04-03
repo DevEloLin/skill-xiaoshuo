@@ -1719,7 +1719,7 @@ Cursor 里的核心不是"复制 Skill 机制"，而是复制这套工作流：
 
 ```text
 当任务涉及小说创作、续写、章节规划、人物设定、总纲、网文连载、审校时：
-1. 先读取 skill-xiaoshuo/SKILL.md
+1. 先读取 skill-xiaoshuo/SKILL.md（精简运行时版），需要详细规则时再读 SKILL-reference.md
 2. 根据任务阶段选择对应模板
 3. 正文任务必须过六道硬门（Idea解析门(如需)→写前门→场景门→正文门→质检门→回写门）
 4. 长篇任务优先读取 canon、时间线、伏笔和章节摘要
@@ -1762,7 +1762,8 @@ When the task is about fiction writing, novel planning, chapter drafting, serial
 ```text
 novel-project/
 ├── skill-xiaoshuo/
-│   ├── SKILL.md
+│   ├── SKILL.md              # 精简运行时版
+│   ├── SKILL-reference.md    # 完整参考手册
 │   ├── USAGE.md
 │   ├── assets/
 │   ├── references/
@@ -1819,7 +1820,8 @@ Lite 模式下门检查简化，但你仍然能看到执行日志、门通过记
 ## 十四、相关文件
 
 - [README.md](./README.md)
-- [SKILL.md](./SKILL.md)
+- [SKILL.md](./SKILL.md) — 精简运行时版（~300行），每次调用加载
+- [SKILL-reference.md](./SKILL-reference.md) — 完整参考手册（~770行），按需加载
 - [examples/README.md](./examples/README.md)
 - [assets](./assets)
 - [references](./references)
