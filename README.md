@@ -28,7 +28,7 @@
 
 **基础写作**：立项、世界观、人物、总纲、分卷与章节规划、正文写作、润色与风格统一、连续性审校
 
-**长篇与连载**：记忆维护（28 层状态体系）、网文连载节奏、单章字数硬约束、章节对齐、十章回响控制、前三章埋线与阶段高潮
+**长篇与连载**：记忆维护（30 层状态体系）、网文连载节奏、单章字数硬约束、章节对齐、十章回响控制、前三章埋线与阶段高潮
 
 **结构与布局**：多线叙事、伏笔矩阵与草蛇灰线、势力棋盘、宇宙设定与世界规律、世界地图与宇宙地图
 
@@ -57,6 +57,7 @@
 - SEO 内容生产
 - 非小说类写作
 - 与当前作品无关的随意灵感闲聊
+
 ## 设计原则
 
 这个 Skill 的核心原则有 5 条：
@@ -150,8 +151,10 @@ skill-xiaoshuo/
   ├── first-sentence-de-ai.md
   ├── first-sentence-technique-library.md
   ├── hallucination-control.md
+  ├── input-collection-guide.md
   ├── magnetic-character-design.md
   ├── macro-plotting.md
+  ├── multisensory-scene-writing.md
   ├── popular-webnovel-craft.md
   ├── platform-submission.md
   ├── project-organization.md
@@ -371,294 +374,43 @@ skill-xiaoshuo/
 
 ## 工作流
 
-### 标准流程
+默认流程：立项 → 设定 → 总纲 → 卷纲 → 细纲 → 章节卡 → 正文 → 审校 → 状态回写。支持 14 种工作模式（A-N），覆盖新建、续写、润色、审校、连载、题材特化、大布局、宇宙设定、群像、去 AI 化等场景。
 
-默认采用以下顺序：
-
-1. 立项
-2. 设定
-3. 总纲
-4. 卷纲
-5. 细纲
-6. 章节卡
-7. 正文
-8. 审校
-9. 状态回写
-
-这套顺序的意义是避免正文先跑太远，后面再回头硬补设定。
-
-长篇项目建议先按 [project-organization.md](./references/project-organization.md) 建目录，再开始填内容。
-
-如果是网文连载，前期还要额外检查两道硬门槛：前三章必须埋线、给爽点、给反转；第 10 到 15 章必须打出第一阶段高潮爽点。
-
-如果你已经发现“前一章和后一章几乎对不上”，优先补章节对齐模板；如果问题已经扩大到最近 5 到 10 章都开始失联，再同时补十章呼应板，不要直接让模型硬接。
-
-### 支持的工作模式
-
-Skill 当前支持 14 种主模式：
-
-1. 模式 A，新建小说
-2. 模式 B，继续写某一章
-3. 模式 C，润色现有章节
-4. 模式 D，连续性审校
-5. 模式 E，网文连载模式
-6. 模式 F，题材特化模式
-7. 模式 G，大布局模式
-8. 模式 H，宇宙设定模式
-9. 模式 I，写法吸收模式
-10. 模式 J，项目整理模式
-11. 模式 K，群像模式
-12. 模式 L，未知钩子模式
-13. 模式 M，平台投稿模式
-14. 模式 N，去 AI 味精修模式
-
-### 源信息优先级
-
-当不同输入发生冲突时，按以下优先级裁决：
-
-1. 用户明确给出的硬约束
-2. Canon 事实表
-3. 世界观与角色设定
-4. 最近章节摘要和时间线
-5. 总纲和章节卡
-6. 推测性补全
-
-这条规则用于降低长篇创作时的逻辑漂移。
+完整工作流规则、源信息优先级、条件扩展树见 [SKILL.md 工作流](./SKILL.md#工作流)。
 
 ## 记忆体系
 
-这个 Skill 不把“记忆”交给模型临时发挥，而是显式维护多类状态；核心基础层至少包括：
+Skill 通过 30 层外部状态文件维护”记忆”，核心包括 Canon 事实、人物状态、时间线、伏笔、章节摘要、势力棋盘、结构网图、宇宙设定、地图体系等。目的是续写时快速恢复上下文，减少 AI 擅自发明新设定。
 
-1. Canon 事实
-2. 人物状态
-3. 时间线
-4. 伏笔与线索
-5. 章节摘要
-6. 连载节奏
-7. 主线 / 支线 / 暗线结构网
-8. 势力棋盘
-9. 宇宙设定
-10. 地图体系
+完整层级列表见 [SKILL.md 记忆体系](./SKILL.md#记忆体系)。
 
-在此基础上，还会按任务阶段补充群像、未知钩子、章首轮换、字数控制、对白声线、情绪价值、冲突节奏、魅力角色、金句与有趣角色等扩展台账。
+## 专项能力
 
-这样做的目的有两个：
-
-- 续写时能快速恢复上下文
-- 减少 AI 擅自发明新设定的空间
-
-### 为什么这样能减少幻觉
-
-因为很多所谓“AI 幻觉”，本质上是：
-
-- 输入不完整
-- 事实边界不明确
-- 没有区分“已知事实”和“待确认内容”
-
-这个 Skill 通过外部状态模板把这些边界显式化，从而减少：
-
-- 设定凭空新增
-- 角色行为失真
-- 时间线冲突
-- 伏笔遗忘
-- 文风突然变调
-
-## 网文连载特化
-
-这个 Skill 已经内置网文连载模式，不只是能“写章节”，而是能管理追更节奏。
-
-### 连载模式重点控制什么
-
-- 开篇钩子是否足够快
-- 三章内是否建立核心承诺
-- 十章内是否形成追更理由
-- 每章是否有推进，而不是空转
-- 卷末是否有兑现、升级或反转
-
-### 连载模式适合什么类型
-
-- 男频升级流
-- 女频情感成长线
-- 悬疑连载
-- 轻小说群像连载
-- 长篇网文项目
-
-## 题材模板系统
-
-为了避免不同题材使用同一套写法，Skill 当前支持 4 套题材模板：
-
-- 玄幻
-- 悬疑
-- 言情
-- 轻小说
-
-这些模板不是简单分类，而是分别定义：
-
-- 该题材读者真正期待什么
-- 设定要重点控制什么
-- 结构上应如何推进
-- 常见错误是什么
-
-这能显著减少“题材表面像，内核不对”的问题。
-
-## 大布局与草蛇灰线
-
-这次优化后，这个 Skill 不再只强调“稳”，也强调“大”。
-
-这里说的“大”，不是单纯把世界观写得很大，而是：
-
-- 至少有主线、支线、暗线三层结构
-- 伏笔不是一个点，而是多点、多层、多时距
-- 势力和人物的博弈能形成棋盘
-- 单章推进会反作用于更大的局势
-
-对应文件：
-
-- [assets/plot-architecture-template.md](./assets/plot-architecture-template.md)
-- [assets/foreshadow-matrix-template.md](./assets/foreshadow-matrix-template.md)
-- [assets/faction-board-template.md](./assets/faction-board-template.md)
-- [references/macro-plotting.md](./references/macro-plotting.md)
-
-## 宇宙、世界与地图系统
-
-这次优化后，这个 Skill 也不再把世界观当成单独设定页，而是把它拆成四个彼此约束的层级：
-
-- 宇宙层：宇宙如何运作、边界在哪里、什么规律不可违背
-- 世界层：文明、资源、力量、秩序如何运行
-- 地图层：地区和世界之间如何连通、阻隔、冲突和迁移
-- 剧情层：这些规律如何实际限制人物、势力和事件
-
-对应文件：
-
-- [assets/cosmology-template.md](./assets/cosmology-template.md)
-- [assets/world-rules-template.md](./assets/world-rules-template.md)
-- [assets/world-map-template.md](./assets/world-map-template.md)
-- [assets/universe-map-template.md](./assets/universe-map-template.md)
-- [references/world-logic.md](./references/world-logic.md)
-
-## 热门网文写法吸收
-
-这次优化后，这个 Skill 也加入了“热门网文高层写法提炼”能力。
-
-它的目标不是模仿具体作品文本，而是抽取这些成功作品常见的长处，例如：
-
-- 世界厚度
-- 信息悬疑
-- 升级节奏
-- 群像辨识度
-- 情绪爆点
-- 史诗感与宿命感
-- 规则闭环
-- 克制成长
-
-对应参考文件：
-
-- [references/popular-webnovel-craft.md](./references/popular-webnovel-craft.md)
+- **网文连载**：管理追更节奏、开篇钩子、三章承诺、十章高潮、卷末兑现。见 [SKILL.md §11](./SKILL.md#11-网文连载特化要求)
+- **题材特化**：玄幻、悬疑、言情、轻小说 4 套模板 + 权谋/克苏鲁/军事等扩展题材。见 [SKILL.md §1.2](./SKILL.md#12-题材模板选择)
+- **大布局**：主线/支线/暗线结构网 + 伏笔矩阵 + 势力棋盘。见 [references/macro-plotting.md](./references/macro-plotting.md)
+- **宇宙与地图**：宇宙层→世界层→地图层→剧情层四级约束。见 [references/world-logic.md](./references/world-logic.md)
+- **热门写法吸收**：抽取高层写法机制，反拼贴验收。见 [references/popular-webnovel-craft.md](./references/popular-webnovel-craft.md)
 
 ## 如何使用
 
-### 用法 1：从零开始写一部小说
+详细使用指南、14 种模式的推荐提问和输入模板见 [USAGE.md](./USAGE.md)。
 
-建议顺序：
+快速入门：
 
 1. 用 [project-brief-template.md](./assets/project-brief-template.md) 做立项
-2. 用 [worldbuilding-template.md](./assets/worldbuilding-template.md) 写世界观
-3. 用 [character-template.md](./assets/character-template.md) 写人物
-4. 用 [outline-template.md](./assets/outline-template.md) 生成总纲
-5. 用 [chapter-card-template.md](./assets/chapter-card-template.md) 规划前几章
-6. 再进入正文写作
+2. 用 [worldbuilding-template.md](./assets/worldbuilding-template.md) + [character-template.md](./assets/character-template.md) 做设定
+3. 用 [outline-template.md](./assets/outline-template.md) 生成总纲
+4. 用 [chapter-card-template.md](./assets/chapter-card-template.md) 规划章节
+5. 写正文 → 审校 → 回写状态
 
-如果要落到文件，章节文件名默认建议用：
+推荐输入信息和各场景输入包见 [references/input-collection-guide.md](./references/input-collection-guide.md)。
 
-- `01-第一章.md`
-- `02-第二章.md`
-- `03-第三章.md`
+## 质量与反幻觉
 
-不要默认只用 `001.md` 这种纯数字文件名。
+正文输出前必须满足：目标明确、冲突成立、角色行为符合设定、无偷塞新设定、结尾留钩子。做不到就先退回章节卡。
 
-### 用法 2：继续写某一章
-
-建议先准备：
-
-1. [canon-facts-template.md](./assets/canon-facts-template.md)
-2. [chapter-summary-template.md](./assets/chapter-summary-template.md)
-3. [timeline-template.md](./assets/timeline-template.md)
-4. [series-state-template.md](./assets/series-state-template.md)
-5. [rewrite-prompt-template.md](./assets/rewrite-prompt-template.md)
-
-这样续写时不容易跑偏。
-
-### 用法 3：做网文连载
-
-建议额外维护：
-
-1. [serialization-board-template.md](./assets/serialization-board-template.md)
-2. [series-state-template.md](./assets/series-state-template.md)
-3. [plot-thread-template.md](./assets/plot-thread-template.md)
-
-这样不仅能写，还能控制更新节奏和追更价值。
-
-### 用法 4：做题材特化创作
-
-写作前先选择：
-
-- 玄幻：用 [genre-xuanhuan-template.md](./assets/genre-xuanhuan-template.md)
-- 悬疑：用 [genre-xuanyi-template.md](./assets/genre-xuanyi-template.md)
-- 言情：用 [genre-yanqing-template.md](./assets/genre-yanqing-template.md)
-- 轻小说：用 [genre-lightnovel-template.md](./assets/genre-lightnovel-template.md)
-
-## 推荐输入信息
-
-为了让这个 Skill 输出更稳定，建议输入时尽量提供：
-
-- 题材与子类型
-- 目标读者
-- 风格目标
-- 篇幅目标
-- 当前阶段
-- 已有素材
-- 视角要求
-- 平台偏好
-- 已确认 canon
-- 最近章节摘要
-- 当前时间线位置
-- 当前人物状态
-- 已埋伏笔与待回收线索
-
-## 输出风格
-
-这个 Skill 默认强调：
-
-- 结构化输出
-- 方便保存到 Markdown / Obsidian
-- 先列已知事实，再给正文或方案
-- 明确标注风险和待确认点
-
-对长篇项目来说，这比只追求“文字好看”更重要。
-
-## 反幻觉策略
-
-Skill 当前采用以下策略降低幻觉：
-
-1. 写作前先提取已知事实和未知事实
-2. 不允许擅自新增重大 canon
-3. 信息不足时优先给出保守版
-4. 先审校再回写状态
-5. 用外部模板约束长期项目
-
-更详细规则见 [hallucination-control.md](./references/hallucination-control.md)。
-
-## 质量门槛
-
-一章正文至少要满足：
-
-1. 本章目标明确
-2. 本章冲突成立
-3. 角色行为符合设定
-4. 没有偷塞重大新设定
-5. 结尾留下余波、问题或钩子
-
-如果做不到，就应先退回章节卡或问题清单层级，而不是硬写。
+反幻觉策略：先提取事实、不擅自新增重大 canon、信息不足时保守输出。详见 [hallucination-control.md](./references/hallucination-control.md) 和 [quality-rubric.md](./references/quality-rubric.md)。
 
 ## 当前版本特点
 
