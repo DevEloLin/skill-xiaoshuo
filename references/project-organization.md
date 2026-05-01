@@ -107,11 +107,12 @@ novel-project/
 
 ### `05-chapters`
 
-分成三层：
+分成四层：
 
 - `chapter-cards/`：控制单章目标
 - `detailed-outlines/`：控制场景级推进
 - `chapter-summaries/`：用于续写前回忆
+- `gate-logs/`：存放每章的执行日志和 Checklist（如 `CH01-gate-log.md`），不嵌入正文
 
 ### `06-drafts`
 
