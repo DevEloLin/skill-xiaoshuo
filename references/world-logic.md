@@ -62,3 +62,7 @@
 5. 如果删掉地图和宇宙层设定，剧情是否还完全不受影响
 
 如果答案是“是”，说明这些设定还没有真正进入故事。
+
+## 输出格式与验收
+
+本文件只讲"为什么需要"。**何时输出 / 题材特化字段 / 验收清单 / 与 timeline / canon 的联动闭环**详见 [world-and-timeline-output-spec.md](./world-and-timeline-output-spec.md)。任何世界地图 / 宇宙地图 / 时间线漏建或不达 spec 验收 → 门 1 BLOCK。

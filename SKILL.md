@@ -1,7 +1,7 @@
 ---
 name: skill-xiaoshuo
-description: 'Use when planning/writing/continuing/auditing/revising 中文长篇小说、网文连载或剧本：一个分阶段写作工作台（项目简报→世界观→人设→大纲→章节卡→场景骨架→正文→质检→回写），不是一次性生成器。强制六道门 + 反AI检测≤5%（13 项硬检）+ 单章 ≥4300 字 + 35 层外部状态文件，避免设定漂移、时间线冲突、伏笔遗忘、AI 腔。覆盖续写润色、群像多线、势力棋盘、未知钩子、双轨剧本、平台投稿降AI味。Triggers: 小说, 网文, 续写, 润色, 连载, 大纲, 章节卡, 群像, 多线, 主线支线, 伏笔, 钩子, 时间线, 草蛇灰线, 世界观, 宇宙, 玄幻, 权谋, 克苏鲁, 悬疑, 古装, 军事, 谍战, 起点, 知乎, 投稿, 降AI味, 去AI, 编剧, 剧本, 双轨, screenplay, 日更续写, novel writing.'
-argument-hint: '描述题材 / 目标读者 / 语气 / 篇幅 / 已有素材 / 想完成的写作任务（如新建项目、续写第 N 章、润色降 AI 味、剧本双轨输出）。'
+description: 'Use when planning/writing/continuing/auditing/revising 中文长篇小说/网文连载/剧本：分阶段写作工作台（立项→设定→大纲→章节卡→场景→正文→质检→回写），非一次性生成器。强制 6 道门 + 39 项反AI硬检(≤5%) + 5 类一致性零容忍(设定/行为/知识/时空/力量) + 36 层记忆(含深度记忆 8 维 + Reference-once dedup) + 单章 ≥4300 字 + 13 题材世界地图/时间线闭环。覆盖续写润色、群像多线、双轨剧本、降AI味、平台投稿。Triggers: 小说, 网文, 续写, 润色, 连载, 大纲, 章节卡, 群像, 多线, 伏笔, 钩子, 时间线, 世界观, 玄幻, 权谋, 克苏鲁, 悬疑, 古装, 谍战, 起点, 知乎, 投稿, 去AI, 编剧, 剧本, 双轨, 日更, screenplay, novel writing.'
+argument-hint: '说明题材 / 篇幅 / 已有素材 / 当前想做什么（新建 / 续写第 N 章 / 润色 / 降 AI 味 / 双轨剧本 / 日更）。'
 user-invocable: true
 disable-model-invocation: false
 ---
@@ -20,11 +20,40 @@ disable-model-invocation: false
 4. **反绕过**：无骨架不写正文 · 无 scene_id 不写正文 · 交稿后不回写不开下一章
 5. **自动修复**：BLOCK → 自动定位+修复+重入门检查（同一门最多 1 次，全流程最多 3 次）
 6. **显式 Checklist**：所有门检查结果必须以 Checklist 形式写入 `05-chapters/gate-logs/CH{N}-gate-log.md`，不嵌入正文
-7. **🚨 AI 检测硬限 ≤5%**：所有正文输出必须达到 AI 检测工具（GPTZero 等）判定 Human ≥95% 的标准。这是与硬检同级的 BLOCK 约束，贯穿门 1 到门 4 全流程。**不是修表面词汇，而是从段落思维结构、叙事链、词汇概率分布、信息密度波动四个底层维度消除 AI 统计特征，同时从纹理层注入人味——角色毛边、素段、配角真实个性、信息弯路、金句节制**
+7. **🚨 AI 检测硬限 ≤5%**：所有正文输出必须达到 AI 检测工具（GPTZero 等）判定 Human ≥95% 的标准。这是与硬检同级的 BLOCK 约束，贯穿门 1 到门 4 全流程。**不是修表面词汇，而是从段落思维结构、叙事链、词汇概率分布、信息密度波动四个底层维度消除 AI 统计特征，同时从纹理层注入人味——角色毛边、素段、配角真实个性、信息弯路、金句节制**。13 项硬检的[**量化计算方法、PASS/FAIL 阈值、自评与外审流程详见 ref**](./references/anti-ai-thresholds.md)（句长变化率怎么算、段长标准差怎么算、金句间隔怎么测的 SSOT）
+8. **🚨 形容词堆砌零容忍 + AI 感全维扫描**：13 项之外另设两道闭门检查。**§六 形容词堆砌零容忍**——同名词修饰 ≤2 个 · 千字形容词 ≤30 · 类比修辞 ≤3/千字 · 程度副词 ≤2/千字 · 禁用 `XX的XX的` 链 · 禁段首形容词起首；删完用动词 / 物件 / 身体反应 / 环境互动替代。**§七 AI 感残留 19 项信号扫描**——句法 / 词汇 / 段落 / 修辞 / 全局五维信号（主语开头比例 / "他她"开头比例 / 排比句 / 量词单调 / 三层比喻嵌套 / 拟人化场景 / "了"字结尾比例 / "的地得"密度 / 章末金句收尾连续性等），命中即触发自动修复。两节[**详见 ref**](./references/anti-ai-thresholds.md#六形容词堆砌零容忍专项)，与 13 项联动执行，永不降级
+9. **🚨 一致性零容忍**（**绝对不能出现前后不一致**）：5 类硬检 —— **C1 设定** / **C2 行为** / **C3 知识** / **C4 时空** / **C5 力量**。每章门 4 全章扫描，任一类 FAIL → BLOCK + 自动修复（最多 3 次）；触顶仍 FAIL → 输出 BLOCK 报告等用户决策。数据源 = canon-facts + timeline + character-engine + deep-memory.md（knowledge-state / relations-arcs / latent-consequences）。[**详见 ref**](./references/consistency-enforcement-protocol.md)，永不降级
+10. **🚨 深度记忆 + Reference-once dedup**：35 层之外加第 36 层"深度记忆"，覆盖 **8 维语义层** —— 主题母题 / 关系弧光 / 知识状态图谱 / 承诺账本 / 读者体验指纹 / 风格指纹 / 隐性后果 / 重复声明记录。**Reference-once 原则** —— 设定 / 角色 / 物件 / 规则**首次说全后**，后续只用简称；连续 3 章重复定义即门 4 BLOCK 自动压缩。承诺账本超硬上限（埋点 + 20 章）未兑现 → 门 1 BLOCK。[**详见 ref**](./references/deep-memory-protocol.md)
 
 ## 六道门概览
 
 门 0 → 门 1 → 门 2 → 门 3（写正文）→ 门 4 → 门 5，串行执行，不通过不继续。
+
+```
+用户输入
+   ↓
+[门 0] Idea 解析 → 项目简报+主角+冲突+世界约束+骨架      （仅无结构化输入触发）
+   ↓
+[门 1] 写前门    → Canon/时间线/对齐已读 · 反AI预设 ·    (读 A 级 7 层 + memory-stream HEAD)
+                  地图/时间线闭环 · pending_writeback=false
+                  必触隐性后果检 · 承诺账本超期检
+   ↓
+[门 2] 场景门    → scene_id + 四要素 + 反预期点          (Scene Engine SSOT)
+   ↓
+[门 3] 正文门    → 实时 39 项反AI(13+7+19) + dedup       (字数 ≥4300，触发即压缩)
+   ↓
+[门 4] 质检门    → P0#1-#9 硬检 + §六 + §七 +            (52 项硬检串行)
+                  P0#9 一致性 5 类 C1-C5 +
+                  写作意识 #10-#15 自评 + #16/#17 双轨
+   ↓
+[门 5] 回写门    → gate-log 写盘 + memory-stream 追加    (含 deep + consistency 段)
+                  + deep-memory 8 维更新 + Canon/伏笔
+   ↓
+pending_writeback=false → 下一章门 1
+```
+
+任一门 BLOCK → [协议 6.1 自动修复](./SKILL-reference.md#协议-61自动修复协议recovery-protocol)（同门 1 次 / 全程 3 次）→ 仍 BLOCK → 输出报告等用户决策。
+
 
 | 门 | 职责 | 关键检查 | 详细 |
 |----|------|---------|------|
@@ -41,15 +70,15 @@ disable-model-invocation: false
 
 ### 门 1 核心要求
 
-写正文前必须确认：场景骨架+Canon+时间线+对齐单已读 · 价值声明已填 · 纲追溯通过 · 角色标签(≥2人各具标签+表现+代价) · 上章回写已完成(pending_writeback=false 且六项内容一致) · **反AI写法预设已确认**（本章角色声线差异点≥3种、感官通道≥2种已预分配、禁用词表已加载）。纲体系按规模自动分类(≤3短篇/4-10中篇/11-30长篇单卷/>30多卷)。
+写正文前必须确认：场景骨架+Canon+时间线+对齐单已读 · 价值声明已填 · 纲追溯通过 · 角色标签(≥2人各具标签+表现+代价) · 上章回写已完成(pending_writeback=false 且六项内容一致) · **反AI写法预设已确认**（本章角色声线差异点≥3种、感官通道≥2种已预分配、禁用词表已加载）· **🚨地图/时间线闭环已建**（如项目类型需要 world-map 必建并通过 spec 验收；timeline 任何项目必建并通过 spec 验收；多界故事 universe-map 必建；详见 [world-and-timeline-output-spec.md](./references/world-and-timeline-output-spec.md)，漏建即 BLOCK）。纲体系按规模自动分类(≤3短篇/4-10中篇/11-30长篇单卷/>30多卷)。
 
 ### 门 4 Checklist 分级
 
-门 4 的 30 项检查分为两类，**执行方式不同**：
+门 4 的 31 项检查分为两类，**执行方式不同**：
 
 **🔒 硬检（可文件对比验证，FAIL → BLOCK）**：
 
-P0#1目标实现 · #2冲突进展 · #3角色逻辑 · #4无新设定 · #5结尾钩子 · #6映射校验 · #7Canon/时间线无冲突 · **#8 🚨AI检测≤5%** · #14/#15双轨一致(仅双轨)
+P0#1目标实现 · #2冲突进展 · #3角色逻辑 · #4无新设定 · **#5结尾钩子(必登记 promise-ledger，附 ID + 软/硬截止章)** · #6映射校验 · #7Canon/时间线无冲突 · **#8 🚨AI检测≤5%** · **#9 🚨一致性零容忍C1-C5** · #16/#17双轨一致(仅双轨)
 
 **🚨 AI检测≤5% 硬检（P0#8，FAIL → BLOCK，与结构硬检同级）**：
 
@@ -74,95 +103,36 @@ P0#1目标实现 · #2冲突进展 · #3角色逻辑 · #4无新设定 · #5结�
 **纹理层（消除AI完美感）**：
 ⑬ 纹理层验收（≥2处角色毛边反应[卡壳/说错/否认/废话] · ≥20%段落为素段[零修辞] · ≥1配角有不推进主线的真实个性 · ≥1处信息揭示不顺[理解错/试错/弯路] · 金句≤4句且间隔≥800字，禁止连续2段有设计感明显的句子）
 
+**🚨 P0#9 一致性零容忍硬检（FAIL → BLOCK，5 类全扫）**：
+
+**C1 设定** · **C2 行为** · **C3 知识** · **C4 时空** · **C5 力量**。任一类 FAIL → 自动修复（最多 3 次）→ 仍 FAIL → BLOCK 报告等用户决策。数据源 = canon-facts + timeline + character-engine + deep-memory.md（knowledge-state / relations-arcs / latent-consequences）。**绝对不能出现前后不一致**。详见 [consistency-enforcement-protocol.md](./references/consistency-enforcement-protocol.md)。
+
 **📝 文笔质感（门 3 #10 强制 + 门 4 P1#11 二次验收）**：
 
 无形容词堆砌 · 细节代替概括 · 多感官(≥2种) · 侧面描写存在 · 细节有功能(感官承载情绪/象征承载主题)
 
 **📝 写作意识（自我评判项，输出评估+标注，不自动BLOCK）**：
 
-P0#9节奏变化 · #10爽点+推进 · #11弃书风险 · #12金句≥2 · #13梗≥1+1 · #14标签体现 · P1全11项 · P2全5项
+P0#10节奏变化 · #11爽点+推进 · #12弃书风险 · #13金句≥2 · #14梗≥1+1 · #15标签体现 · P1全11项 · P2全5项
 
 > 写作意识项的评估结果输出到 Checklist 中供用户审阅。P1 中 ≥3 项🔴 → Auto Flow 下自动修复最严重的 1-2 项；其余等用户确认后下一轮修复。
 
 ## 执行日志与 Checklist 输出协议
 
-执行日志和 Checklist **不嵌入正文**，单独写入 `05-chapters/gate-logs/CH{N}-gate-log.md` 文件。正文输出保持干净，只包含小说内容。
+执行日志和 Checklist **不嵌入正文**，单独写入 `05-chapters/gate-logs/CH{N}-gate-log.md`。正文输出保持干净。
 
-**输出位置规则**：
-- **正文输出**：只包含小说正文，不含任何执行日志、Checklist 或门检查信息
-- **执行日志+Checklist**：写入 `05-chapters/gate-logs/CH{N}-gate-log.md`（如 `CH05-gate-log.md`）
-- 如果用户未指定项目目录，则在当前工作目录下创建 `05-chapters/gate-logs/`
+**模板** = [`assets/gate-log-template.md`](./assets/gate-log-template.md)（46 项硬检 + 22 项写作意识 + 6 项门 5 回写 + 6 类记忆流 delta 字段）。
 
-**gate-log 文件模板**（`05-chapters/gate-logs/CH{N}-gate-log.md`）：
-
-```markdown
-# CH{N} 执行日志
-
-## 执行信息
-【执行模式】Standard｜【当前章号】CH{N}｜【项目规模】中篇(CH5, 4章完成)
-【门执行记录】门0 未触发 → 门1 PASS → 门2 PASS → 门3 PASS → 门4 见下 → 门5 待执行
-【pending_writeback】无｜【rollback_pending】无
-
-## 门 4 Checklist
-
-### 🔒 硬检（FAIL 即 BLOCK，已自动验证）
-- [✅] #1 本章核心目标已实现：{一句话证据}
-- [✅] #2 主冲突有进展：{一句话证据}
-- [✅] #3 角色行为合逻辑：{一句话证据}
-- [✅] #4 无未说明新设定
-- [✅] #5 结尾有钩子：{引用结尾}
-- [✅] #6 映射校验通过
-- [✅] #7 Canon/时间线无冲突
-
-### 🚨 AI检测≤5% 硬检（FAIL 即 BLOCK，13项全检）
-表面层：
-- [✅] ① 无平均句：{最短句X字/最长句Y字，变化率Z%}
-- [✅] ② 无解释腔：{全文无"先结论后动作"段落}
-- [✅] ③ 无抽象情绪堆叠：{情绪均由动作/细节承载}
-- [✅] ④ 无对白同声：{角色A={特征}，B={特征}，C={特征}}
-- [✅] ⑤ 有现场感：{每场景均有动作+环境互动}
-- [✅] ⑥ 不过度工整：{保留{N}处粗粝/未说满/毛边}
-- [✅] ⑦ 情绪有失控：{高压段有短句/断句/不完整句}
-- [✅] ⑧ 无模板感：{章首/段首/收束句法均不重复}
-
-深层结构：
-- [✅] ⑨ 段落思维打破：{无结论段{N}个/总{M}段，段长标准差={X}字}
-- [✅] ⑩ 叙事链非线性：{因果断裂{N}处，反应偏移{描述}，遗漏{描述}}
-- [✅] ⑪ 词汇去高频：{无禁用修饰词，口语碎片{N}处，连接词不重复}
-- [✅] ⑫ 信息密度波动：{密段{N}个/空段{M}个，大事小写{描述}}
-
-纹理层：
-- [✅] ⑬ 纹理验收：毛边{N}处({描述}) · 素段{N}个/总{M}段(占比{X}%) · 配角个性({角色}:{细节}) · 信息弯路({描述}) · 金句{N}句(间隔≥800字✔/✘)
-
-### 📝 写作意识（自评结果，供审阅）
-- [🟢] #9 节奏有变化：{简述起伏}
-- [🟡] #10 爽点：✔ {段落}｜信息推进：✔ {内容}
-- [🟢] #11 弃书风险：低
-- [🟢] #12 金句 2 句："{句1}" / "{句2}"
-- [🟡] #13 反预期梗 1：{描述}｜可传播梗 1：{描述}
-- [🟢] #14 标签体现：角色A{行为}，角色B{行为}
-- P1：{通过数}/11｜P2：{标注}
-- P1#11 文笔质感：形容词堆砌{🟢/🟡/🔴}｜细节vs概括{🟢/🟡/🔴}｜多感官{🟢/🟡/🔴}｜侧面描写{🟢/🟡/🔴}｜细节功能{🟢/🟡/🔴}
-
-## 读者体验评估
-爽点兑现：✔/✘ ｜ 信息推进：✔/✘ ｜ 弃书风险：低/中/高
-继续阅读理由：{一句话}
-
-## 门 5 回写清单
-- [ ] 章节摘要更新
-- [ ] 时间线回写
-- [ ] Canon 登记
-- [ ] 伏笔状态更新
-- [ ] 章节对齐单填写
-- [ ] 纲是否需要更新
-```
+**输出位置**：项目根 `05-chapters/gate-logs/CH{N}-gate-log.md`；用户未指定项目目录则在 cwd 下创建。
 
 **规则**：
 - 硬检任一 FAIL → 正文不交付，自动修复后重输出
-- 写作意识项全部输出自评结果，🟢=良好 🟡=勉强 🔴=不足
-- 用户看到🔴可要求修复，Claude 下一轮执行
-- 门 5 回写清单在用户确认后执行（Auto Flow 下自动补完）
-- 正文交付时在对话中简要提示"gate-log 已写入 05-chapters/gate-logs/CH{N}-gate-log.md"
+- 写作意识项 🟢/🟡/🔴 自评 + 证据，输出供用户审阅
+- 用户看到 🔴 可要求修复，下一轮执行
+- 门 5 回写清单 Auto Flow 下自动补完
+- 正文交付时简提 "gate-log 已写入 ..."
+- 门 5 回写后追加 "记忆流 delta" 段（详见 [memory-streaming-protocol.md](./references/memory-streaming-protocol.md)）
+
 
 ## 执行模式
 
@@ -183,6 +153,7 @@ P0#9节奏变化 · #10爽点+推进 · #11弃书风险 · #12金句≥2 · #13�
 | 6道门全部显式 | 门0简化+门2/4可简写 | 门1/5不可跳 |
 | P0全查+P1+P2 | P0硬检全查+写作意识缩减 | P0硬检前7项+🚨AI检测13项不可跳 |
 | 🚨AI检测13项全查 | AI检测13项全查（**不可降级**） | **AI检测≤5%永不降级、永不裁剪、永不跳过（含纹理层）** |
+| 🚨§六形容词零容忍7项+§七AI感扫描19项 | 全查（**不可降级**） | **§六/§七永不降级、永不裁剪、永不跳过；与 13 项联动、命中即修** |
 
 裁剪触发：上下文 >20 轮。裁剪后标注"【裁剪模式】已启用"。
 
@@ -202,7 +173,7 @@ P0#9节奏变化 · #10爽点+推进 · #11弃书风险 · #12金句≥2 · #13�
 | **反 AI 项无证据可引用** | 模型自评 PASS 但找不到具体段落 | 视为 FAIL；要求重新检查或重写对应段落 |
 | **用户要求绕过某门** | 用户说"跳过门 4"等 | 拒绝 + 引用协议 2 反绕过；提供合规替代（降 Lite / Manual Checkpoint 精简） |
 | **题材或主角中途切换** | 与既有 Canon 冲突 | 触发版本分支 `Canon_v{N}_alt`，不直接覆盖；rollback_pending=true |
-| **上下文超 30 轮** | 远超裁剪阈值 | 强制裁剪：仅留 SKILL.md + A 级记忆 + 最近 1 章正文，标注【强裁剪】 |
+| **上下文超 30 轮** | 远超裁剪阈值 | 强制裁剪：仅留 SKILL.md + A 级记忆 + 最近 1 章正文，标注【强裁剪】；**一致性 C2/C5 降级 WARN**（character-engine 不在加载，详见 [consistency §6.1](./references/consistency-enforcement-protocol.md#61-裁剪模式-fallback上下文--30-轮强制裁剪时)），C1/C3/C4 仍 BLOCK 级 |
 | **gate-log 写入失败** | 项目目录不可写 | 在对话内显式输出 Checklist 全文 + 提示用户手动落盘；不视为门通过 |
 
 ## 检查点协议
@@ -217,6 +188,7 @@ P0#9节奏变化 · #10爽点+推进 · #11弃书风险 · #12金句≥2 · #13�
 | 题材或主角中途切换 | 创建 `Canon_v{N}_alt` 分支前 | 列冲突点 + 等用户决策 |
 | Pro 模式关键节点 | G 大布局完成、K 群像矩阵建好、O 双轨骨架完成 | 输出对照表 + 等用户 OK |
 | 用户主动触发 | 用户说"让我确认 / 暂停 / 我先看一下" | 立即从 Auto Flow 切到 Manual Checkpoint |
+| 外部 AI 检测器 > 5% | GPTZero 等返回 AI 概率 > 5% 阈值 | 强制暂停 + 输出 13/7/19 项扫描报告 + 等用户选择修复路径 |
 
 非检查点节点默认连续执行，不打断写作节奏。
 
@@ -230,13 +202,20 @@ P0#9节奏变化 · #10爽点+推进 · #11弃书风险 · #12金句≥2 · #13�
 
 ## 记忆体系
 
-35 层分 A/B/C 三级。**不要一次全读**。
+35 层 **两级正交分级**：
 
-- **A 级必读**(7层)：Canon · 时间线 · 人物状态 · 章节摘要 · 记忆索引 · 章节对齐单 · 十章呼应板
-- **B 级按需**(17层)：按任务加载
-- **C 级特定**(11层)：特定模式才读（注意：连载项目层18章首轮换表实际为每章必读）
+- **A/B/C 三级**（按"何时加载"）：A 必读(7) / B 按需(17) / C 特定(11)。详见 [memory-layer-index.md](./references/memory-layer-index.md)
+- **🔥HOT / 🌡️WARM / 🧊COLD**（按"读多少"）：HOT 每章重读 / WARM 任务匹配读 / COLD 一次读 + 缓存。详见 [memory-streaming-protocol.md](./references/memory-streaming-protocol.md)
 
-完整列表[详见 ref](./SKILL-reference.md#记忆体系完整-35-层)。
+**Token 预算**：Lite ≤ 2000 / Standard ≤ 5000 / Pro ≤ 10000（A 级总）。超预算自动压缩（COLD FULL→HEAD → WARM HEAD→DELTA → HOT 缩窗）。
+
+**记忆流（Memory Stream）**：每章门 5 回写后追加 entry 到 `07-memory/memory-stream.md`，含 6 类事实级 delta（canon / timeline / characters / foreshadow / worldmap / universemap）+ 1 类语义级 delta（deep）。续写时**优先读 stream 最近 5 章 entry，再读 canon/timeline HEAD**，token 节省 60-80%。
+
+**🚨 第 36 层 深度记忆**（语义层）：在 35 事实层之上建 `07-memory/deep-memory.md`，含 **8 维**：主题母题 · 关系弧光 · 知识状态图谱 · 承诺账本 · 读者体验指纹 · 风格指纹 · 隐性后果 · 重复声明记录（dedup-ledger）。**Reference-once 原则** —— 设定首次说全后，后续 3 档复述权限（🔴完整 / 🟡半说 / 🟢简称），重复声明命中阈值 → 自动压缩。详见 [deep-memory-protocol.md](./references/deep-memory-protocol.md)。
+
+**A 级 7 层（不要一次全读）**：记忆索引 · Canon · 时间线 · 人物状态 · 章节摘要 · 章节对齐单 · 十章呼应板。
+
+**完整 35 层列表**[详见 ref](./SKILL-reference.md#记忆体系完整-35-层)。**模板映射 / 加载顺序 / 项目类型必读包**[详见 ref](./references/memory-layer-index.md)。
 
 **版本控制**：主版本(Canon_v{N}) · 分支(Canon_v{N}_alt) · 检查点(checkpoint_{章号})。回滚后设置 `rollback_pending=true`，门1全项强制重验，不可跳过。[详见 ref](./SKILL-reference.md#版本控制机制详细)。
 
@@ -252,5 +231,21 @@ P0#9节奏变化 · #10爽点+推进 · #11弃书风险 · #12金句≥2 · #13�
 | 投稿/去AI(M/N) | 润色与降AI味规则 |
 | 回滚/版本分支 | 版本控制 + 回滚硬协议 |
 | 其他 | 设计原则 / 审校 / 条件扩展树 / 模板索引 |
+
+**专项 references 同步加载（不在 SKILL-reference.md 内）**：
+
+| 触发 | 同步加载 |
+|------|---------|
+| 门 3 #11 反 AI 实时检查 / 门 4 P0#8 AI 检测≤5% | `references/anti-ai-thresholds.md`（13 项 + §六 形容词 + §七 AI 感扫描 SSOT）+ `references/de-ai-rewriting-patterns.md`（病灶+修法）|
+| 输入信息收集 | `references/input-collection-guide.md` |
+| 章首第一句去 AI | `references/first-sentence-de-ai.md` + `references/first-sentence-technique-library.md` |
+| 项目目录初始化 | `references/project-organization.md` |
+| 选模板 / 同名模板取舍（角色 × 6, 群像 × 3, 章节 × 6） | `references/template-index.md` |
+| 选记忆层 / 35 层加载顺序 / 项目类型必读包 | `references/memory-layer-index.md` |
+| 记忆流 / Hot-Warm-Cold / Token 预算 / 压缩 / Memory Stream | `references/memory-streaming-protocol.md`（项目启动 + 上下文 > 20 轮时必读）|
+| 深度记忆 8 维 / 主题母题 / 关系弧光 / 知识状态 / 承诺账本 / Reference-once dedup | `references/deep-memory-protocol.md`（门 1 + 门 4 + 门 5 必读）|
+| 一致性零容忍 5 类硬检（设定 / 行为 / 知识 / 时空 / 力量） | `references/consistency-enforcement-protocol.md`（门 4 P0#9 必跑）|
+| 全协议闭环验证 / 6 道门 × 数据源 × BLOCK × Fallback 主矩阵 | `references/closure-map.md`（架构审计 / 调试用） |
+| 输出世界地图 / 宇宙地图 / 时间线（题材特化、字段、验收、联动闭环） | `references/world-and-timeline-output-spec.md`（13 题材 × 3 维度 SSOT） |
 
 Lite 模式 / 简单润色 / 上下文超长 → 不加载 reference，本文件已足够。

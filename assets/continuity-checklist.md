@@ -1,5 +1,9 @@
 # 连续性检查清单
 
+> ⚠️ **本文件是作者级清单（人工逐项审校题目）**，不是自动门检测协议。
+> **门 4 自动一致性硬检（C1 设定 / C2 行为 / C3 知识 / C4 时空 / C5 力量）见 [consistency-enforcement-protocol.md](../references/consistency-enforcement-protocol.md)**，含 detection 算法 / FAIL 阈值 / auto-repair 路径 / 门 4 BLOCK 集成。
+> 两者并存：协议是机器自动跑的硬检，本清单是作者人工审校的辅助题目。
+
 在续写、改写、长篇整理前，逐项检查：
 
 ## 事实一致性
