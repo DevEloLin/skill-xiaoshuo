@@ -22,13 +22,16 @@ novel-project/
 │   ├── character-biographies.md
 │   ├── relationship-map.md
 │   ├── ensemble-cast.md
-│   └── ensemble-arc-matrix.md
+│   ├── ensemble-arc-matrix.md
+│   └── character-identity-tree.md
 ├── 03-outline/
 │   ├── master-outline.md
 │   ├── storyline-board.md
 │   ├── plot-architecture.md
 │   ├── foreshadow-matrix.md
-│   └── faction-board.md
+│   ├── faction-board.md
+│   ├── conspiracy-weave.md
+│   └── concurrent-plot-weave.md
 ├── 04-volumes/
 │   ├── volume-01-outline.md
 │   ├── volume-02-outline.md
@@ -36,7 +39,8 @@ novel-project/
 ├── 05-chapters/
 │   ├── chapter-cards/
 │   ├── detailed-outlines/
-│   └── chapter-summaries/
+│   ├── chapter-summaries/
+│   └── gate-logs/
 ├── 06-drafts/
 │   ├── volume-01/
 │   ├── volume-02/
@@ -47,7 +51,9 @@ novel-project/
 │   ├── timeline.md
 │   ├── plot-threads.md
 │   ├── series-state.md
-│   └── consistency-ledger.md
+│   ├── consistency-ledger.md
+│   ├── memory-stream.md
+│   └── deep-memory.md
 ├── 08-review/
 │   ├── continuity-reports/
 │   ├── revision-notes/
@@ -90,6 +96,7 @@ novel-project/
 - 人物弧光
 - 群像总表
 - 群像弧光矩阵
+- 角色身份树与命名账本（私人事件线、称呼边界、别名揭示）
 
 ### `03-outline`
 
@@ -100,6 +107,8 @@ novel-project/
 - 结构网图
 - 伏笔矩阵
 - 势力棋盘
+- 多层阴谋局网（R 模式：节点、因果边、线索、知识边界、反制与回收）
+- 并发布局线程板（多伏笔、多局、筛选与现实代价的互相牵引）
 
 ### `04-volumes`
 
@@ -186,6 +195,18 @@ novel-project/
 
 11. `02-characters/ensemble-cast.md`
 12. `02-characters/ensemble-arc-matrix.md`
+
+如果角色、群像或起名是作品核心，再补一项：
+
+13. `02-characters/character-identity-tree.md`（身份树、私人事件线与命名账本）
+
+如果作品采用总阴谋、连环布局或幕后棋局，再补一项：
+
+14. `03-outline/conspiracy-weave.md`（与结构网图、伏笔矩阵互补；详见 `conspiracy-weaving-protocol.md`）
+
+如果作品有多条伏笔、多局同时运行、候选人筛选或底层代价线，再补一项：
+
+15. `03-outline/concurrent-plot-weave.md`（线程并发、遮蔽、人物多重位置与场景交通）
 
 ## 四点五、章节文件命名规则
 

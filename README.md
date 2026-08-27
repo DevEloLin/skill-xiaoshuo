@@ -6,6 +6,8 @@
 
 **不是写作提示词集合**，而是一个具备点子自动建模、强制流程控制、可验证执行、状态闭环、读者体验导向的中文小说写作操作系统。
 
+> **权威入口**：只以 [SKILL.md](./SKILL.md) 为运行时规则。`SKILL_back.md` 与 `SKILL_v2_backup.md` 是历史对照，不可作为指令或模板来源。
+
 ---
 
 ## 三条铁律
@@ -26,10 +28,10 @@
 | 你想 | 读哪份 |
 |------|------|
 | **了解项目是什么 / 整体架构** | 本 README（继续往下读） |
-| **直接开干 / 17 种模式提问示例 / 操作落地** | [USAGE.md](./USAGE.md) |
+| **直接开干 / 18 种模式提问示例 / 操作落地** | [USAGE.md](./USAGE.md) |
 | **看模型加载时实际遵循的运行时协议** | [SKILL.md](./SKILL.md)（每次调用必读） |
 | **查完整规则：41 条设计原则 / V1-V18 校验器 / 协议详细** | [SKILL-reference.md](./SKILL-reference.md)（按需加载） |
-| **9 个 SSOT 索引** | 见下方 §9 SSOT 网络 |
+| **11 个 SSOT 索引** | 见下方 §11 SSOT 网络 |
 | **看示例项目** | [examples/](./examples/) |
 
 ---
@@ -44,7 +46,7 @@
 [门 0] Idea 解析   →  项目简报+主角+冲突+世界约束+骨架（仅无结构化输入触发）
 [门 1] 写前门      →  Canon/时间线/对齐已读 · 反AI预设 · 地图/时间线闭环
 [门 2] 场景门      →  scene_id + 四要素 + 反预期点
-[门 3] 正文门      →  实时 39 项反AI + dedup（字数 ≥4300）
+[门 3] 正文门      →  实时自然度诊断 + dedup（篇幅服从章节功能与用户/平台要求）
 [门 4] 质检门      →  P0#1-#9 硬检 + §六/§七 + 写作意识 #10-#15
 [门 5] 回写门      →  gate-log + memory-stream + deep-memory 8 维更新
    ↓
@@ -74,15 +76,14 @@ pending_writeback=false → 下一章门 1
 | **Pro** | 双轨输出 / 投稿 / 群像大布局 | 6 道门 + 完整证据 + V1-V18 全跑 | 10000 |
 | **Q（日更）** | 一句方向指令 → 自动续写 | 自动 6 道门 | 1500 |
 
-### 39 项反 AI 硬检
+### 39 项叙事自然度诊断
 
 ```
 表面层 8 + 深层 4 + 纹理 1 = 13 项（句长变化 / 解释腔 / 抽象情绪 / 对白同声 ...）
 §六 形容词零容忍 7 项（同名词修饰 ≤2 / 千字形容词 ≤30 / "XX的"链 ≤1 ...）
 §七 AI 感扫描 19 项（句法 / 词汇 / 段落 / 修辞 / 全局五维信号）
 ─────────────────────────────────────
-全部带量化阈值 + 计算公式 + 自动修复路径
-门 4 P0#8 BLOCK 级，永不降级
+用于定位句法、词汇、段落、修辞与全局层面的可读性病灶；量化项是编辑信号，不是外部检测器的通过承诺。发现可定位且伤害阅读的病灶时，按修复路径定向处理。
 ```
 
 ### 5 类一致性零容忍硬检（门 4 P0#9）
@@ -108,23 +109,25 @@ pending_writeback=false → 下一章门 1
 - **A/B/C**（按"何时加载"）
 - **🔥HOT / 🌡️WARM / 🧊COLD**（按"读多少"）
 
-**记忆流（Memory Stream）**：每章门 5 回写后追加 entry 到 `07-memory/memory-stream.md`，含 7 类 delta（6 事实 + 1 deep）。续写时优先读 stream 最近 5 章 entry，token 节省 60-80%。
+**记忆流（Memory Stream）**：每章门 5 回写后追加 entry 到 `07-memory/memory-stream.md`，含 6 类事实 delta + 1 类 deep delta；阴谋局网与并发布局按需追加 `conspiracy`、`weave` 字段。续写时优先读 stream 最近 5 章 entry。
 
 ---
 
-## 9 SSOT 网络
+## 11 SSOT 网络
 
 | SSOT | 职责 |
 |------|------|
-| [`anti-ai-thresholds.md`](./references/anti-ai-thresholds.md) | 反 AI 39 项硬检计算口径（13+7+19）|
+| [`anti-ai-thresholds.md`](./references/anti-ai-thresholds.md) | 叙事自然度 39 项诊断口径（13+7+19）|
 | [`world-and-timeline-output-spec.md`](./references/world-and-timeline-output-spec.md) | 世界地图 / 宇宙地图 / 时间线 输出约定（13 题材 × 3 维度闭环） |
 | [`memory-streaming-protocol.md`](./references/memory-streaming-protocol.md) | 记忆流式（Hot/Warm/Cold + Token 预算 + DELTA + Memory Stream + 压缩） |
 | [`memory-layer-index.md`](./references/memory-layer-index.md) | 35 层记忆"用哪层 / 加载顺序 / 项目类型必读包" |
 | [`consistency-enforcement-protocol.md`](./references/consistency-enforcement-protocol.md) | 5 类一致性硬检（设定 / 行为 / 知识 / 时空 / 力量，门 4 P0#9） |
 | [`deep-memory-protocol.md`](./references/deep-memory-protocol.md) | 第 36 层深度记忆 8 维 + Reference-once dedup |
-| [`template-index.md`](./references/template-index.md) | 60 模板"用哪个 / 何时用 / 重叠关系" |
+| [`character-identity-tree-protocol.md`](./references/character-identity-tree-protocol.md) | 角色身份树、群像独立线、称呼边界与命名账本 |
+| [`concurrent-plot-weave-protocol.md`](./references/concurrent-plot-weave-protocol.md) | 并发伏笔、多局互牵、候选人筛选与现实代价 |
+| [`template-index.md`](./references/template-index.md) | 63 模板"用哪个 / 何时用 / 重叠关系" |
 | [`closure-map.md`](./references/closure-map.md) | 全协议闭环验证矩阵（6 道门 × 协议 × 数据源 × BLOCK × Fallback）|
-| [`gate-log-template.md`](./assets/gate-log-template.md) | gate-log 输出格式（46 项硬检 + 22 项写作意识 + 6 项门 5 + 7 类记忆流）|
+| [`gate-log-template.md`](./assets/gate-log-template.md) | gate-log 输出格式（结构/一致性硬检、自然度诊断、写作意识、6 项门 5 回写及条件 delta）|
 
 ---
 
@@ -137,7 +140,7 @@ pending_writeback=false → 下一章门 1
 - 风格统一（跨章风格指纹 + 章首轮换）
 - 连续性审校（5 类一致性硬检）
 - 剧本双轨输出（Scene Engine 同时输出小说 + 标准剧本格式）
-- 平台投稿降 AI 味（39 项硬检 ≤ 5%）
+- 平台投稿前的叙事自然度诊断与定向润色
 - 日更一句话续写（Q 模式）
 
 ## 不适用场景
@@ -165,7 +168,7 @@ AI 按 立项 → 设定 → 总纲 → 章节卡 → 场景骨架 → 正文 �
 
 每章完成后系统自动经过质检门 + 回写门，更新 memory-stream + deep-memory + Canon + 时间线 + 伏笔，保证下一章能正确续接。
 
-详细操作 / 17 种模式提问示例 / Memory Stream 实操 → 见 [USAGE.md](./USAGE.md)。
+详细操作 / 18 种模式提问示例 / Memory Stream 实操 → 见 [USAGE.md](./USAGE.md)。
 
 ---
 
@@ -207,8 +210,8 @@ novel-project/
 
 正文输出前必须通过门 4：
 
-- **🔒 P0 硬检（FAIL 即 BLOCK）**：#1 目标 · #2 冲突 · #3 角色 · #4 无新设定 · #5 结尾钩子（必登记 promise-ledger）· #6 映射 · #7 Canon/时间线 · #8 AI 检测 ≤5% · #9 一致性 5 类 · #16/#17 双轨
-- **🚨 反 AI 39 项**（13 + 7 + 19）：永不降级
+- **🔒 P0 硬检（FAIL 即 BLOCK）**：#1 目标 · #2 冲突 · #3 角色 · #4 无新设定 · #5 结尾钩子（仅新承诺登记 promise-ledger）· #6 映射 · #7 Canon/时间线 · #9 一致性 5 类 · #16/#17 双轨
+- **📝 叙事自然度 39 项诊断**（13 + 7 + 19）：定位有害病灶后定向修复，不承诺外部检测器分数
 - **📝 写作意识 P0#10-#15**：节奏 / 爽点 / 弃书 / 金句 / 梗 / 标签（自评供审阅）
 
 反幻觉策略：先提取事实 → 不擅自新增重大 canon → 信息不足时保守输出 → Reference-once dedup 防重复声明。详见 [hallucination-control.md](./references/hallucination-control.md) 与 [closure-map.md](./references/closure-map.md)。
@@ -219,9 +222,9 @@ novel-project/
 
 - [SKILL.md](./SKILL.md) — 精简运行时版（~230 行），每次调用加载
 - [SKILL-reference.md](./SKILL-reference.md) — 完整参考手册（~2600 行），按需加载
-- [USAGE.md](./USAGE.md) — 操作手册 + 17 种模式提问示例
-- [references/](./references/) — 9 SSOT + 33 专题参考
-- [assets/](./assets/) — 60 套模板（按 [template-index.md](./references/template-index.md) 选用）
+- [USAGE.md](./USAGE.md) — 操作手册 + 18 种模式提问示例
+- [references/](./references/) — 11 SSOT + 33 专题参考
+- [assets/](./assets/) — 63 套模板（按 [template-index.md](./references/template-index.md) 选用）
 - [examples/](./examples/) — 10 个示例项目
 
 ---

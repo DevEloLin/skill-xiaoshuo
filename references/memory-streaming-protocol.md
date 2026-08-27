@@ -180,8 +180,8 @@ COLD 层读取后缓存于会话上下文，下次同会话内不再重读。
 ### 5.1 路径与生命周期
 
 - **路径**：`{项目根}/07-memory/memory-stream.md`
-- **创建时机**：项目第 1 章门 5 回写时自动建
-- **更新时机**：每章门 5 回写后追加一条 entry
+- **创建时机**：用户指定项目目录并要求落盘时，于项目第 1 章门 5 回写创建；未授权落盘时使用 §5.5 状态交接包
+- **更新时机**：已授权时每章门 5 回写后追加一条 entry；未授权时在交接包中交付同字段 delta
 - **不删历史**：按章节顺序追加，永不删除已写入的 entry
 
 ### 5.2 单 entry 格式
@@ -212,6 +212,20 @@ universemap:
 - 跨界事件：{事件}
 - 通路变化：{描述}
 （单世界故事此段可省略）
+
+deep:
+- motifs / relations-arcs / knowledge-state / promise-ledger / reader-fingerprint / style-fingerprint / latent-consequences / dedup-ledger 的本章增量
+
+consistency:
+- C1-C5 扫描结果｜本门 repair_count｜全流程 flow_repair_count
+
+conspiracy:
+- {CJ-ID}：{状态变化 / 新因果边 / 线索重释 / 角色知识更新 / 到期揭示处理}
+（仅 R 多层阴谋局网模式；其他模式填 —）
+
+weave:
+- {F/J/Y/R-ID}：{并发状态、人物位置变化、遮蔽/碰撞关系、候选人分化或现实代价回响}
+（仅并发布局模式；其他模式填 —）
 ```
 
 ### 5.3 无变化条目处理
@@ -226,13 +240,29 @@ characters: —
 foreshadow: —
 worldmap: —
 universemap: —
+deep: —
+consistency: —
 ```
 
-确保解析器始终找到 6 段。
+确保解析器始终找到 8 个常驻段（canon / timeline / characters / foreshadow / worldmap / universemap / deep / consistency）；conspiracy 与 weave 为条件段。
 
 ### 5.4 与 gate-log 的联动
 
-`05-chapters/gate-logs/CH{N}-gate-log.md` 末尾的"记忆流 delta"段是本 entry 的草稿。门 5 回写时**复制**到 `07-memory/memory-stream.md`，并加 entry header `## CH{N} (timestamp)`。
+`05-chapters/gate-logs/CH{N}-gate-log.md` 末尾的“记忆流 delta”段是本 entry 的草稿。已获落盘授权时，门 5 回写时**复制**到 `07-memory/memory-stream.md`，并加 entry header `## CH{N} (timestamp)`。
+
+### 5.5 未落盘模式：状态交接包
+
+用户未指定项目目录或未要求写入时，不创建临时文件，也不宣称 `pending_writeback=false` 已持久化。改为在对话中交付以下“状态交接包”：
+
+```markdown
+## 状态交接包 CH{N}
+writeback: complete-in-chat
+next-run requirement: 请提供本交接包或项目状态文件后再续写
+
+{完整的 canon / timeline / characters / foreshadow / worldmap / universemap / deep / consistency / conspiracy / weave delta}
+```
+
+下一轮若用户未提供该交接包或项目状态文件，先请求最小状态包；不得假定上章回写已完成。用户随后指定目录并授权写入时，再将交接包并入对应状态文件。
 
 ---
 
@@ -303,6 +333,8 @@ WARM/COLD 不加载；不读 5 章 chapter-summary
 | 本章触发未知钩子 | unknown-hook-matrix |
 | 群像章节（≥3 角色独立行动） | ensemble-cast + ensemble-arc-matrix |
 | 多阵营冲突 | multi-faction-dynamics + faction-board |
+| 总阴谋 / 连环布局 / 幕后棋局 | conspiracy-weave HEAD（活跃 CJ-ID、相邻层节点、知识边界、到期揭示） |
+| 多伏笔 / 多局互牵 / 候选人筛选 / 底层代价 | concurrent-plot-weave HEAD（活跃 F/J/Y/R、人物位置、遮蔽关系、下次状态） |
 | 高情绪段 | emotion-burst + emotional-value-board |
 | 章首手法待选 | first-sentence-template + chapter-opening-rotation |
 

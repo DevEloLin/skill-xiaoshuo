@@ -1,3 +1,7 @@
+# ⚠️ 已归档的旧版（非权威）
+
+> 此文件只保留历史对照，不能作为 skill 指令或模板来源。唯一运行时入口是 [`SKILL.md`](./SKILL.md)；其中的旧配额、旧元数据和旧流程均已失效。
+
 ---
 name: skill-xiaoshuo
 description: 'Plan, write, continue, audit, and revise long-form Chinese fiction with stronger memory and lower hallucination risk. This is a staged fiction workbench, not a one-shot full-book generator. Use for小说创作, 网文连载, Obsidian 写作, 故事总纲, 世界观设定, 人物设定, 章节规划, 正文写作, 文风统一, 连续性审校, 时间线维护, 伏笔回收, 未知钩子, 悬疑钩子, 信息差, 平台投稿, 起点投稿, 知乎投稿, 降低AI味, 去AI化, 状态管理, 草蛇灰线, 多线叙事, 主线支线, 群像, 群像写作, 多主角, 团队叙事, 势力棋盘, 宏大布局, 宇宙设定, 世界地图, 宇宙地图, 世界规律, 宇宙运作, 减少AI幻觉, 权谋, 玄幻, 克苏鲁, 脑洞, 军事, 战争, 谍战, 悬疑, 搞笑, 古装, 剧本, 编剧, 剧本输出, 双轨输出, 场景骨架, screenplay, 日更一句话续写. Trigger phrases include 小说, 故事, 世界观, 大纲, 人设, 章节, 续写, 润色, 连载, 审校, 时间线, 伏笔, 未知, 钩子, 信息差, 起点, 知乎, 投稿, 去AI化, 降低AI味, 状态, 主线, 支线, 群像, 多主角, 团队, 布局, 棋盘, 宇宙, 地图, 规律, 权谋, 玄幻, 克苏鲁, 脑洞, 军事, 战争, 谍战, 悬疑, 搞笑, 古装, 剧本, 编剧, 场景, 双轨, screenplay, 日更, 一句话续写, 日更续写, daily continuation.'

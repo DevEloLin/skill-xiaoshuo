@@ -1,15 +1,15 @@
-# 模板索引（60 个 assets 模板的"用哪个 / 何时用 / 跟哪个重叠"）
+# 模板索引（63 个 assets 模板的"用哪个 / 何时用 / 跟哪个重叠"）
 
 > 这份索引解决三个问题：
 > 1. **要写新章节，应该建哪个状态文件**
 > 2. **角色 / 群像 / 章节 这类有多份模板的，到底用哪个**
 > 3. **哪些模板是必建，哪些只是"按需"**
 
-`assets/` 下共 60 个模板（含 1 份不带 `-template` 后缀的 `continuity-checklist.md`）。本索引按阶段分类、标注必备级别、列出重叠关系。
+`assets/` 下共 63 个模板（含 1 份不带 `-template` 后缀的 `continuity-checklist.md`）。本索引按阶段分类、标注必备级别、列出重叠关系。
 
 ---
 
-## 一、按阶段速查（60 模板分类）
+## 一、按阶段速查（63 模板分类）
 
 ### 1. 立项阶段（5 个）
 
@@ -21,7 +21,7 @@
 | `genre-xuanyi-template.md` | 悬疑题材特化（线索、误导、揭示） | ⚪ 题材选 1 |
 | `genre-yanqing-template.md` | 言情题材特化（情绪推进、关系节奏） | ⚪ 题材选 1 |
 
-### 2. 世界观阶段(10 个)
+### 2. 世界观阶段(12 个)
 
 | 模板 | 用途 | 必备级别 |
 |------|------|---------|
@@ -35,8 +35,10 @@
 | `plot-thread-template.md` | 单条情节线明细 | ⚪ 按支线数补 |
 | `faction-board-template.md` | 势力棋盘（势力之间的对抗与制衡） | 🟡 群像/权谋推荐 |
 | `foreshadow-matrix-template.md` | 伏笔矩阵（埋点、回收、密度） | 🟡 长篇推荐 |
+| `conspiracy-weave-template.md` | 多层阴谋局网（局、棋手、线索、反制、揭示） | 🔴 R 模式 / 总阴谋项目必建 |
+| `concurrent-plot-weave-template.md` | 并发布局线程板（伏笔/局/筛选/代价的并发、遮蔽与场景交通） | 🔴 多伏笔 / 多局互牵 / 养蛊式筛选项目必建 |
 
-### 3. 角色阶段（12 个，含 6 个含义重叠）
+### 3. 角色阶段（13 个，含 6 个含义重叠）
 
 | 模板 | 用途 | 必备级别 | 重叠关系 |
 |------|------|---------|------|
@@ -49,6 +51,7 @@
 | `protagonist-agency-template.md` | **主角主动性**：每章主角是否主动推进局势 | 🟡 长篇推荐 | character-engine 的"行动检查"延伸 |
 | `ensemble-cast-template.md` | **群像总表**：3+ 核心角色统一管理 | 🔴 群像项目必建 | 同 character 但批量化 |
 | `ensemble-arc-matrix-template.md` | **群像弧光矩阵**：每个角色独立弧光 | 🔴 群像项目必建 | ensemble-cast 之上加"弧光"维度 |
+| `character-identity-tree-template.md` | **角色身份树与命名账本**：私人事件线、命运分枝、称呼与别名 | 🔴 群像 / 起名 / 多势力人物项目必建 | 与角色卡互补，不代替角色卡 |
 | `multi-faction-dynamics-template.md` | **多势力动态**：反派/中立/敌对方推动 | 🟡 群像/权谋推荐 | 与 faction-board 互补（faction 是棋盘，本表是动态） |
 | `relationship-map-template.md` | **关系图**：角色之间的关系结构 | 🟡 长篇推荐 | — |
 | `dialogue-voice-matrix-template.md` | **对白声线矩阵**：每个角色的"说话毛病" | 🟡 ≥3 主要角色推荐 | 服务反 AI 13 项之 ④无对白同声 |
@@ -94,12 +97,12 @@
 | `unknown-hook-matrix-template.md` | 未知钩子矩阵 | 🟡 悬疑推荐 | B 级 |
 | `serialization-board-template.md` | 连载棋盘（追更点管理） | 🟡 连载推荐 | B 级 |
 
-### 7. 质检与投稿（4 个）
+### 7. 质检与投稿（5 个）
 
 | 模板 | 用途 | 必备级别 |
 |------|------|---------|
-| `quality-gate-template.md` | 质量闭环（P0/P1/P2 分级规则与写后必检清单） | 🔴 写正文必用 |
-| `gate-log-template.md` | gate-log 文件输出格式（46 项硬检 + 22 项写作意识 + 6 项门 5 回写 + 6 类记忆流 delta） | 🔴 每章门 4 必生成 |
+| `quality-gate-template.md` | 深度复核工作表（对齐主门证据、定位高价值修订） | ⚪ 投稿前 / 复杂章节 / 用户要求深度审校时使用；不代替 gate-log |
+| `gate-log-template.md` | 唯一门流程记录（结构/连续性硬检、自然度诊断、写作意识、门 5 回写与记忆流 delta） | 🔴 每章门 4 必交付；仅在授权时落盘 |
 | `de-ai-diagnostic-template.md` | 去 AI 诊断（病灶定位） | 🔴 投稿/N 模式必建 |
 | `submission-polish-template.md` | 投稿润色（平台特化） | ⚪ M 模式必建 |
 | `rewrite-prompt-template.md` | 重写 prompt（指定段落定向重写） | ⚪ 修订时按需 |
@@ -291,7 +294,7 @@ daily-continuation（独立模板，触发即用）
 | subplot-fragility / plot-thread | `macro-plotting.md` |
 | ten-chapter-echo / serialization | `webnovel-serialization.md` |
 | de-ai-diagnostic / submission-polish | `de-ai-rewriting-patterns.md` · `anti-ai-thresholds.md` · `platform-submission.md` |
-| quality-gate | `quality-gate-design.md` · `quality-rubric.md` |
+| quality-gate（深度复核） | `quality-gate-design.md` · `quality-rubric.md`；主门记录见 `gate-log-template.md` |
 | world-rules / world-map / universe-map | `world-logic.md` |
 | (项目目录组织) | `project-organization.md` |
 | (题材增强) | `expanded-genre-strengths.md` · `popular-webnovel-craft.md` · `anti-pastiche.md` |
@@ -305,7 +308,7 @@ daily-continuation（独立模板，触发即用）
 1. 写新章节前：先确认有没有 `chapter-card-template` 填好；没有 → 创建
 2. 找不到该用哪个模板时：先看本索引 §二（决策树），不存在的组合查 §一（按阶段）
 3. 同名重叠模板：优先看 §二 的"对应关系"
-4. 项目刚启动：按 §三 选必备包，避免一次性建 60 个文件
+4. 项目刚启动：按 §三 选必备包，避免一次性建 63 个文件
 5. 模板设计原理 / 何谓"标签 + 魅力 + 代价"：查 §四 references 列表
 
 ---

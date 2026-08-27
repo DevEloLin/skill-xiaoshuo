@@ -2,7 +2,7 @@
 
 > **路径**：`05-chapters/gate-logs/CH{N}-gate-log.md`
 > **用途**：每章门 4 完成时按本模板写入；正文输出保持干净，不嵌入 Checklist。
-> **生成时机**：门 3 正文完成 → 门 4 验收时按本模板生成 → 门 5 回写时更新最后 6 项 checkbox 与记忆流 delta 段。
+> **生成时机**：门 3 正文完成 → 门 4 验收时按本模板生成 → 门 5 回写时更新最后 6 项 checkbox 与记忆流 delta 段。用户未指定项目目录或未要求落盘时，直接在对话中交付本模板内容。
 > **协议规则**详见 [SKILL.md §执行日志与 Checklist 输出协议](../SKILL.md#执行日志与-checklist-输出协议)。
 
 ---
@@ -26,7 +26,7 @@
 - [✅] #6 映射校验通过
 - [✅] #7 Canon/时间线无冲突
 
-### 🚨 AI检测≤5% 硬检（FAIL 即 BLOCK，13项全检）
+### 自然度编辑诊断（13 项；严重且可定位时回修）
 表面层：
 - [✅] ① 无平均句：{最短句X字/最长句Y字，变化率Z%}
 - [✅] ② 无解释腔：{全文无"先结论后动作"段落}
@@ -46,7 +46,7 @@
 纹理层：
 - [✅] ⑬ 纹理验收：毛边{N}处({描述}) · 素段{N}个/总{M}段(占比{X}%) · 配角个性({角色}:{细节}) · 信息弯路({描述}) · 金句{N}句(间隔≥800字✔/✘)
 
-### 🚨 §六 形容词堆砌零容忍（FAIL 即 BLOCK，7 项全检）
+### §六 形容词与修辞诊断（按病灶回修）
 - [✅] 7.1.1 同名词修饰 ≤2：最大命中{N}个名词带{M}修饰
 - [✅] 7.1.2 千字形容词 ≤30：实际{X}/千字
 - [✅] 7.1.3 类比修辞 ≤3/千字：实际{X}/千字
@@ -55,7 +55,7 @@
 - [✅] 7.1.6 同段重复修饰 ≤1：命中{N}处
 - [✅] 7.1.7 形容词起首段 = 0：命中{N}段
 
-### 🚨 §七 AI 感残留全维扫描（命中规则触发自动修复，19 项）
+### §七 模板感残留扫描（命中后结合场景判断）
 句法层：
 - [✅] 8.1.1 主语开头段比例 ≤60%：实际{X}%
 - [✅] 8.1.2 "他/她/它"开头句 ≤35%：实际{X}%
@@ -87,7 +87,7 @@
 
 §七 总判定：WARN {N} 项｜FAIL {M} 项｜修复优先级 {P0/P1/P2/P3/P4}
 
-### 🚨 P0#9 一致性零容忍（FAIL 即 BLOCK，5 类全扫）
+### 🚨 连续性零容忍（FAIL 即 BLOCK，C1-C5 全扫）
 > 详见 [consistency-enforcement-protocol.md](../references/consistency-enforcement-protocol.md)
 - [✅] C1 设定一致性：{命中{N}处｜引用：段{X}"{原文片段}"｜修复：{动作}}
 - [✅] C2 行为一致性：{命中{N}处｜引用：角色{Y}段{X}｜修复：{动作}}
@@ -95,15 +95,27 @@
 - [✅] C4 时空一致性：{命中{N}处｜引用：段{X}（与 timeline / world-map 矛盾）｜修复：{动作}}
 - [✅] C5 力量一致性：{命中{N}处｜引用：段{X}（与 character-engine / latent-consequences 矛盾）｜修复：{动作}}
 
-P0#9 总判定：FAIL {M} 类 / 5｜repair_count：{0-3}｜数据源：canon-facts + timeline + character-engine + deep-memory.md
-若 repair_count = 3 且仍 FAIL → 输出 BLOCK 报告（详见 consistency-enforcement-protocol.md §3.3）
+P0#9 总判定：FAIL {M} 类 / 5｜本门 repair_count：{0-1}｜全流程 flow_repair_count：{0-3}｜数据源：canon-facts + timeline + character-engine + deep-memory.md
+若本门已修复 1 次或全流程累计 3 次且仍 FAIL → 输出 BLOCK 报告（详见 consistency-enforcement-protocol.md §3.3）
+
+### 角色身份树与命名审校（群像 / 起名 / 重要角色项目触发）
+- [✅] 本章重要角色有自主目标或明确的情绪/关系/伏笔功能，未沦为传话筒。
+- [✅] 人物的选择、声线与私人事件线可区分；没有可互换的核心角色。
+- [✅] 姓名、称呼、别名与当前关系/知识状态一致，且同场不易混淆。
+- [✅] 本章涉及的身份树分枝已推进、承压或有明确休眠理由。
+
+### 并发布局与多线程审校（多伏笔 / 多局 / 筛选项目触发）
+- [✅] 本章前台事件独立成立；并发 F/J/Y/R 线程有明确状态变化或后续窗口。
+- [✅] 人物的棋子/棋手/候选人/变量位置变化可追溯，未被写成单一功能件。
+- [✅] 本章涉及的小、长、大伏笔均有当前功能；遮蔽保留了真实但不完整的证据。
+- [✅] 候选人和现实代价层均有自主反应与后续，未被一次性消耗。
 
 ### 📝 写作意识（自评结果，供审阅）
 - [🟢] #10 节奏有变化：{简述起伏}
 - [🟡] #11 爽点：✔ {段落}｜信息推进：✔ {内容}
 - [🟢] #12 弃书风险：低
-- [🟢] #13 金句 2 句："{句1}" / "{句2}"
-- [🟡] #14 反预期梗 1：{描述}｜可传播梗 1：{描述}
+- [🟢] #13 可摘抄句（按章节需要）：{句子或“不适用：原因”}
+- [🟡] #14 反预期/可传播点（按章节需要）：{描述或“不适用：原因”}
 - [🟢] #15 标签体现：角色A{行为}，角色B{行为}
 - P1：{通过数}/11｜P2：{标注}
 - P1#11 文笔质感：形容词堆砌{🟢/🟡/🔴}｜细节vs概括{🟢/🟡/🔴}｜多感官{🟢/🟡/🔴}｜侧面描写{🟢/🟡/🔴}｜细节功能{🟢/🟡/🔴}
@@ -118,15 +130,20 @@ P0#9 总判定：FAIL {M} 类 / 5｜repair_count：{0-3}｜数据源：canon-fac
 - [ ] Canon 登记
 - [ ] 伏笔状态更新
 - [ ] 章节对齐单填写
-- [ ] 纲是否需要更新
+- [ ] 纲 / 局网 / 线程板（触发时）是否需要更新
 
 ## 记忆流 delta（门 5 回写后追加，详见 memory-streaming-protocol.md）
 canon: [本章新增/修改的事实条目，无变化填 —]
 timeline: [本章新事件，按 type 分级]
-characters: [人物状态变化]
+characters: [人物状态变化；群像/起名项目同时记私人事件线、称呼或别名状态]
 foreshadow: [伏笔状态变化（埋点 / 偏移 / 回收）]
 worldmap: [新地点 / 区域调整]
 universemap: [跨界事件，仅多界故事]
+deep: [8 维增量：motifs / relations-arcs / knowledge-state / promise-ledger / reader-fingerprint / style-fingerprint / latent-consequences / dedup-ledger]
+consistency: [C1-C5 扫描结果、本门 repair_count、全流程 flow_repair_count]
+conspiracy: [R 模式：CJ-ID 状态 / 因果边 / 线索重释 / 知识边界 / 揭示窗口变化；其他模式填 —]
+weave: [并发布局模式：F/J/Y/R 线程状态、人物位置、遮蔽/碰撞关系、候选人分化或现实代价回响；其他模式填 —]
+writeback: [persisted｜complete-in-chat；后者须提示用户下轮提供本交接包或项目状态文件]
 ```
 
 ---
@@ -142,16 +159,19 @@ universemap: [跨界事件，仅多界故事]
 | `pending_writeback` | 上一章是否未完回写（true/false 或具体未完项） | 是 |
 | `rollback_pending` | 是否处于回滚后未重验状态 | 是 |
 | `硬检 #1-#7` | 结构 7 项硬检 + 证据 | 是 |
-| `AI 检测 ① - ⑬` | 13 项硬检 + 实际数值 | 是 |
+| `自然度诊断 ① - ⑬` | 13 项诊断 + 可引用证据；仅可见且有害的病灶要求回修 | 是 |
 | `§六 7.1.1-7.1.7` | 形容词零容忍 7 项 + 实际数值 | 是 |
 | `§七 8.1.1-8.1.19` | AI 感扫描 19 项 + 实际数值 | 是 |
 | `🚨 P0#9 一致性扫描 C1-C5` | 5 类一致性硬检 + 命中数 + 引用证据 + 修复动作 + repair_count | 是 |
-| `写作意识 #10-#15` | P0 体验类 6 项自评（节奏/爽点/弃书/金句/梗/标签） | 是 |
+| `写作意识 #10-#15` | P0 体验类 6 项自评（节奏/爽点/弃书/可摘抄句/反预期或传播点/标签）；后两项可按章标“不适用”并说明原因 | 是 |
 | `读者体验评估` | 爽点兑现 / 信息推进 / 弃书风险 / 继续阅读理由 | 是 |
-| `门 5 回写清单` | 6 项 checkbox（门 5 完成时勾选） | 是 |
+| `门 5 回写清单` | 6 项 checkbox（含触发时的局网/线程板更新；门 5 完成时勾选） | 是 |
 | `记忆流 delta` | 本章对各记忆层的变更摘要（门 5 后追加，详见 memory-streaming-protocol） | 是 |
-| `记忆流 delta.deep` | 第 36 层深度记忆 7 维变更（motifs / relations / knowledge / promises / fingerprint / consequences / dedup）| 是 |
-| `记忆流 delta.consistency` | C1-C5 5 类扫描结果 + repair_count（详见 consistency-enforcement-protocol §4.3）| 是 |
+| `记忆流 delta.deep` | 第 36 层深度记忆 8 维变更（motifs / relations-arcs / knowledge-state / promise-ledger / reader-fingerprint / style-fingerprint / latent-consequences / dedup-ledger）| 是 |
+| `记忆流 delta.consistency` | C1-C5 5 类扫描结果 + 本门 / 全流程 repair_count（详见 consistency-enforcement-protocol §4.3）| 是 |
+| `记忆流 delta.conspiracy` | R 模式的 CJ-ID 状态、因果边、线索、知识边界与揭示窗口变化 | R 模式必填 |
+| `记忆流 delta.weave` | 并发布局的 F/J/Y/R 状态、人物位置、遮蔽/碰撞与现实代价变化 | 并发布局模式必填 |
+| `记忆流 delta.writeback` | `persisted`（已获授权并写入）或 `complete-in-chat`（只交付状态交接包） | 是 |
 
 ## 命名规则
 

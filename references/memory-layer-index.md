@@ -21,6 +21,7 @@
 | 1 | Canon 事实表 | 不可改的设定（硬约束） | `assets/canon-facts-template.md` | `hallucination-control.md` |
 | 3 | 时间线 | 事件顺序（硬约束） | `assets/timeline-template.md` | — |
 | 2 | 人物状态表 | 角色当前处境 / 关系 / 心理 | （含在 character / ensemble 模板内） | `character-engine-design.md` |
+| 2a | 角色身份树与命名账本（叠加视图，不计入 35 层） | 群像 / 起名 / 角色独立线 / 称呼变化时 | `assets/character-identity-tree-template.md` | `character-identity-tree-protocol.md` |
 | 5 | 章节摘要 | 续写前快速回忆 | `assets/chapter-summary-template.md` | — |
 | 28 | 章节对齐单 | 前后章承接 | `assets/chapter-alignment-template.md` | — |
 | 29 | 十章呼应板 | 最近 10 章未结线 | `assets/ten-chapter-echo-template.md` | — |
@@ -32,6 +33,8 @@
 | 4 | 伏笔与线索表 | 需要埋线 / 回收时 | `assets/foreshadow-matrix-template.md` | — |
 | 6 | 势力棋盘 | 涉及多阵营推进时 | `assets/faction-board-template.md` | — |
 | 7 | 结构网图 | 大布局 / 多线叙事时 | `assets/plot-architecture-template.md` + `storyline-board-template.md` | `macro-plotting.md` |
+| 7a | 多层阴谋局网（叠加视图，不计入 35 层） | R 模式 / 总阴谋、连环布局、幕后棋局时 | `assets/conspiracy-weave-template.md` | `conspiracy-weaving-protocol.md` |
+| 7b | 并发布局线程板（叠加视图，不计入 35 层） | 多伏笔/多局/筛选/底层代价同时运行时 | `assets/concurrent-plot-weave-template.md` | `concurrent-plot-weave-protocol.md` |
 | 11 | 连续性台账 | 审校 / 续写时 | `assets/consistency-ledger-template.md` | — |
 | 12 | 群像总表 | 群像章节时 | `assets/ensemble-cast-template.md` | `ensemble-writing.md` |
 | 13 | 群像弧光矩阵 | 群像弧光设计时 | `assets/ensemble-arc-matrix-template.md` | `ensemble-writing.md` |
@@ -45,7 +48,7 @@
 | 32 | 信息流控制单 | 控制信息释放时 | `assets/information-flow-template.md` | `information-flow-control.md` |
 | 33 | 节奏控制单 | 节奏设计时 | `assets/pacing-engine-template.md` | `pacing-engine-design.md` |
 | 34 | 角色驱动单 | 分配驱动角色时 | （含在 chapter-card 内） | — |
-| 35 | 质量闭环单 | 正文完成质检时 | `assets/quality-gate-template.md` | `quality-gate-design.md` · `quality-rubric.md` |
+| 35 | 质量闭环单 | 正文完成质检时 | `assets/gate-log-template.md` | `closure-map.md` · `quality-rubric.md`；`quality-gate-template.md` 仅深度复核时叠加 |
 
 ### C 级：专项 11 层（特定模式 / 题材才读）
 
@@ -125,6 +128,7 @@ B 级最低: 4 伏笔表 · 11 连续性台账 · 31 场景骨架 · 35 质量�
 
 ```
 + 12 群像总表 · 13 群像弧光矩阵 · 21 多阵营动态表 · 6 势力棋盘
++ 2a 角色身份树与命名账本（门 1 读本章人物的私人线/称呼边界；门 5 回写分枝与别名状态）
 ```
 
 ### 宏大世界观
@@ -141,6 +145,22 @@ B 级最低: 4 伏笔表 · 11 连续性台账 · 31 场景骨架 · 35 质量�
 
 ```
 + 14 未知钩子矩阵
+```
+
+### 多层阴谋 / 连环布局
+
+在长篇基础上追加 B 级局网层：
+
+```
++ 7a 多层阴谋局网（门 1 读取 active 节点、知识边界、到期揭示；门 5 写 conspiracy delta）
+```
+
+### 并发伏笔 / 多局互牵 / 候选人筛选
+
+在长篇基础上追加 B 级叠加视图：
+
+```
++ 7b 并发布局线程板（门 1 读活跃线程/人物位置/现实代价；门 2 标场景交通；门 5 写 weave delta）
 ```
 
 ### 投稿（M 模式）/ 去 AI（N 模式）

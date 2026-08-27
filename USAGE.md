@@ -3,7 +3,7 @@
 面向实际操作的使用手册。回答 8 个问题：
 
 1. 怎么开始
-2. 17 种模式（A-Q）每个怎么用
+2. 18 种模式（A-R）每个怎么用
 3. 六道门怎么运转
 4. Scene Engine 怎么跑
 5. Memory Stream / 深度记忆 / 5 类一致性 怎么落地
@@ -12,7 +12,7 @@
 8. 在不同客户端（Claude / Cursor / Codex / VS Code）里怎么用
 
 > **不是项目介绍** —— 项目是什么 / 整体架构请看 [README.md](./README.md)。
-> **不是协议规范** —— 完整规则见 [SKILL-reference.md](./SKILL-reference.md) 与 9 大 SSOT。
+> **不是协议规范** —— 完整规则见 [SKILL-reference.md](./SKILL-reference.md) 与 11 大 SSOT。
 
 ---
 
@@ -20,7 +20,7 @@
 
 1. [先理解它到底怎么用](#一先理解它到底怎么用)
 2. [四大场景标准流程](#二四大场景标准流程)
-3. [17 种使用模式（A-Q）](#三17-种使用模式a-q)
+3. [18 种使用模式（A-R）](#三18-种使用模式a-r)
 4. [每次输入最好提供什么](#四每次输入最好提供什么)
 5. [输出结果格式](#五输出结果格式)
 6. [执行协议使用指南](#六执行协议使用指南)
@@ -66,9 +66,9 @@
 ```
 1. 前三章必须埋线 + 给爽点 + 给反转
 2. 第 10-15 章必须打第一阶段高潮（不能拖）
-3. 单章正文 ≥ 4300 字（默认 4300-5000）
-4. 反 AI 39 项硬检（13+7+19）必须 PASS（永不降级）
-5. 一致性 5 类硬检 C1-C5 必须 PASS（永不降级）
+3. 长篇连载可默认建议 4300-5500 字；短篇、剧本或用户另有要求时，以章节功能和交付要求为准
+4. 叙事自然度 39 项（13+7+19）用于定位有害病灶，不以机械阈值或外部检测分数代替编辑判断
+5. 一致性 C1-C5 在数据源完整时必须通过；强裁剪时 C2/C5 必须显式标为 WARN，不能伪称已通过
 6. 章首轮换：连续 3 章不允许同手法
 ```
 
@@ -139,7 +139,7 @@
 
 ---
 
-## 三、17 种使用模式（A-Q）
+## 三、18 种使用模式（A-R）
 
 ### 模式 A：新建小说
 
@@ -250,7 +250,7 @@
 **提问示例**：
 > "投稿起点，前三章样章。当前 AI 痕迹：解释腔重 + 对白同声。"
 
-**输出**：投稿润色单（按平台特化）+ 39 项反 AI 全跑 + 修订建议。
+**输出**：投稿润色单（按平台特化）+ 39 项自然度诊断 + 修订建议。
 
 ### 模式 N：去 AI 味精修
 
@@ -259,7 +259,7 @@
 **提问示例**：
 > "降 AI 味。重点：第 4 章解释腔太重 + 章首老用'他意识到'。"
 
-**输出**：39 项硬检报告（按命中数排序）+ 优先级修复（P0 结构性 → P1 句法 → P2 修辞 → P3 段落 → P4 局部）+ 改前/改后对比。
+**输出**：39 项自然度诊断报告（按可定位病灶排序）+ 优先级修复（P0 结构性 → P1 句法 → P2 修辞 → P3 段落 → P4 局部）+ 改前/改后对比。
 
 ### 模式 O：剧本/双轨输出
 
@@ -287,6 +287,15 @@
 > "今天这章：主角第一次进入裂缝。"
 
 **输出**：自动读 memory-stream 最近 3 章 → 解析指令 → 章节卡 → 骨架 → 正文 → 门 4 质检 → 门 5 回写。Q 模式 Token 预算 1500 tokens。
+
+### 模式 R：多层阴谋与并发布局
+
+**触发**：用户要求总阴谋套小阴谋、多个局同时牵引、长短伏笔并发、候选人筛选，或希望底层人物的代价持续回响。
+
+**提问示例**：
+> “设计一个总局套三个小局：主角同时被选拔、被利用，也在反向布一个局；每一层都有不同人付出代价。”
+
+**输出**：`conspiracy-weave`（J 局的层级、因果、反制与回收）+ `concurrent-plot-weave`（F/J/Y/R 线程、人物位置、遮蔽、现实代价与场景并发）。先完成局网/线程板，再进入章节卡和正文；不把所有事件归因于全知幕后者。
 
 ---
 
@@ -382,7 +391,7 @@
 [门 0] Idea 解析   → 仅无结构化输入时触发；输出最小骨架
 [门 1] 写前门      → 11 项检查（Canon / 时间线 / 对齐 / 反 AI 预设 / 地图时间线 / 隐性后果 / 承诺超期 / character-engine 实例化）
 [门 2] 场景门      → 8 项（scene_id / 四要素 / 类型不连续 / 反预期点 / 骨架反 AI 预检）
-[门 3] 正文门      → 11 项（映射完整 / Canon 无冲突 / 字数 ≥4300 / 章首 / 对话 / 群像 / 文笔质感 / 实时反 AI / dedup）
+[门 3] 正文门      → 11 项（映射完整 / Canon 无冲突 / 篇幅与章节功能相称 / 章首 / 对话 / 群像 / 文笔质感 / 实时自然度诊断 / dedup）
 [门 4] 质检门      → 完整 P0#1-#9 + §六 7 项 + §七 19 项 + 写作意识 #10-#15 + 双轨 #16/#17
 [门 5] 回写门      → gate-log + memory-stream + deep-memory + Canon / 伏笔 / 摘要更新
 ```
@@ -474,9 +483,9 @@ Scene 骨架 ─┬→ 小说正文（叙事化展开）
 
 ## 八、风格保护与去 AI 化（39 项实操）
 
-### 8.1 反 AI 39 项硬检（永不降级）
+### 8.1 叙事自然度 39 项诊断
 
-完整计算口径见 [anti-ai-thresholds.md](./references/anti-ai-thresholds.md)。
+完整计算口径见 [anti-ai-thresholds.md](./references/anti-ai-thresholds.md)。数值是定位病灶的信号；短段、独白、诗性段或有意风格选择须结合上下文判断。
 
 ```
 表面层 8（① - ⑧）：
@@ -770,20 +779,22 @@ skill-xiaoshuo 兼容 Obsidian Markdown：
 - [SKILL.md](./SKILL.md) — 精简运行时版（~230 行），每次调用加载
 - [SKILL-reference.md](./SKILL-reference.md) — 完整参考手册（~2600 行），按需加载
 
-**9 大 SSOT**：
+**11 大 SSOT**：
 - [anti-ai-thresholds.md](./references/anti-ai-thresholds.md) — 反 AI 39 项计算口径
 - [world-and-timeline-output-spec.md](./references/world-and-timeline-output-spec.md) — 13 题材闭环
 - [memory-streaming-protocol.md](./references/memory-streaming-protocol.md) — Hot/Warm/Cold + 预算 + DELTA
 - [memory-layer-index.md](./references/memory-layer-index.md) — 35 层"用哪层"
 - [consistency-enforcement-protocol.md](./references/consistency-enforcement-protocol.md) — 5 类一致性
 - [deep-memory-protocol.md](./references/deep-memory-protocol.md) — 第 36 层 8 维
-- [template-index.md](./references/template-index.md) — 60 模板导航
+- [character-identity-tree-protocol.md](./references/character-identity-tree-protocol.md) — 角色身份树、群像独立线与命名账本
+- [concurrent-plot-weave-protocol.md](./references/concurrent-plot-weave-protocol.md) — 并发伏笔、多局互牵、候选人筛选与现实代价
+- [template-index.md](./references/template-index.md) — 63 模板导航
 - [closure-map.md](./references/closure-map.md) — 全协议闭环验证矩阵
 - [gate-log-template.md](./assets/gate-log-template.md) — gate-log 输出格式
 
 **专题参考**：[references/](./references/)（33 份，含 input-collection-guide / first-sentence-de-ai / scene-schema 等）
 
-**模板**：[assets/](./assets/)（60 套，按 [template-index](./references/template-index.md) 选用）
+**模板**：[assets/](./assets/)（63 套，按 [template-index](./references/template-index.md) 选用）
 
 **示例**：[examples/](./examples/)（10 个示例项目）
 
